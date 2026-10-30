@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Restaurante Estação Largo do Machado | Tradição Carioca Desde 1966</title>
+  
+  <meta name="description" content="O restaurante mais tradicional do Largo do Machado desde 1966. Cardápio completo, executivos diários, chopp geladíssimo, feijoada carioca e drinks autorais." />
+  <meta name="theme-color" content="#121110" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #FAF8F5;
+      color: #1c1917;
+    }
+    h1, h2, h3, .font-serif-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .bg-subtle-pattern {
+      background-color: #FAF8F5;
+      background-image: radial-gradient(#d6cebe 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+    .bg-dark-pattern {
+      background-color: #121110;
+      background-image: radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f1ede6; }
+    ::-webkit-scrollbar-thumb { background: #c7b9a5; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a8947b; }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-stone-900 antialiased selection:bg-amber-700 selection:text-white pb-20 md:pb-0">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#1C1917] text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 font-medium text-amber-400">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          Tradição Carioca Desde 1966
+        </span>
+        <span class="hidden md:inline text-stone-600">•</span>
+        <span class="hidden sm:inline-flex items-center gap-1 text-stone-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i>
+          Rua Bento Lisboa, 184 — Largo do Machado / Catete
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Aberto Hoje até 00:00 (Meia-noite)
+        </span>
+        <a href="tel:2125565323" class="hidden sm:inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          (21) 2556-5323
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200 py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-900/40 shadow-sm shrink-0">
+          <img 
+            src="./public/images/logo.jpg" 
+            alt="Logo Estação Largo do Machado" 
+            class="w-full h-full object-cover" 
+            onerror="this.src='https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/LOGO-ESTACAO-baixa.jpg'" 
+          />
+        </div>
+        <div>
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-tight block group-hover:text-amber-900 transition-colors">
+            Estação Largo do Machado
+          </span>
+          <span class="text-[11px] font-medium tracking-wider uppercase text-amber-800">
+            Boteco 184 • Desde 1966
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-stone-700">
+        <a href="#cardapio" class="hover:text-amber-800 transition-colors">Cardápio (136 Itens)</a>
+        <a href="#destaques" class="hover:text-amber-800 transition-colors">Feijoada & Cozido</a>
+        <a href="#drinks" class="hover:text-amber-800 transition-colors">Drinks Autorais</a>
+        <a href="#historia" class="hover:text-amber-800 transition-colors">Tradição 1966</a>
+        <a href="#avaliacoes" class="hover:text-amber-800 transition-colors">Avaliações (4.8★)</a>
+        <a href="#localizacao" class="hover:text-amber-800 transition-colors">Como Chegar</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a 
+          href="https://wa.me/552125565323?text=Ol%C3%A1,%20estou%20no%20Site%20do%20Restaurante%20Esta%C3%A7%C3%A3o%20Largo%20do%20Machado%20e%20quero%20fazer%20um%20pedido" 
+          target="_blank" 
+          class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Pedir no WhatsApp</span>
+        </a>
+
+        <!-- Cart Trigger -->
+        <button 
+          onclick="toggleCart()" 
+          class="relative inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-400 font-semibold text-xs sm:text-sm shadow transition-all active:scale-95"
+          aria-label="Abrir Comanda"
+        >
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-400"></i>
+          <span class="hidden sm:inline text-white">Comanda</span>
+          <span id="cart-badge" class="ml-1 w-5 h-5 rounded-full bg-amber-600 text-white text-[11px] font-bold flex items-center justify-center hidden">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-subtle-pattern pt-8 pb-16 md:py-20 border-b border-stone-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Copy -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-900/10 border border-amber-900/20 text-amber-950 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-amber-700 animate-pulse"></span>
+            TRADIÇÃO DESDE 1966 • CATETE / LARGO DO MACHADO
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-[54px] font-extrabold text-stone-900 leading-[1.12] tracking-tight">
+            O sabor autêntico e a alma carioca no coração do <span class="italic font-normal text-amber-900">Largo do Machado.</span>
+          </h1>
+
+          <p class="text-stone-700 text-base sm:text-lg leading-relaxed">
+            Localizado na histórica Rua Bento Lisboa, a 50 metros do metrô. 
+            Chopp Brahma trincando de gelado, carnes nobres na brasa, a consagrada 
+            feijoada completa, 24 opções de almoço executivo diário e uma carta autoral de drinks inspirada no Catete.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a 
+              href="#cardapio" 
+              class="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-semibold text-sm sm:text-base shadow-md transition-all active:scale-[0.98]"
+            >
+              <span>Explorar Cardápio (136 Opções)</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a 
+              href="https://wa.me/552125565323?text=Ol%C3%A1,%20estou%20no%20Site%20do%20Restaurante%20Esta%C3%A7%C3%A3o%20Largo%20do%20Machado%20e%20quero%20fazer%20um%20pedido" 
+              target="_blank" 
+              class="inline-flex items-center gap-2 px-5 py-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-sm sm:text-base shadow transition-all active:scale-[0.98]"
+            >
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Pedir no WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="pt-4 grid grid-cols-3 gap-4 border-t border-stone-200">
+            <div>
+              <div class="flex items-center gap-1 text-amber-600 font-bold text-base">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                4.8
+              </div>
+              <p class="text-[11px] text-stone-600">992 avaliações no Google</p>
+            </div>
+            <div>
+              <div class="font-bold text-amber-900 text-base">1966</div>
+              <p class="text-[11px] text-stone-600">60 anos de tradição</p>
+            </div>
+            <div>
+              <div class="font-bold text-emerald-800 text-base">11h às 00h</div>
+              <p class="text-[11px] text-stone-600">Todos os dias</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Gallery -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden border border-stone-300 bg-stone-900 shadow-2xl">
+            <div class="relative aspect-[16/11]">
+              <img 
+                id="hero-img" 
+                src="./public/images/fachada.jpg" 
+                alt="Restaurante Estação Largo do Machado" 
+                class="w-full h-full object-cover transition-opacity duration-300" 
+                onerror="this.src='https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/estac.jpg'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/25 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <h3 id="hero-title" class="font-serif text-lg sm:text-xl font-bold text-amber-100">
+                  A Tradicional Esquina da Bento Lisboa
+                </h3>
+                <p id="hero-subtitle" class="text-xs sm:text-sm text-stone-300">
+                  Mesas acolhedoras, clima clássico de boteco e chopp estupidamente gelado.
+                </p>
+              </div>
+            </div>
+
+            <!-- Gallery Buttons -->
+            <div class="p-3 bg-stone-950 border-t border-stone-800 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar text-xs font-medium">
+              <button onclick="setHero(0)" id="hbtn-0" class="hbtn px-3 py-1.5 rounded-lg bg-amber-900/40 text-amber-300 border border-amber-600/50">Fachada</button>
+              <button onclick="setHero(1)" id="hbtn-1" class="hbtn px-3 py-1.5 rounded-lg text-stone-400 hover:text-white">Gastronomia</button>
+              <button onclick="setHero(2)" id="hbtn-2" class="hbtn px-3 py-1.5 rounded-lg text-stone-400 hover:text-white">Chopp Brahma</button>
+              <button onclick="setHero(3)" id="hbtn-3" class="hbtn px-3 py-1.5 rounded-lg text-stone-400 hover:text-white">Executivos</button>
+              <button onclick="setHero(4)" id="hbtn-4" class="hbtn px-3 py-1.5 rounded-lg text-stone-400 hover:text-white">Drinks Autorais</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Pillars Section -->
+  <section class="py-12 bg-[#F5F2EB] border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center mb-4">
+              <i data-lucide="beer" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">Chopp Brahma Trincando</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Tulipa e caldereta a R$ 10,90 tiradas com colarinho aveludado na temperatura certa, além de cervejas 600ml de Spaten e Stella.
+            </p>
+          </div>
+          <button onclick="filterCat('chopes')" class="mt-4 text-xs font-bold text-amber-900 hover:underline text-left">
+            Ver Bebidas & Chopes →
+          </button>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center mb-4">
+              <i data-lucide="utensils" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">24 Executivos Diários</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Servidos durante todo o horário, das 11h à meia-noite. Pratos completos com fartura, carnes, frangos, peixes e massas a partir de R$ 29,90.
+            </p>
+          </div>
+          <button onclick="filterCat('executivos')" class="mt-4 text-xs font-bold text-amber-900 hover:underline text-left">
+            Ver Pratos Executivos →
+          </button>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center mb-4">
+              <i data-lucide="flame" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">Tradição Desde 1966</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              A famosa Feijoada Completa do Largo do Machado, o Filé à Oswaldo Aranha coberto de alho crocante e o Cozido de Domingo.
+            </p>
+          </div>
+          <a href="#destaques" class="mt-4 text-xs font-bold text-amber-900 hover:underline text-left">
+            Ver Destaques da Casa →
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center mb-4">
+              <i data-lucide="bike" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-stone-900">Entregas no Bairro</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              Atendimento ágil para Catete, Largo do Machado, Flamengo, Glória e Laranjeiras direto pelo WhatsApp sem burocracia.
+            </p>
+          </div>
+          <a href="https://wa.me/552125565323" target="_blank" class="mt-4 text-xs font-bold text-amber-900 hover:underline text-left">
+            Pedir no WhatsApp →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Banner (Feijoada & Cozido) -->
+  <section id="destaques" class="py-16 bg-[#161413] text-stone-100 border-y border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/40 px-3 py-1 rounded-full">
+          Assinaturas Históricas da Casa
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Pratos que Fizeram a Fama do Restaurante
+        </h2>
+        <p class="text-stone-400 text-sm mt-2">
+          Receitas passadas com rigor e afeto há quase seis décadas no Largo do Machado.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Feijoada Card -->
+        <div class="bg-[#1F1C1A] rounded-3xl p-6 sm:p-8 border border-stone-800 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950 px-3 py-1 rounded-full border border-amber-800/40">
+                Receita Desde 1966
+              </span>
+              <span class="text-xs text-stone-400">Servida Todos os Dias</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-amber-50">
+              Tradicional Feijoada do Largo do Machado
+            </h3>
+            
+            <p class="text-stone-300 text-sm leading-relaxed mt-3">
+              Feijão preto enriquecido lentamente com carnes nobres selecionadas (carne seca, lombo, costelinha, paio e calabresa). Acompanha arroz solto, couve mineira refogada fininha no alho, farofa na manteiga, torresmo pururuca estalando de crocante e laranjas frescas.
+            </p>
+
+            <div class="mt-6 pt-5 border-t border-stone-800">
+              <label class="text-xs font-semibold text-stone-400 block mb-2">Escolha o tamanho:</label>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <button onclick="setFeijSize('ind')" id="feij-btn-ind" class="p-3 rounded-xl border text-left bg-amber-950/70 border-amber-600 text-white font-bold">
+                  <div>Individual (1 pessoa)</div>
+                  <div class="text-amber-400 text-sm mt-0.5">R$ 60,00</div>
+                </button>
+                <button onclick="setFeijSize('comp')" id="feij-btn-comp" class="p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white">
+                  <div>Completa (2 pessoas)</div>
+                  <div class="text-amber-400 text-sm mt-0.5">R$ 110,00</div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between gap-4">
+            <div>
+              <span class="text-[11px] text-stone-400 block">Preço</span>
+              <span id="feij-price" class="text-2xl font-extrabold text-amber-400 font-serif">R$ 60,00</span>
+            </div>
+            <button onclick="addFeijoada()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold text-sm shadow transition-all active:scale-95">
+              <i data-lucide="plus" class="w-4 h-4"></i>
+              <span>Adicionar à Comanda</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cozido Card -->
+        <div class="bg-[#1F1C1A] rounded-3xl p-6 sm:p-8 border border-stone-800 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-300 bg-rose-950 px-3 py-1 rounded-full border border-rose-800/40">
+                Especial de Domingo
+              </span>
+              <span class="text-xs text-stone-400">Tradição Luso-Carioca</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-amber-50">
+              Cozido à Portuguesa Carioca
+            </h3>
+            
+            <p class="text-stone-300 text-sm leading-relaxed mt-3">
+              A verdadeira celebração do almoço de domingo. Carnes nobres suculentas, legumes variados frescos da estação (batata, cenoura, abóbora, repolho, banana da terra) cozidos lentamente no próprio caldo aromático e servidos com pirão aveludado artesanal.
+            </p>
+
+            <div class="mt-6 pt-5 border-t border-stone-800">
+              <label class="text-xs font-semibold text-stone-400 block mb-2">Escolha o tamanho:</label>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <button onclick="setCozSize('ind')" id="coz-btn-ind" class="p-3 rounded-xl border text-left bg-rose-950/70 border-rose-600 text-white font-bold">
+                  <div>Individual (1 pessoa)</div>
+                  <div class="text-rose-400 text-sm mt-0.5">R$ 60,00</div>
+                </button>
+                <button onclick="setCozSize('comp')" id="coz-btn-comp" class="p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white">
+                  <div>Completo (2 pessoas)</div>
+                  <div class="text-rose-400 text-sm mt-0.5">R$ 110,00</div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between gap-4">
+            <div>
+              <span class="text-[11px] text-stone-400 block">Preço</span>
+              <span id="coz-price" class="text-2xl font-extrabold text-rose-400 font-serif">R$ 60,00</span>
+            </div>
+            <button onclick="addCozido()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm shadow transition-all active:scale-95">
+              <i data-lucide="plus" class="w-4 h-4"></i>
+              <span>Adicionar à Comanda</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Complete Menu Section -->
+  <section id="cardapio" class="py-16 md:py-24 bg-[#FAF8F5] scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-900/20">
+          Cardápio Oficial Completo
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900 mt-3 tracking-tight">
+          Todas as Opções da Casa (136 Itens)
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base mt-2">
+          Use a busca instantânea ou filtre por categoria para montar seu pedido em segundos.
+        </p>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-stone-200 shadow-sm mb-8 space-y-4">
+        
+        <!-- Search bar -->
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input 
+            id="search-input" 
+            type="text" 
+            oninput="renderMenu()" 
+            placeholder="Buscar por prato ou bebida (ex: Oswaldo Aranha, Feijoada, Chopp, Picanha, Bacalhau, Spaten)..." 
+            class="w-full pl-10 pr-10 py-3 bg-stone-50 rounded-xl border border-stone-200 focus:border-amber-700 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700/20"
+          />
+        </div>
+
+        <!-- Quick filter pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs font-semibold">
+          <button onclick="setTag('all')" id="tag-all" class="tag-btn px-3.5 py-1.5 rounded-full bg-amber-800 text-white shadow-sm whitespace-nowrap">Tudo</button>
+          <button onclick="setTag('popular')" id="tag-popular" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">⭐ Mais Pedidos</button>
+          <button onclick="setTag('executivos')" id="tag-executivos" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🍱 Executivos (24)</button>
+          <button onclick="setTag('petiscos')" id="tag-petiscos" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🍟 Petiscos & Chapas</button>
+          <button onclick="setTag('chopes')" id="tag-chopes" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🍺 Chopes & Cervejas</button>
+          <button onclick="setTag('drinks')" id="tag-drinks" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🍸 Drinks Autorais</button>
+          <button onclick="setTag('share')" id="tag-share" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">👨‍👩‍👦 Para Compartilhar</button>
+          <button onclick="setTag('veg')" id="tag-veg" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🌱 Vegetarianos</button>
+          <button onclick="setTag('sobremesas')" id="tag-sobremesas" class="tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap">🍰 Sobremesas</button>
+        </div>
+
+        <!-- Categories bar -->
+        <div id="cat-tabs" class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs font-semibold border-t border-stone-100 pt-3">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+
+      <!-- Dishes Grid -->
+      <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Authorial Drinks Showcase -->
+  <section id="drinks" class="py-20 bg-dark-pattern text-stone-100 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/40 px-3 py-1 rounded-full">
+          Carta Autoral de Drinks
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-3">
+          Coquetéis Inspirados no Rio & no Catete
+        </h2>
+        <p class="text-stone-400 text-sm mt-2">
+          Homenagens líquidas a Machado de Assis, Aterro do Flamengo, Clarisse Índio do Brasil e Cássia Eller.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-rose-950/80 to-stone-900 border border-rose-800/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[10px] uppercase font-bold text-rose-300 mb-2">
+              <span class="bg-rose-900/60 px-2.5 py-0.5 rounded-full border border-rose-700/50">Assinatura Autoral</span>
+              <span>R$ 31,00</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Machado de Assis</h3>
+            <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+              Amoras frescas maceradas, xarope de rosas nobre, toque sutil de tabasco, Gin Beefeater Rosê, água tônica e finalizado com aveludada espuma artesanal de morango.
+            </p>
+          </div>
+          <button onclick="addCustomDrink('Machado de Assis', 31.00)" class="mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 transition-all">
+            + Adicionar Drink (R$ 31,00)
+          </button>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-amber-950/80 to-stone-900 border border-amber-800/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[10px] uppercase font-bold text-amber-300 mb-2">
+              <span class="bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-700/50">Mais Pedido</span>
+              <span>R$ 32,00</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Aterro do Flamengo</h3>
+            <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+              Gin Beefeater, licor fino de pêssego, xarope artesanal de maracujá, espumante brut geladíssimo e finalizado com cremosa espuma de gengibre.
+            </p>
+          </div>
+          <button onclick="addCustomDrink('Aterro do Flamengo', 32.00)" class="mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 transition-all">
+            + Adicionar Drink (R$ 32,00)
+          </button>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-yellow-950/80 to-stone-900 border border-yellow-800/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[10px] uppercase font-bold text-yellow-300 mb-2">
+              <span class="bg-yellow-900/60 px-2.5 py-0.5 rounded-full border border-yellow-700/50">Homenagem Carioca</span>
+              <span>R$ 31,00</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Rua das Laranjeiras 'Cássia Eller'</h3>
+            <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+              Polpa de maracujá fresco, xarope de manga, Gin Beefeater Tropical, água tônica e inesquecível espuma brasileira de rapadura.
+            </p>
+          </div>
+          <button onclick="addCustomDrink('Rua das Laranjeiras Cássia Eller', 31.00)" class="mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 transition-all">
+            + Adicionar Drink (R$ 31,00)
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Heritage Section -->
+  <section id="historia" class="py-20 bg-[#F4EFEA] border-b border-stone-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <img 
+              src="./public/images/fachada.jpg" 
+              alt="Fachada Bento Lisboa 184" 
+              class="w-full h-auto object-cover" 
+              onerror="this.src='https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/estac.jpg'"
+            />
+            <div class="absolute bottom-4 left-4 right-4 bg-stone-950/80 backdrop-blur-sm p-3 rounded-xl text-white">
+              <p class="text-xs font-bold uppercase text-amber-400">Rua Bento Lisboa, 184</p>
+              <p class="text-sm font-serif font-bold">O coração boêmio e tradicional do Catete</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-900/20">
+            Tradição & Hospitalidade Carioca
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 leading-tight">
+            Mais de meio século de amizades, boemia e comida boa de verdade.
+          </h2>
+          <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+            O restaurante mais tradicional do bairro, situado na <strong>Rua Bento Lisboa, 184</strong>, de fácil acesso e a poucos passos do <strong>Metrô do Largo do Machado</strong>. A gastronomia carioca é a nossa essência: seja para compartilhar momentos em família aos domingos ou para desfrutar de um almoço executivo dinâmico, farto e saboroso no intervalo do trabalho.
+          </p>
+          <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+            Aqui, a cerveja chega sempre na temperatura certa, o chopp é servido com colarinho aveludado e o cardápio abraça desde carnes nobres grelhadas até feijoada completa, peixes frescos, massas italianas, petiscos e pizzas crocantes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Reviews Section -->
+  <section id="avaliacoes" class="py-20 bg-[#FAF8F5] border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+            Opinião de Quem Frequenta
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 mt-2">
+            Avaliações Reais no Google (Nota 4.8★)
+          </h2>
+          <p class="text-stone-600 text-sm mt-1">
+            Com base em 992 depoimentos verificados no perfil oficial do restaurante.
+          </p>
+        </div>
+
+        <a 
+          href="https://estacaolargodomachado.com.br/google" 
+          target="_blank" 
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-400 font-semibold text-xs shadow"
+        >
+          <i data-lucide="thumbs-up" class="w-4 h-4"></i>
+          <span>Ver ou Avaliar no Google</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-2">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
+              "Ótimo atendimento e comida muito boa. A feijoada e o filé à Oswaldo Aranha são impecáveis. Um dos melhores pontos do Largo do Machado!"
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+            <span class="font-bold text-stone-900">Fillipe Braga</span>
+            <span class="text-stone-400">Fev/2025</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-2">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
+              "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+            <span class="font-bold text-stone-900">Lucía G.</span>
+            <span class="text-stone-400">Fev/2025</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-2">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
+              "Chopp Brahma estupidamente gelado e o bolinho de bacalhau crocante por fora e macio por dentro. Clássico boteco carioca nota 10."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+            <span class="font-bold text-stone-900">Carlos Eduardo Mendes</span>
+            <span class="text-stone-400">Jan/2025</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-2">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-stone-700 text-xs sm:text-sm italic leading-relaxed">
+              "O almoço executivo salva a rotina! Preço justo, pratos muito bem servidos e sabor caseiro de verdade. Atendimento impecável."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+            <span class="font-bold text-stone-900">Mariana Alencar</span>
+            <span class="text-stone-400">Dez/2024</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Map -->
+  <section id="localizacao" class="py-20 bg-[#F4EFEA] border-b border-stone-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-900/20">
+          Como Chegar
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 mt-2">
+          Rua Bento Lisboa, 184 — Catete
+        </h2>
+        <p class="text-stone-600 text-sm mt-1">
+          A apenas 50 metros da estação de Metrô Largo do Machado.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-4 text-sm text-stone-700">
+          <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-stone-900">Endereço Oficial</h4>
+                <p class="text-xs text-stone-500">Largo do Machado / Catete, Rio de Janeiro - RJ</p>
+              </div>
+            </div>
+            <p class="font-semibold text-stone-900">Rua Bento Lisboa, 184 — CEP 22221-011</p>
+            <p class="text-xs text-emerald-800 bg-emerald-50 p-2.5 rounded-lg border border-emerald-200">
+              ✓ Saída fácil pelo Metrô Largo do Machado (menos de 1 minuto a pé).
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-900/10 text-amber-900 flex items-center justify-center">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-stone-900">Horário de Funcionamento</h4>
+                <p class="text-xs text-stone-500">Todos os dias sem exceção</p>
+              </div>
+            </div>
+            <p class="font-semibold text-stone-900">Segunda a Domingo: 11:00 às 00:00 (Meia-noite)</p>
+            <p class="text-xs text-stone-600">Almoço Executivo servido o dia inteiro durante todo o horário.</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm">
+            <p class="text-xs font-bold text-stone-900 mb-1">Formas de Pagamento:</p>
+            <p class="text-xs text-stone-600">Pix, Dinheiro, Débito, Crédito e Cartões de Refeição (Sodexo, VR, Alelo, Ticket).</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-stone-300 shadow-xl h-96 bg-stone-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.8872036486016!2d-43.1804245239103!3d-22.92671207923769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ff9ea43a419%3A0xe5eb6cf83dc6f827!2sR.%20Bento%20Lisboa%2C%20184%20-%20Catete%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022221-011!5e0!3m2!1spt-BR!2sbr!4v1719900000000!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+          ></iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#121110] text-stone-400 py-12 px-4 text-xs border-t border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left space-y-1">
+        <p class="font-serif text-base font-bold text-white">Restaurante Estação Largo do Machado</p>
+        <p class="text-stone-400">BOTECO 184 LTDA • CNPJ: 46.859.491/0001-21</p>
+        <p class="text-stone-500">Rua Bento Lisboa, 184 — Catete / Largo do Machado, Rio de Janeiro - RJ • CEP 22221-011</p>
+      </div>
+
+      <div class="flex items-center gap-4 flex-wrap justify-center text-xs">
+        <a href="tel:2125565323" class="hover:text-amber-300 transition-colors">Telefone: (21) 2556-5323</a>
+        <span>•</span>
+        <a href="https://wa.me/552125565323" target="_blank" class="text-emerald-400 font-semibold hover:underline">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.instagram.com/estacao184oficial/" target="_blank" class="hover:text-pink-400 transition-colors">Instagram @estacao184oficial</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/Estacao184Oficial/" target="_blank" class="hover:text-blue-400 transition-colors">Facebook</a>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-stone-800/80 text-center text-stone-600 text-[11px]">
+      © 2026 Restaurante Estação Largo do Machado. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- Slide-Over Digital Cart Drawer -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+    <div onclick="toggleCart()" class="absolute inset-0 bg-stone-950/60 backdrop-blur-sm"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col border-l border-stone-200">
+        
+        <div class="p-4 bg-[#1C1917] text-white flex items-center justify-between border-b border-stone-800">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-white">Sua Comanda Digital</h3>
+              <span id="cart-count-label" class="text-xs text-amber-300 font-medium">0 itens</span>
+            </div>
+          </div>
+          <button onclick="toggleCart()" class="p-2 text-stone-400 hover:text-white" aria-label="Fechar">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div id="cart-footer" class="p-4 bg-stone-50 border-t border-stone-200 space-y-3 hidden">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-stone-600 font-medium">Subtotal dos itens:</span>
+            <span id="cart-subtotal" class="font-serif font-extrabold text-stone-900 text-xl">R$ 0,00</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div>
+              <label class="font-semibold text-stone-700 block mb-1">Seu Nome:</label>
+              <input id="cart-name" type="text" placeholder="Ex: Carlos Silva" class="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs" />
+            </div>
+            <div>
+              <label class="font-semibold text-stone-700 block mb-1">Endereço de Entrega (ou Retirada/Mesa):</label>
+              <input id="cart-address" type="text" placeholder="Ex: Rua Bento Lisboa, 184 apto 201" class="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs" />
+            </div>
+            <div>
+              <label class="font-semibold text-stone-700 block mb-1">Observações:</label>
+              <input id="cart-obs" type="text" placeholder="Ex: Carne ao ponto, sem cebola..." class="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs" />
+            </div>
+          </div>
+
+          <button onclick="sendOrderToWhatsApp()" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow transition-all active:scale-95">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <span>Enviar Pedido Pronto no WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#1C1917]/95 backdrop-blur-md border-t border-stone-800 p-2 shadow-2xl">
+    <div class="grid grid-cols-3 gap-2">
+      <a href="#cardapio" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl text-stone-300 hover:text-white text-[11px] font-semibold min-h-[44px]">
+        <i data-lucide="utensils" class="w-4 h-4 text-amber-400 mb-0.5"></i>
+        <span>Cardápio</span>
+      </a>
+      <a href="https://wa.me/552125565323" target="_blank" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-emerald-700 text-white text-[11px] font-semibold min-h-[44px] shadow">
+        <i data-lucide="message-circle" class="w-4 h-4 mb-0.5"></i>
+        <span>WhatsApp</span>
+      </a>
+      <button onclick="toggleCart()" class="relative flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-amber-600 text-stone-950 font-bold text-[11px] min-h-[44px] shadow">
+        <i data-lucide="shopping-bag" class="w-4 h-4 mb-0.5"></i>
+        <span>Comanda</span>
+        <span id="mobile-cart-badge" class="absolute top-1 right-2 w-4 h-4 rounded-full bg-stone-950 text-amber-400 text-[9px] font-black flex items-center justify-center hidden">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- EMBEDDED COMPLETE DATA (ZERO FETCH REQUIRED) -->
+  <script>
+    const menuData = {
+  "restaurant": {
+    "name": "Restaurante Estação Largo do Machado",
+    "shortName": "Estação Largo do Machado",
+    "badge": "Tradição Carioca Desde 1966",
+    "historyYear": 1966,
+    "tagline": "O ponto de encontro mais tradicional e charmoso do Largo do Machado",
+    "description": "Situado na Rua Bento Lisboa, a poucos passos do Metrô do Largo do Machado. A autêntica gastronomia carioca e o chopp mais gelado da Zona Sul em um ambiente acolhedor, familiar e repleto de história viva.",
+    "razaoSocial": "BOTECO 184 LTDA",
+    "cnpj": "46.859.491/0001-21",
+    "address": {
+      "street": "Rua Bento Lisboa, 184",
+      "neighborhood": "Largo do Machado / Catete",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "cep": "22221-011",
+      "metroDistance": "A apenas 50m da estação de Metrô Largo do Machado"
+    },
+    "hours": {
+      "days": "Todos os dias (Segunda a Domingo)",
+      "time": "11:00 à 00:00 (Meia-noite)",
+      "executiveHours": "Executivos servidos diariamente durante todo o horário"
+    },
+    "contacts": {
+      "phone": "(21) 2556-5323",
+      "whatsappNumber": "552125565323",
+      "whatsappDisplay": "(21) 2556-5323",
+      "whatsappLink": "https://wa.me/552125565323?text=Ol%C3%A1,%20estou%20no%20Site%20do%20Restaurante%20Esta%C3%A7%C3%A3o%20Largo%20do%20Machado%20e%20quero%20fazer%20um%20pedido",
+      "instagram": "https://www.instagram.com/estacao184oficial/",
+      "instagramHandle": "@estacao184oficial",
+      "facebook": "https://www.facebook.com/Estacao184Oficial/",
+      "ifood": "https://www.ifood.com.br/delivery/rio-de-janeiro-rj/restaurante-estacao-largo-do-machado-184-catete/f85cd422-e059-4b90-b2a3-fd1ee9511e87",
+      "app99": "https://oia.99app.com/dlp9/KpHevh"
+    },
+    "googleReviews": {
+      "score": 4.8,
+      "totalReviews": 992,
+      "platform": "Google Avaliações",
+      "reviews": [
+        {
+          "author": "Fillipe Braga",
+          "date": "Fevereiro de 2025",
+          "rating": 5,
+          "comment": "Ótimo atendimento e comida muito boa. A feijoada e o filé à Oswaldo Aranha são impecáveis. Um dos melhores pontos do Largo do Machado!",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Lucía G.",
+          "date": "Fevereiro de 2025",
+          "rating": 5,
+          "comment": "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio.",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Carlos Eduardo Mendes",
+          "date": "Janeiro de 2025",
+          "rating": 5,
+          "comment": "Chopp Brahma estupidamente gelado e o bolinho de bacalhau crocante por fora e macio por dentro. Lugar clássico de boteco carioca de alta qualidade.",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Mariana Alencar",
+          "date": "Dezembro de 2024",
+          "rating": 5,
+          "comment": "O almoço executivo salva a rotina! Preço justo, pratos muito bem servidos e sabor caseiro de verdade. Atendimento nota 10.",
+          "source": "Google Reviews"
+        }
+      ]
+    },
+    "highlights": [
+      {
+        "icon": "Beer",
+        "title": "Chopp Trincando",
+        "subtitle": "Brahma tirado no ponto certo na tulipa e caldereta"
+      },
+      {
+        "icon": "UtensilsCrossed",
+        "title": "Executivos o Dia Todo",
+        "subtitle": "24 opções diárias com o melhor custo-benefício do bairro"
+      },
+      {
+        "icon": "Flame",
+        "title": "Tradição Desde 1966",
+        "subtitle": "Receitas consagradas como a Feijoada e Oswaldo Aranha"
+      },
+      {
+        "icon": "Bike",
+        "title": "Entrega nas Redondezas",
+        "subtitle": "Peça direto pelo WhatsApp ou pelos aplicativos parceiros"
+      }
+    ]
+  },
+  "categories": [
+    { "id": "todos", "name": "Todo o Cardápio", "count": 136, "badge": "Cardápio Completo" },
+    { "id": "executivos", "name": "Pratos Executivos", "count": 24, "badge": "Almoço & Jantar Diário", "description": "Refeições completas com fartura e excelente custo-benefício servidas todos os dias durante todo o horário." },
+    { "id": "especiais", "name": "Destaques & Tradição", "count": 2, "badge": "Assinaturas da Casa", "description": "A famosa Feijoada Completa e o imperdível Cozido à Portuguesa aos domingos." },
+    { "id": "carnes", "name": "Carnes Nobres & Grelhados", "count": 13, "badge": "Para 2 a 4 Pessoas", "description": "Cortes selecionados, guarnições fartas e preparo artesanal no ponto desejado." },
+    { "id": "peixes", "name": "Peixes & Frutos do Mar", "count": 7, "badge": "Frescor & Tradição", "description": "Bacalhau à Portuguesa, Salmão com Alcaparras, Camarões à Monte Carlo e pescados nobres." },
+    { "id": "aves", "name": "Aves & Frangos", "count": 4, "badge": "Clássicos Cariocas", "description": "Pratos fartos e dourados para compartilhar." },
+    { "id": "petiscos", "name": "Petiscos de Boteco & Chapas", "count": 17, "badge": "Para Beliscar", "description": "Pastéis sequinhos, bolinho de bacalhau, chapas borbulhantes e dadinhos de tapioca." },
+    { "id": "pizzas", "name": "Pizzas Artesanais", "count": 6, "badge": "Massa Crocante", "description": "Receitas tradicionais assadas no ponto com muçarela farta." },
+    { "id": "sanduiches", "name": "Sanduíches & Pães", "count": 4, "badge": "Pão Francês Crocante", "description": "Filé mignon, pernil com geleia de abacaxi e carne assada recheada." },
+    { "id": "drinks", "name": "Drinks Autorais & Históricos", "count": 24, "badge": "Carta Autoral", "description": "Coquetéis inspirados nas lendas e esquinas do Largo do Machado e Catete." },
+    { "id": "chopes", "name": "Chopes & Cervejas", "count": 9, "badge": "Estupidamente Geladas", "description": "Chopp Brahma cremoso, cervejas 600ml e rótulos selecionados." },
+    { "id": "vinhos", "name": "Vinhos & Destilados", "count": 22, "badge": "Rótulos Nobres", "description": "Tintos, brancos, espumantes premiados e doses especiais." },
+    { "id": "massas", "name": "Massas & Omeletes", "count": 6, "badge": "Comfort Food", "description": "Molhos artesanais italianos e omeletes fofinhos na hora." },
+    { "id": "vegetarianos", "name": "Vegetarianos", "count": 2, "badge": "Sem Carne", "description": "Opções nutritivas e aromáticas com cogumelos e risotos." },
+    { "id": "kids", "name": "Pratos Infantis", "count": 2, "badge": "Brasileirinhos", "description": "Pratinhos balanceados com arroz, feijão e fritas crocantes." },
+    { "id": "saladas", "name": "Saladas Frescas", "count": 5, "badge": "Leves & Naturais", "description": "Folhas selecionadas, palmito premium e molhos caseiros." },
+    { "id": "sopas", "name": "Sopas & Caldos", "count": 4, "badge": "Tigelas Quentes", "description": "Caldo verde, canja de galinha e caldinho de feijão na medida certa." },
+    { "id": "guarnicoes", "name": "Guarnições & Extras", "count": 11, "badge": "Acompanhamentos", "description": "Arroz à piamontese, farofa de ovos, batata portuguesa e muito mais." },
+    { "id": "bebidas", "name": "Bebidas Sem Álcool", "count": 6, "badge": "Refrescantes", "description": "Mate artesanal da casa, sucos naturais e sodas italianas." },
+    { "id": "sobremesas", "name": "Sobremesas Artesanais", "count": 8, "badge": "Final Doce", "description": "Pudim de leite, petit gâteau, torta alemã e creme de papaya." }
+  ],
+  "items": [
+    {
+      "id": "exec-01",
+      "name": "Oswaldinho",
+      "category": "executivos",
+      "price": 66.90,
+      "description": "Homenagem ao clássico carioca: corte nobre grelhado, servido com arroz branco solto, batata portuguesa fatiada crocante e alho frito dourado.",
+      "badge": "Mais Pedido",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-02",
+      "name": "Contrafilé Executivo",
+      "category": "executivos",
+      "price": 51.90,
+      "description": "Suculento contrafilé grelhado no ponto com arroz soltinho, batata portuguesa da casa e farofa simples temperada.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-03",
+      "name": "Alcatra à Campanha",
+      "category": "executivos",
+      "price": 42.90,
+      "description": "Bife de alcatra macio na chapa com arroz branco, batatas fritas douradas, farofa simples e molho à campanha fresco.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-04",
+      "name": "Carne Assada ao Molho Rôti",
+      "category": "executivos",
+      "price": 38.90,
+      "description": "Carne assada de panela desmanchando ao autêntico molho rôti com arroz branco e batata portuguesa.",
+      "badge": "Tradicional",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-05",
+      "name": "Picadinho Estação",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Clássico da boemia carioca: carne bovina em cubos refogada lentamente, arroz, feijão com sabor de mãe, farofa de banana e ovo frito com gema mole.",
+      "badge": "Ícone Carioca",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-06",
+      "name": "Carne Seca à Mineira",
+      "category": "executivos",
+      "price": 43.90,
+      "description": "Carne seca desfiada e puxada na cebola com arroz branco, couve fininha refogada e tutu de feijão aveludado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-07",
+      "name": "Carne de Sol Nordestina",
+      "category": "executivos",
+      "price": 49.90,
+      "description": "Carne de sol macia na manteiga de garrafa acompanhada de cremoso baião de dois e aipim frito sequinho.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-08",
+      "name": "Estrogonofe de Carne",
+      "category": "executivos",
+      "price": 48.90,
+      "description": "Tiras de carne bovina no molho cremoso de champignons com arroz branco e batata sauté na manteiga com ervas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-09",
+      "name": "Estrogonofe de Frango",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Filé de frango em cubos em molho suave e aveludado de champignons, arroz branco e batata sauté.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-10",
+      "name": "Frango Grelhado Light",
+      "category": "executivos",
+      "price": 39.90,
+      "description": "Peito de frango grelhado com tempero suave da casa, arroz branco e panachê colorido de legumes frescos no vapor.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-11",
+      "name": "Frango Crocante",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Filé de frango empanado com casquinha extra crocante, arroz fresquinho com brócolis e batata sauté.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-12",
+      "name": "Frango à Milanesa",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Peito de frango à milanesa douradinho, servido com arroz branco e batatas fritas crocantes.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-13",
+      "name": "Linguiça Fatiada à Campanha",
+      "category": "executivos",
+      "price": 29.90,
+      "description": "Linguiça calabresa especial fatiada e acebolada na chapa com arroz branco, farofa simples e batatas fritas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-14",
+      "name": "Fígado à Lisboeta",
+      "category": "executivos",
+      "price": 34.90,
+      "description": "Tiras de fígado acebolado refogadas com tomate, pimentão doce e batatas sauté ao estilo português.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-15",
+      "name": "Carré à Mineira",
+      "category": "executivos",
+      "price": 29.90,
+      "description": "Costeleta suína suculenta grelhada na chapa, servida com arroz branco, couve refogada e tutu de feijão.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-16",
+      "name": "Picanha Suína à Mineira",
+      "category": "executivos",
+      "price": 49.90,
+      "description": "Picanha suína macia dourada na chapa, arroz branco, couve refogada e tutu tradicional.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-17",
+      "name": "Filé de Truta Grelhada",
+      "category": "executivos",
+      "price": 60.90,
+      "description": "Filé de truta delicado grelhado na manteiga com arroz branco e batatas sauté aromáticas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-18",
+      "name": "Tilápia Grelhada",
+      "category": "executivos",
+      "price": 66.90,
+      "description": "Filé de tilápia fresco e grelhado com arroz branco e batatas sauté douradas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-19",
+      "name": "Filé de Peixe ao Molho de Camarão",
+      "category": "executivos",
+      "price": 46.90,
+      "description": "Pescado macio coberto por molho de tomates frescos e camarões selecionados com arroz branco e purê de batatas cremoso.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-20",
+      "name": "Risoto de Camarão Executivo",
+      "category": "executivos",
+      "price": 48.90,
+      "description": "Arroz cremoso envolto em caldo aromático de frutos do mar com camarões frescos, tomate e ervas finas.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-21",
+      "name": "Fetuccine com Camarões",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Massa longa al dente salteada com camarões frescos e envolta em molho bechamel cremoso e queijo gratinado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-22",
+      "name": "Nhoque ao Sugo com Carne Assada",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Nhoque de batata macio artesanal ao molho sugo de tomates com fatias generosas de carne assada suculenta.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-23",
+      "name": "Talharim à Parisiense",
+      "category": "executivos",
+      "price": 45.90,
+      "description": "Talharim caseiro com pedaços de frango desfiado, presunto, ervilhas frescas e molho bechamel gratinado com queijo parmesão.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-24",
+      "name": "Talharim à Bolonhesa",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Talharim com molho bolonhesa clássico apurado lentamente com carne moída selecionada e ervas.",
+      "serves": "1 pessoa"
+    },
+
+    {
+      "id": "esp-01",
+      "name": "Tradicional Feijoada do Largo do Machado",
+      "category": "especiais",
+      "price": 60.00,
+      "priceOptions": [
+        { "label": "Individual (1 pessoa)", "price": 60.00 },
+        { "label": "Completa (2 pessoas)", "price": 110.00 }
+      ],
+      "description": "A estrela do Catete desde 1966: feijão preto apurado com carnes nobres selecionadas (carne seca, lombo, costelinha, paio e calabresa), acompanhada de arroz branco solto, couve mineira refogada fininha, farofa de mandioca tostada na manteiga, torresmo pururuca sequinho e fatias de laranja fresca.",
+      "badge": "Tradição Desde 1966",
+      "popular": true,
+      "serves": "1 a 2 pessoas"
+    },
+    {
+      "id": "esp-02",
+      "name": "Cozido à Portuguesa (Especial de Domingo)",
+      "category": "especiais",
+      "price": 60.00,
+      "priceOptions": [
+        { "label": "Individual (1 pessoa)", "price": 60.00 },
+        { "label": "Completo (2 pessoas)", "price": 110.00 }
+      ],
+      "description": "Servido exclusivamente aos domingos. O autêntico cozido de tradição luso-carioca com carnes nobres, legumes variados cozidos no ponto no próprio caldo aromático e pirão aveludado artesanal.",
+      "badge": "Exclusivo Domingo",
+      "popular": true,
+      "serves": "1 a 2 pessoas"
+    },
+
+    {
+      "id": "carne-01",
+      "name": "Contrafilé à Gaúcha",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "Generoso corte de contrafilé grelhado no ponto com linguiça calabresa na brasa, servido com arroz branco, batata frita portuguesa e farofa de ovos.",
+      "badge": "Para Compartilhar",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-02",
+      "name": "Contrafilé à Paulista",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "Contrafilé grelhado coroado com ovo estrelado, cebola dourada na manteiga, chimichurri artesanal, feijão com caldo rico, arroz e batatas portuguesas.",
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-03",
+      "name": "Contrafilé à Oswaldo Aranha",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "O mais icônico prato carioca: contrafilé alto grelhado e coberto por alho frito dourado crocante, acompanhado de arroz solto, batatas portuguesas e farofa de ovos úmida.",
+      "badge": "Clássico Carioca",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-04",
+      "name": "Picanha à Campanha",
+      "category": "carnes",
+      "price": 185.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 185.90 },
+        { "label": "Para 3 pessoas", "price": 240.00 }
+      ],
+      "description": "Fatias nobres de picanha maturada com capa de gordura nobre grelhada, servidas com arroz, batatas portuguesas, farofa de ovos e molho à campanha refrescante.",
+      "badge": "Corte Nobre",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-05",
+      "name": "Picanha à Estação (Especial da Casa)",
+      "category": "carnes",
+      "price": 185.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 185.90 },
+        { "label": "Para 3 pessoas", "price": 260.00 }
+      ],
+      "description": "Picanha nobre grelhada servida com batata gratinada especial coberta com queijo muçarela derretido, bacon crocante e cebolinha, acompanhada de feijão tropeiro legítimo, batatas fritas, arroz e molho à campanha.",
+      "badge": "Assinatura da Casa",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-06",
+      "name": "Filé Mignon à Estação",
+      "category": "carnes",
+      "price": 190.00,
+      "description": "Medalhões de filé mignon grelhados, acompanhados de batatas gratinadas com queijo e bacon, feijão tropeiro, fritas crocantes, arroz branco e molho à campanha.",
+      "badge": "Especialidade",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-07",
+      "name": "Filé Mignon à Oswaldo Aranha",
+      "category": "carnes",
+      "price": 185.90,
+      "description": "Mignon alto e macio coberto por alho frito crocante na manteiga, acompanhado de arroz branco, batata portuguesa e farofa de ovos caprichada.",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-08",
+      "name": "Filé Mignon à Parmegiana",
+      "category": "carnes",
+      "price": 190.90,
+      "description": "Filé mignon empanado dourado, coberto com molho artesanal de tomates selecionados e camada farta de queijo muçarela gratinado no forno, servido com arroz branco e purê de batatas sedoso.",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-09",
+      "name": "Medalhão de Filé à Piamontese",
+      "category": "carnes",
+      "price": 190.90,
+      "description": "Medalhões altos de filé mignon grelhados ao aveludado molho madeira com champignons, acompanhados de autêntico arroz à piamontese cremoso e batatas portuguesas crocantes.",
+      "badge": "Mais Pedido",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-10",
+      "name": "Escalopinho de Filé Mignon",
+      "category": "carnes",
+      "price": 185.90,
+      "description": "Escalopes macios de filé ao molho madeira clássico com arroz à piamontese e batatas portuguesas.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-11",
+      "name": "Estrogonofe de Filé Mignon",
+      "category": "carnes",
+      "price": 180.90,
+      "description": "Filé mignon em tiras envolvido em creme especial de champignons flambados no conhaque, com arroz branco e batata sauté ou corada.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-12",
+      "name": "Churrasco Misto à Campanha",
+      "category": "carnes",
+      "price": 209.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 209.90 },
+        { "label": "Para 4 pessoas", "price": 292.00 }
+      ],
+      "description": "Fartura total: contrafilé, peito de frango, lombo suíno e linguiça artesanal grelhados na brasa, servidos com arroz, batatas fritas, farofa de ovos e molho à campanha.",
+      "badge": "Família & Amigos",
+      "popular": true,
+      "serves": "2 a 4 pessoas"
+    },
+    {
+      "id": "carne-13",
+      "name": "Picanha Suína à Mineira (Para Compartilhar)",
+      "category": "carnes",
+      "price": 125.90,
+      "description": "Corte suculento de picanha suína dourada, servida com arroz branco, tutu de feijão, farofa crocante de ovos e couve refogada no alho.",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "peixe-01",
+      "name": "Salmão Grelhado com Alcaparras & Camarões",
+      "category": "peixes",
+      "price": 159.90,
+      "description": "Posta de salmão grelhada regada ao molho de alcaparras, cogumelos frescos e camarões na manteiga, acompanhada de arroz com brócolis e panachê de legumes selecionados.",
+      "badge": "Sofisticado",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-02",
+      "name": "Filé de Pescada ao Molho de Camarão",
+      "category": "peixes",
+      "price": 134.90,
+      "description": "Pescada branca grelhada coberta por rico molho de camarões refogados com tomates e ervas, arroz branco e purê de batatas cremoso.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-03",
+      "name": "Filé de Peixe Colonial Gratinado",
+      "category": "peixes",
+      "price": 129.90,
+      "description": "Peixe nobre grelhado em leito de purê artesanal, camada generosa de molho bechamel, molho pomodoro e camarões frescos, gratinado ao forno.",
+      "badge": "Especialidade",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-04",
+      "name": "Filé de Tilápia Grelhada",
+      "category": "peixes",
+      "price": 132.90,
+      "description": "Filés frescos de tilápia com azeite e ervas na chapa, servidos com arroz branco e batatas sauté aromáticas.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-05",
+      "name": "Filé de Truta ao Belle Meunière",
+      "category": "peixes",
+      "price": 132.90,
+      "description": "Truta delicada grelhada com legumes ao molho Belle Meunière (manteiga, alcaparras, cogumelos e limão), com arroz de brócolis.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-06",
+      "name": "Bacalhau à Portuguesa Tradicional",
+      "category": "peixes",
+      "price": 170.90,
+      "description": "Lombo nobre de bacalhau cozido em azeite extravirgem com batatas cozidas, ovos cozidos, pimentões coloridos, cebola e azeitonas pretas portuguesas.",
+      "badge": "Tradição Lusa",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-07",
+      "name": "Camarões à Monte Carlo",
+      "category": "peixes",
+      "price": 136.90,
+      "description": "Camarões graúdos empanados em crosta dourada e gratinados com queijo, acompanhados de colorido arroz à grega.",
+      "badge": "Mais Pedido",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "ave-01",
+      "name": "Estrogonofe de Frango (Para Compartilhar)",
+      "category": "aves",
+      "price": 114.90,
+      "description": "Generosa porção de cubos de peito de frango em molho cremoso com cogumelos, arroz branco e batata sauté ou corada.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-02",
+      "name": "Frango à Parmegiana ou à Cubana",
+      "category": "aves",
+      "price": 114.90,
+      "description": "Filé de frango à parmegiana gratinado com queijo ou versão à cubana com batata palha, palmito, bacon crocante, cebola e toque de pimenta suave.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-03",
+      "name": "Frango à Campanha",
+      "category": "aves",
+      "price": 124.90,
+      "description": "Filés de frango grelhados acompanhados de arroz branco, batatas portuguesas da casa, farofa de ovos e molho à campanha refrescante.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-04",
+      "name": "Filé de Frango Crocante",
+      "category": "aves",
+      "price": 124.90,
+      "description": "Frango empanado crocante dourado com arroz verde de brócolis e batatas portuguesas fatiadas.",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "pet-01",
+      "name": "Batata Frita Especial (Palito ou Portuguesa)",
+      "category": "petiscos",
+      "price": 40.00,
+      "description": "Porção gigante de batatas cortadas na casa, crocantes por fora e macias por dentro com sal na medida.",
+      "badge": "Clássico",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-02",
+      "name": "Gurjão de Frango com Molho Tártaro",
+      "category": "petiscos",
+      "price": 55.00,
+      "description": "Tiras macias de peito de frango empanadas com casquinha crocante, acompanhadas de molho tártaro artesanal.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-03",
+      "name": "Gurjão de Peixe Branco",
+      "category": "petiscos",
+      "price": 69.90,
+      "description": "Iscas de peixe branco fresco empanadas no ponto perfeito com molho tártaro e limão galego.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-04",
+      "name": "Pernil Folhado na Chapa com Pão de Alho",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Fatias finas de pernil assado acebolado na chapa borbulhante no seu próprio molho de cozimento, acompanhado de fatias de pão de alho crocante.",
+      "badge": "Especial da Casa",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-05",
+      "name": "Frango à Passarinho Crocante",
+      "category": "petiscos",
+      "price": 52.90,
+      "priceOptions": [
+        { "label": "Meia Porção", "price": 49.00 },
+        { "label": "Porção Inteira", "price": 52.90 }
+      ],
+      "description": "Pedaços suculentos de frango fritos no ponto, salpicados com alho frito dourado crocante e salsinha fresca.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-06",
+      "name": "Batatas Estação 184 Gratinadas",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Batatas fritas cobertas por farta linguiça calabresa acebolada e queijo muçarela derretido e gratinado na hora.",
+      "badge": "Campeão de Vendas",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-07",
+      "name": "Carne Assada com Torradas no Azeite",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Fatias de carne assada desmanchando com seu molho aromático de cozimento, servidas com cesta de torradas douradas no azeite.",
+      "serves": "2 pessoas"
+    },
+    {
+      "id": "pet-08",
+      "name": "Estação Chapa Quente",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Chapa fumegante de ferro fundido com tiras de alcatra nobre acebolada, linguiça artesanal, batatas fritas crocantes e pão de alho tostado.",
+      "badge": "Para Compartilhar",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-09",
+      "name": "Estação Terrinha Nordestina",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Chapa fervente com autêntica carne de sol puxada na manteiga de garrafa, aipim frito derretendo de tão macio e queijo coalho tostado com orégano.",
+      "badge": "Favorito da Casa",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-10",
+      "name": "Estação Turbinada (Frutos do Mar & Sertão)",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Combinação espetacular: camarão à paulista no alho e óleo, queijo coalho grelhado, aipim frito crocante e carne seca acebolada na manteiga.",
+      "badge": "Assinatura Boteco",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-11",
+      "name": "Chapa 'Pra Galera' Super Completa",
+      "category": "petiscos",
+      "price": 138.90,
+      "description": "A maior fartura do Largo do Machado: mix grelhado de alcatra nobre, lombinho suíno, peito de frango e linguiça calabresa, acompanhado de molho à campanha refrescante e farofa de ovos úmida.",
+      "badge": "Mesa Farta",
+      "popular": true,
+      "serves": "4 a 6 pessoas"
+    },
+    {
+      "id": "pet-12",
+      "name": "Dadinho de Tapioca com Geleia de Pimenta",
+      "category": "petiscos",
+      "price": 40.90,
+      "description": "Cubinhos dourados de tapioca e queijo coalho crocantes por fora e cremosos por dentro, servidos com geleia de pimenta agridoce.",
+      "badge": "Vegetariano",
+      "dietary": "Vegetariano",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-13",
+      "name": "Pastel Artesanal de Carne ou Queijo (Unidade)",
+      "category": "petiscos",
+      "price": 11.00,
+      "description": "Massa crocante com bolhas sequinhas, recheada generosamente com carne moída bem temperada ou queijo muçarela derretendo.",
+      "badge": "Frito na Hora"
+    },
+    {
+      "id": "pet-14",
+      "name": "Pastel de Camarão ou Camarão com Catupiry (Unidade)",
+      "category": "petiscos",
+      "price": 12.00,
+      "description": "Pastel crocante recheado com refogado farto de camarões frescos e toque opcional de Catupiry legítimo cremoso.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "pet-15",
+      "name": "Croquete do Alemão (Unidade)",
+      "category": "petiscos",
+      "price": 11.50,
+      "description": "Receita clássica de carne cozida desfiada com tempero especial alemão, empanado fininho e crocante.",
+      "badge": "Tradição"
+    },
+    {
+      "id": "pet-16",
+      "name": "Bolinho de Bacalhau Legítimo (Unidade)",
+      "category": "petiscos",
+      "price": 12.50,
+      "description": "Feito à mão com alto teor de bacalhau nobre desfiado e batata selecionada, dourado e sequinho por fora, macio por dentro.",
+      "badge": "Receita de 1966",
+      "popular": true
+    },
+    {
+      "id": "pet-17",
+      "name": "Bolinho de Feijoada Carioca (Unidade)",
+      "category": "petiscos",
+      "price": 12.50,
+      "description": "Massa de feijão preto temperada com carnes nobres recheada com couve refogada no alho e bacon.",
+      "badge": "Carioca Raiz",
+      "popular": true
+    },
+
+    { "id": "piz-01", "name": "Pizza Portuguesa Tradicional", "category": "pizzas", "price": 59.90, "description": "Molho de tomate artesanal, queijo muçarela farto, presunto magro, rodelas de ovos, cebola, ervilha e azeitonas pretas.", "popular": true },
+    { "id": "piz-02", "name": "Pizza Calabresa Acebolada", "category": "pizzas", "price": 54.90, "description": "Molho caseiro, muçarela, linguiça calabresa fatiada crocante, rodelas de cebola fresca e orégano chileno.", "popular": true },
+    { "id": "piz-03", "name": "Pizza Muçarela Clássica", "category": "pizzas", "price": 47.90, "description": "Molho de tomate temperado, dupla camada de queijo muçarela de primeira linha, azeitonas e orégano." },
+    { "id": "piz-04", "name": "Pizza Marguerita Especial", "category": "pizzas", "price": 54.90, "description": "Molho artesanal, muçarela derretida, rodelas de tomate fresco, queijo parmesão ralado e manjericão fresco." },
+    { "id": "piz-05", "name": "Pizza Frango com Catupiry", "category": "pizzas", "price": 59.90, "description": "Peito de frango desfiado temperado, muçarela, generosas tiras de Catupiry original cremoso e orégano.", "popular": true },
+    { "id": "piz-06", "name": "Pizza Doce de Banana com Canela", "category": "pizzas", "price": 49.90, "description": "Massa crocante com muçarela suave, fatias de banana prata caramelizadas, açúcar cristal e canela aromática em pó." },
+
+    { "id": "sand-01", "name": "Sanduíche de Filé Mignon com Queijo", "category": "sanduiches", "price": 42.00, "description": "Fatias nobres de filé mignon grelhado na manteiga, queijo derretido abundante e toque de molho de alho suave no pão crocante.", "popular": true },
+    { "id": "sand-02", "name": "Sanduíche de Frango Crocante Especial", "category": "sanduiches", "price": 35.00, "description": "Filé de frango empanado crocante, queijo muçarela, alface fresca e rodelas de tomate no pão fresquinho." },
+    { "id": "sand-03", "name": "Sanduíche de Pernil com Geleia de Abacaxi", "category": "sanduiches", "price": 31.00, "description": "Pernil desfiado suculento assado lentamente com tempero especial e geleia artesanal agridoce de abacaxi.", "badge": "Toque Autoral", "popular": true },
+    { "id": "sand-04", "name": "Sanduíche de Carne Assada com Queijo", "category": "sanduiches", "price": 31.00, "description": "Carne assada da panela no seu molho rôti com queijo muçarela derretido no pão francês crocante." },
+
+    {
+      "id": "drk-01",
+      "name": "Machado de Assis",
+      "category": "drinks",
+      "price": 31.00,
+      "description": "Homenagem ao bruxo do Cosme Velho: Amoras frescas maceradas, xarope de rosas nobre, toque sutil de tabasco, Gin Beefeater Rosê, água tônica e finalizado com espuma artesanal aveludada de morango.",
+      "badge": "Assinatura Autoral",
+      "popular": true
+    },
+    {
+      "id": "drk-02",
+      "name": "Aterro do Flamengo",
+      "category": "drinks",
+      "price": 32.00,
+      "description": "Inspirado na brisa da Baía de Guanabara: Gin Beefeater, licor de pêssego, xarope artesanal de maracujá, espumante brut geladíssimo e finalizado com espuma refrescante de gengibre.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "drk-03",
+      "name": "Clarisse Índio do Brasil",
+      "category": "drinks",
+      "price": 32.00,
+      "description": "Morangos frescos, xarope de hibisco rubi, Gin Beefeater Cítrico, água tônica gelada e espuma aromática de gengibre.",
+      "badge": "Autoral"
+    },
+    {
+      "id": "drk-04",
+      "name": "Rua das Laranjeiras 'Cássia Eller'",
+      "category": "drinks",
+      "price": 31.00,
+      "description": "Polpa fresca de maracujá, xarope aromático de manga, Gin Beefeater Tropical, água tônica e cremosa espuma brasileira de rapadura.",
+      "badge": "Homenagem Carioca",
+      "popular": true
+    },
+    {
+      "id": "drk-05",
+      "name": "Lia Corrêa Dutra",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Coquetel vibrante com morangos frescos macerados, abacaxi doce da estação e toque floral de xarope de hibisco.",
+      "badge": "Autoral"
+    },
+    {
+      "id": "drk-06",
+      "name": "São Salvador",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Em referência à famosa praça vizinha: amoras silvestres, morango, gota sutil de tabasco e xarope de açúcar.",
+      "badge": "Praça São Salvador"
+    },
+    {
+      "id": "drk-07",
+      "name": "Moscow Mule Clássico da Estação",
+      "category": "drinks",
+      "price": 30.00,
+      "description": "Vodka premium, suco de limão taiti fresco espremido na hora, xarope caseiro de gengibre picante e espuma densa de gengibre na canequinha de cobre.",
+      "popular": true
+    },
+    {
+      "id": "drk-08",
+      "name": "Negroni Perfeito",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Campari italiano, vermouth rosso selecionado e Gin Beefeater londrino na proporção áurea com casca de laranja bahia.",
+      "popular": true
+    },
+    {
+      "id": "drk-09",
+      "name": "Aperol Spritz",
+      "category": "drinks",
+      "price": 30.00,
+      "description": "Aperol italiano, espumante brut nacional, água com gás e fatia de laranja fresca servido na taça bojuda com bastante gelo.",
+      "popular": true
+    },
+    {
+      "id": "drk-10",
+      "name": "Mojito Cubano",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Folhas frescas de hortelã maceradas, suco de limão taiti, rum branco caribenho, xarope simples e toque de soda borbulhante."
+    },
+    {
+      "id": "drk-11",
+      "name": "Sex on the Beach",
+      "category": "drinks",
+      "price": 28.00,
+      "description": "Vodka, licor doce de pêssego, xarope de morango rubi e suco fresco de laranja da terra."
+    },
+    {
+      "id": "drk-12",
+      "name": "Brasil Smash",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Folhas de manjericão fresco da horta maceradas com Gin Beefeater, suco de limão e xarope de açúcar."
+    },
+    {
+      "id": "drk-13",
+      "name": "Gin Tônica Beefeater",
+      "category": "drinks",
+      "price": 28.00,
+      "description": "Gin Beefeater London Dry com água tônica clássica e fatias de limão siciliano ou zimbro."
+    },
+    {
+      "id": "drk-14",
+      "name": "Gin Tônica Importado Super Premium",
+      "category": "drinks",
+      "price": 37.00,
+      "description": "Rótulos internacionais de gin premium preparados com botânicos selecionados e água tônica especial."
+    },
+    {
+      "id": "drk-15",
+      "name": "Piña Colada Cremosa",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Rum branco, leite de coco espesso, leite condensado e suco natural de abacaxi batidos com gelo."
+    },
+    {
+      "id": "drk-16",
+      "name": "Whisky Sour",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Whisky escocês, suco de limão fresco e xarope de açúcar batidos vigorosamente na coqueteleira."
+    },
+    {
+      "id": "drk-17",
+      "name": "Kir Imperial",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Licor francês de cassis com vinho branco Mosteiro gelado."
+    },
+    {
+      "id": "drk-18",
+      "name": "Batida da Casa (Limão ou Maracujá)",
+      "category": "drinks",
+      "price": 8.00,
+      "description": "A clássica batidinha carioca de balcão de boteco: cachaça selecionada, fruta natural e leite condensado cremoso.",
+      "badge": "Clássico Boteco",
+      "popular": true
+    },
+    {
+      "id": "drk-19",
+      "name": "Caipirinha Tradicional de Cachaça",
+      "category": "drinks",
+      "price": 22.00,
+      "description": "Limão taiti fresco macerado com açúcar e cachaça da casa com bastante gelo."
+    },
+    {
+      "id": "drk-20",
+      "name": "Caipirinha com Cachaça Seleta",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Cachaça Seleta mineira envelhecida em tonéis de umburana com limão e açúcar."
+    },
+    {
+      "id": "drk-21",
+      "name": "Caipivodka Nacional / Absolut",
+      "category": "drinks",
+      "price": 27.00,
+      "priceOptions": [
+        { "label": "Nacional (Smirnoff)", "price": 27.00 },
+        { "label": "Importada (Vodka Absolut)", "price": 31.00 }
+      ],
+      "description": "Vodka com frutas frescas à sua escolha: limão, morango, abacaxi ou maracujá."
+    },
+    {
+      "id": "drk-22",
+      "name": "Clericot Jarra Especial (700ml)",
+      "category": "drinks",
+      "price": 50.00,
+      "priceOptions": [
+        { "label": "Com Vinho Branco", "price": 50.00 },
+        { "label": "Com Espumante Brut", "price": 60.00 }
+      ],
+      "description": "Jarra para compartilhar com frutas frescas picadas da época, Domecq, licor fino de pêssego, toque de soda e vinho branco ou espumante.",
+      "badge": "Jarra 700ml"
+    },
+    {
+      "id": "drk-23",
+      "name": "Marquesa de Santos (Mocktail / Sem Álcool)",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Drink doce sem álcool delicioso: café expresso encorpado, sorvete artesanal de baunilha e borda generosa de Nutella pura.",
+      "badge": "Sem Álcool",
+      "popular": true
+    },
+    {
+      "id": "drk-24",
+      "name": "Ice Tea Artesanal com Espuma de Rapadura",
+      "category": "drinks",
+      "price": 12.00,
+      "description": "Chá gelado da casa com opções de sabores (morango, maracujá, manga, maçã verde ou limão siciliano), coberto com espuma de rapadura.",
+      "badge": "Sem Álcool"
+    },
+
+    {
+      "id": "chopp-01",
+      "name": "Chopp Brahma Geladíssimo na Tulipa",
+      "category": "chopes",
+      "price": 10.90,
+      "description": "O mais tradicional chopp do Largo do Machado, tirado com colarinho cremoso de dois dedos na tulipa resfriada.",
+      "badge": "Tradição 1966",
+      "popular": true
+    },
+    {
+      "id": "chopp-02",
+      "name": "Chopp Brahma na Caldereta",
+      "category": "chopes",
+      "price": 10.90,
+      "description": "Chopp Brahma gelado servido no copo caldereta para beber com os amigos.",
+      "popular": true
+    },
+    {
+      "id": "chopp-03",
+      "name": "Cerveja Spaten (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 17.00,
+      "description": "A puro malte de Munique servida trincando de gelada com balde de gelo.",
+      "badge": "600ml Geladíssima",
+      "popular": true
+    },
+    {
+      "id": "chopp-04",
+      "name": "Cerveja Original (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 17.00,
+      "description": "A clássica pilsen brasileira de garrafa, amada em todos os botecos do Rio de Janeiro.",
+      "popular": true
+    },
+    {
+      "id": "chopp-05",
+      "name": "Cerveja Stella Artois (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 19.00,
+      "description": "Lager premium belga leve e sofisticada na garrafa de 600ml."
+    },
+    {
+      "id": "chopp-06",
+      "name": "Stella Artois Long Neck",
+      "category": "chopes",
+      "price": 14.00,
+      "description": "Long neck clássica servida estupidamente gelada."
+    },
+    {
+      "id": "chopp-07",
+      "name": "Stella Artois Sem Glúten (Long Neck)",
+      "category": "chopes",
+      "price": 14.00,
+      "description": "Todo o sabor inconfundível de Stella Artois na versão especial sem glúten.",
+      "dietary": "Sem Glúten"
+    },
+    {
+      "id": "chopp-08",
+      "name": "Corona Extra",
+      "category": "chopes",
+      "price": 15.00,
+      "description": "Cerveja mexicana refrescante servida com a clássica fatia de limão no gargalo."
+    },
+    {
+      "id": "chopp-09",
+      "name": "Corona Cero (Zero Álcool)",
+      "category": "chopes",
+      "price": 15.00,
+      "description": "A mesma refrescância de Corona com zero teor alcoólico.",
+      "badge": "Zero Álcool"
+    },
+
+    {
+      "id": "vin-01",
+      "name": "Dona Vitória Premium (Tinto)",
+      "category": "vinhos",
+      "price": 145.00,
+      "description": "Origem: Portugal, Região do Alentejo. Uvas: Aragonês, Syrah e Trincadeira. Perfeito para harmonizar com carnes suculentas, picanha e cortes grelhados densos.",
+      "badge": "Vinho Tinto Premium"
+    },
+    {
+      "id": "vin-02",
+      "name": "Seival Tempranillo (Tinto)",
+      "category": "vinhos",
+      "price": 79.00,
+      "description": "Origem: Brasil, Campanha Gaúcha. Uva: Tempranillo. Notas frutadas que harmonizam com carnes e massas.",
+      "badge": "Nacional Selecionado"
+    },
+    {
+      "id": "vin-03",
+      "name": "Viejo Feo Reserva Carmenere (Tinto)",
+      "category": "vinhos",
+      "price": 139.00,
+      "description": "Origem: Chile, Vale do Maule. Uva: Carmenere. Estruturado e aveludado, ideal para carnes assadas e feijoada."
+    },
+    {
+      "id": "vin-04",
+      "name": "El Supremo Malbec (Tinto)",
+      "category": "vinhos",
+      "price": 110.00,
+      "description": "Origem: Argentina, Mendoza. Uva: Malbec. Taninos redondos com notas de ameixa e especiarias doces."
+    },
+    {
+      "id": "vin-05",
+      "name": "Júlia Florista (Tinto)",
+      "category": "vinhos",
+      "price": 99.00,
+      "description": "Origem: Portugal, Lisboa. Uvas: Castelão e Aragonês. Vinho versátil e gastronômico que harmoniza desde bolinho de bacalhau até carnes magras e frangos."
+    },
+    {
+      "id": "vin-06",
+      "name": "El Supremo Blend (Branco)",
+      "category": "vinhos",
+      "price": 79.00,
+      "description": "Origem: Argentina, Mendoza. Uvas: Chenin Blanc e Pedro Ximenez. Fresco e aromático, excelente para saladas, entradas e peixes fritos.",
+      "badge": "Vinho Branco"
+    },
+    {
+      "id": "vin-07",
+      "name": "Viejo Feo Reserva Chardonnay (Branco)",
+      "category": "vinhos",
+      "price": 129.00,
+      "description": "Origem: Chile, Vale do Maule. Uva: Chardonnay. Mineralidade e elegância para acompanhar frutos do mar e salmão."
+    },
+    {
+      "id": "vin-08",
+      "name": "Altís Vinho Verde DOC (Branco)",
+      "category": "vinhos",
+      "price": 139.00,
+      "description": "Origem: Portugal, Região do Minho. Uvas: Loureiro, Arinto e Trajadura. Leve agulha refrescante, par perfeito para bacalhau e petiscos de praia.",
+      "badge": "Vinho Verde DOC"
+    },
+    {
+      "id": "vin-09",
+      "name": "Espumante Chandon Brut",
+      "category": "vinhos",
+      "price": 189.00,
+      "description": "Origem: Garibaldi, Serra Gaúcha. Uvas: Chardonnay, Riesling Itálico e Pinot Noir. Elegante, borbulhas finas para brindar ocasiões especiais.",
+      "badge": "Espumante Brut"
+    },
+    {
+      "id": "vin-10",
+      "name": "Espumante Terra Nova Brut Rosé",
+      "category": "vinhos",
+      "price": 119.00,
+      "description": "Origem: Vale do São Francisco. Uva: Grenache. Aromas florais e de frutas vermelhas frescas."
+    },
+    {
+      "id": "vin-11",
+      "name": "Taça de Vinho Mosteiro da Casa",
+      "category": "vinhos",
+      "price": 15.00,
+      "description": "Taça de vinho tinto da casa servido na temperatura ideal."
+    },
+    { "id": "dest-01", "name": "Whisky Johnnie Walker Red Label (Dose)", "category": "vinhos", "price": 26.00, "description": "Clássico whisky escocês blended." },
+    { "id": "dest-02", "name": "Whisky Johnnie Walker Black Label 12 Anos (Dose)", "category": "vinhos", "price": 30.00, "description": "Whisky 12 anos complexo e defumado." },
+    { "id": "dest-03", "name": "Whisky Black & White (Dose)", "category": "vinhos", "price": 20.00, "description": "Whisky suave e equilibrado." },
+    { "id": "dest-04", "name": "Vodka Absolut Importada (Dose)", "category": "vinhos", "price": 27.00, "description": "Vodka sueca pura e aveludada." },
+    { "id": "dest-05", "name": "Tequila José Cuervo (Dose)", "category": "vinhos", "price": 24.00, "description": "Dose de tequila mexicana com limão e sal." },
+    { "id": "dest-06", "name": "Cachaças Premium Artesanais (Dose)", "category": "vinhos", "price": 14.00, "description": "Doses selecionadas de cachaças envelhecidas em madeiras nobres brasileiras." },
+    { "id": "dest-07", "name": "Licores Finos (Dose)", "category": "vinhos", "price": 23.00, "description": "Digestivos e licores selecionados para finalizar a refeição." },
+
+    { "id": "veg-01", "name": "Risoto de Tomate Seco & Manjericão", "category": "vegetarianos", "price": 38.90, "description": "Arroz cremoso aromatizado com tomates secos nobres, manjericão fresco colhido e queijo parmesão ralado na hora.", "badge": "Vegetariano", "dietary": "Vegetariano", "serves": "1 pessoa" },
+    { "id": "veg-02", "name": "Estrogonofe de Cogumelos", "category": "vegetarianos", "price": 38.90, "description": "Mix de cogumelos frescos e abobrinha em molho de estrogonofe cremoso, acompanhado de arroz com castanhas e batatas portuguesas.", "badge": "Vegetariano", "dietary": "Vegetariano", "serves": "1 pessoa" },
+
+    { "id": "kids-01", "name": "Brasileirinho de Frango (Kids)", "category": "kids", "price": 29.00, "description": "Filézinho de frango grelhado ou empanado em tirinhas, arroz branquinho, feijão com sabor caseiro e batatinhas fritas.", "badge": "Menu Kids", "serves": "1 criança" },
+    { "id": "kids-02", "name": "Brasileirinho de Filé (Kids)", "category": "kids", "price": 39.00, "description": "Tirinhas macias de filé mignon grelhado na manteiga, arroz branco, feijãozinho e batatas fritas crocantes.", "badge": "Menu Kids", "serves": "1 criança" },
+
+    { "id": "massa-01", "name": "Massa ao Molho Pomodoro Clássico", "category": "massas", "price": 40.90, "description": "Massa al dente com molho caseiro de tomates frescos, azeite extravirgem, alho e folhas de manjericão fresco.", "serves": "1 pessoa" },
+    { "id": "massa-02", "name": "Massa à Bolonhesa Tradicional", "category": "massas", "price": 40.90, "description": "Massa italiana com molho de carne moída selecionada cozida lentamente com vinho tinto, tomate e ervas finas.", "serves": "1 pessoa" },
+    { "id": "massa-03", "name": "Massa aos Quatro Queijos", "category": "massas", "price": 40.90, "description": "Molho aveludado e cremoso elaborado com gorgonzola, muçarela, provolone e parmesão gratinado.", "serves": "1 pessoa" },
+    { "id": "omelete-01", "name": "Omelete de Queijo", "category": "massas", "price": 32.90, "description": "Omelete fofinho e dourado com queijo derretido abundante, acompanhado de salada ou guarnição.", "serves": "1 pessoa" },
+    { "id": "omelete-02", "name": "Omelete Misto", "category": "massas", "price": 32.90, "description": "Ovos caipiras batidos e recheados com presunto cozido magro e queijo muçarela derretendo.", "serves": "1 pessoa" },
+    { "id": "omelete-03", "name": "Omelete de Legumes", "category": "massas", "price": 32.90, "description": "Omelete leve preparado com seleção de legumes salteados na manteiga e cheiro verde.", "serves": "1 pessoa" },
+
+    { "id": "salada-01", "name": "Salada Mista Completa", "category": "saladas", "price": 48.90, "description": "Alface crespa, tomate fresco, palmito nobre em rodelas, cebola, azeitonas e ovos cozidos.", "serves": "Para compartilhar" },
+    { "id": "salada-02", "name": "Salada de Palmito Nobre", "category": "saladas", "price": 50.90, "description": "Porção farta de palmito pupunha macio e saboroso com azeite extravirgem e orégano.", "serves": "Para compartilhar" },
+    { "id": "salada-03", "name": "Salada Verde", "category": "saladas", "price": 35.90, "description": "Mix crocante de folhas verdes da estação com azeite e vinagre balsâmico.", "serves": "1 a 2 pessoas" },
+    { "id": "salada-04", "name": "Salada Tradicional", "category": "saladas", "price": 35.90, "description": "Alface americana crocante, rodelas de tomate caqui e cebola roxa fininha.", "serves": "1 a 2 pessoas" },
+    { "id": "salada-05", "name": "Salada Estação 184", "category": "saladas", "price": 34.90, "description": "Receita exclusiva da casa combinando folhas selecionadas, queijo em cubos e molho suave especial.", "serves": "1 a 2 pessoas" },
+
+    {
+      "id": "sopa-01",
+      "name": "Canja de Galinha Tradicional",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Canja reconfortante com frango desfiado, legumes picadinhos e arroz cozido no caldo aromatizado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-02",
+      "name": "Caldo Verde com Calabresa",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Autêntico caldo português espesso de batatas com couve fininha e rodelas de linguiça calabresa frita.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-03",
+      "name": "Caldo de Feijão Amigo",
+      "category": "sopas",
+      "price": 20.00,
+      "priceOptions": [
+        { "label": "Pequeno (300ml)", "price": 20.00 },
+        { "label": "Grande (500ml)", "price": 30.00 }
+      ],
+      "description": "O lendário caldinho de feijão de boteco carioca batido com alho, servido com cheiro verde e torresminho.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-04",
+      "name": "Sopa de Legumes da Vovó",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Sopa quentinha e aveludada com batatas, cenouras, chuchu e ervas aromáticas frescas.",
+      "serves": "1 pessoa"
+    },
+
+    { "id": "guar-01", "name": "Arroz Branco ou Feijão", "category": "guarnicoes", "price": 22.00, "description": "Porção caprichada de arroz agulhinha solto ou feijão carioca temperado no alho." },
+    { "id": "guar-02", "name": "Arroz com Brócolis", "category": "guarnicoes", "price": 28.00, "description": "Arroz refogado no azeite com brócolis frescos picados e alho dourado." },
+    { "id": "guar-03", "name": "Arroz à Grega", "category": "guarnicoes", "price": 28.00, "description": "Arroz soltinho com passas, cenoura em cubinhos, pimentões e ervilhas." },
+    { "id": "guar-04", "name": "Arroz com Passas", "category": "guarnicoes", "price": 28.00, "description": "Arroz branco salteado na manteiga com uvas passas doces." },
+    { "id": "guar-05", "name": "Arroz Maluco Carioca", "category": "guarnicoes", "price": 34.00, "description": "Arroz com bacon crocante, ovos mexidos, presunto, cebolinha e batata palha." },
+    { "id": "guar-06", "name": "Arroz à Piamontese Cremoso", "category": "guarnicoes", "price": 35.00, "description": "Arroz envolto em creme de leite fresco, champignons e queijo muçarela derretido." },
+    { "id": "guar-07", "name": "Farofa à Brasileira", "category": "guarnicoes", "price": 28.00, "description": "Farinha de mandioca torrada com manteiga, cebola douradinha e bacon." },
+    { "id": "guar-08", "name": "Farofa de Ovos Caipiras", "category": "guarnicoes", "price": 28.00, "description": "Farofa úmida com pedaços graúdos de ovos mexidos e cheiro verde." },
+    { "id": "guar-09", "name": "Farofa de Banana", "category": "guarnicoes", "price": 28.00, "description": "Farofa agridoce com rodelas de banana fritas na manteiga de primeira." },
+    { "id": "guar-10", "name": "Guarnição à Francesa", "category": "guarnicoes", "price": 35.00, "description": "Batata palha crocante salteada com presunto em tiras, cebola fininha e ervilhas na manteiga." },
+    { "id": "guar-11", "name": "Guarnição à Mineira", "category": "guarnicoes", "price": 29.00, "description": "Couve fininha refogada no alho, farofa temperada e tutu de feijão." },
+
+    { "id": "beb-01", "name": "Água Mineral (Com ou Sem Gás)", "category": "bebidas", "price": 7.00, "description": "Garrafa 300ml geladinha." },
+    { "id": "beb-02", "name": "Refrigerante Lata", "category": "bebidas", "price": 9.00, "description": "Coca-Cola, Coca Zero, Guaraná Antarctica, Sprite ou Schweppes Tônica." },
+    { "id": "beb-03", "name": "H2OH! Limão", "category": "bebidas", "price": 11.00, "description": "Garrafa 500ml gelada." },
+    { "id": "beb-04", "name": "Suco Natural da Fruta (Copo 300ml)", "category": "bebidas", "price": 15.00, "description": "Fruta fresca espremida na hora: Laranja, Limão, Abacaxi, Maracujá ou Melancia." },
+    { "id": "beb-05", "name": "Suco Natural da Fruta (Jarra 700ml)", "category": "bebidas", "price": 30.00, "description": "Jarra servindo até 3 pessoas com suco natural refrescante." },
+    { "id": "beb-06", "name": "Mate Artesanal da Casa (Limão ou Natural)", "category": "bebidas", "price": 9.90, "description": "O legítimo mate tostado carioca com toque de limão fresco da casa.", "badge": "Carioca Raiz", "popular": true },
+
+    {
+      "id": "sob-01",
+      "name": "Brownie Quente com Sorvete de Baunilha",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Brownie macio de puro chocolate meio amargo servido quente, acompanhado de bola de sorvete de baunilha e calda de chocolate.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "sob-02",
+      "name": "Pudim de Leite Condensado Lisinho",
+      "category": "sobremesas",
+      "price": 13.00,
+      "description": "Fatia caprichada de pudim tradicional sem furinhos, textura sedosa e calda de caramelo dourado da casa.",
+      "badge": "Receita Tradicional",
+      "popular": true
+    },
+    {
+      "id": "sob-03",
+      "name": "Mousse de Chocolate Artesanal",
+      "category": "sobremesas",
+      "price": 14.00,
+      "description": "Mousse aerada e densa com raspas finas de chocolate nobre."
+    },
+    {
+      "id": "sob-04",
+      "name": "Torta Alemã Clássica",
+      "category": "sobremesas",
+      "price": 18.00,
+      "description": "Camadas crocantes de biscoito embebido com creme aveludado e cobertura farta de ganache de chocolate."
+    },
+    {
+      "id": "sob-05",
+      "name": "Petit Gâteau com Sorvete",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Bolinho de chocolate com recheio cremoso que escorre ao cortar, servido com sorvete de creme e hortelã."
+    },
+    {
+      "id": "sob-06",
+      "name": "Creme de Papaya com Licor de Cassis",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Mamão papaya batido na hora com sorvete de baunilha e coroado com fio do autêntico licor francês de cassis.",
+      "badge": "Clássico Anos 90",
+      "popular": true
+    },
+    {
+      "id": "sob-07",
+      "name": "Sorvete Artesanal (1 Bola)",
+      "category": "sobremesas",
+      "price": 13.00,
+      "description": "Sabores disponíveis: Creme, Chocolate ou Morango."
+    },
+    {
+      "id": "sob-08",
+      "name": "Sorvete Artesanal (2 Bolas)",
+      "category": "sobremesas",
+      "price": 17.00,
+      "description": "Duas bolas generosas com calda à sua escolha."
+    }
+  ]
+};
+
+    let cart = [];
+    let activeCat = 'todos';
+    let activeTag = 'all';
+
+    let feijSize = 'ind';
+    let cozSize = 'ind';
+
+    const galleryData = [
+      { src: './public/images/fachada.jpg', title: 'A Tradicional Esquina da Bento Lisboa', sub: 'Mesas acolhedoras, clima clássico de boteco e chopp estupidamente gelado.' },
+      { src: './public/images/banner-1.jpg', title: 'Gastronomia Afetiva Carioca', sub: 'Carnes nobres na brasa, feijoada completa, pescados frescos e guarnições.' },
+      { src: './public/images/banner-2.jpg', title: 'Chopp Estupidamente Gelado', sub: 'Chopp Brahma tirado no ponto certo na tulipa e caldereta a R$ 10,90.' },
+      { src: './public/images/banner-3.jpg', title: 'Almoço & Jantar Executivo Diário', sub: '24 opções completas e fartas servidas todos os dias até meia-noite.' },
+      { src: './public/images/banner-4.jpg', title: 'Carta de Drinks Autorais', sub: 'Homenagens a Machado de Assis, Aterro do Flamengo e Cássia Eller.' }
+    ];
+
+    function setHero(idx) {
+      document.querySelectorAll('.hbtn').forEach((b, i) => {
+        b.className = (i === idx) 
+          ? 'hbtn px-3 py-1.5 rounded-lg bg-amber-900/40 text-amber-300 border border-amber-600/50' 
+          : 'hbtn px-3 py-1.5 rounded-lg text-stone-400 hover:text-white';
+      });
+      const item = galleryData[idx];
+      document.getElementById('hero-img').src = item.src;
+      document.getElementById('hero-title').innerText = item.title;
+      document.getElementById('hero-subtitle').innerText = item.sub;
+    }
+
+    function setFeijSize(size) {
+      feijSize = size;
+      const isInd = (size === 'ind');
+      document.getElementById('feij-btn-ind').className = isInd 
+        ? 'p-3 rounded-xl border text-left bg-amber-950/70 border-amber-600 text-white font-bold'
+        : 'p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white';
+      document.getElementById('feij-btn-comp').className = !isInd 
+        ? 'p-3 rounded-xl border text-left bg-amber-950/70 border-amber-600 text-white font-bold'
+        : 'p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white';
+      document.getElementById('feij-price').innerText = isInd ? 'R$ 60,00' : 'R$ 110,00';
+    }
+
+    function addFeijoada() {
+      const price = feijSize === 'ind' ? 60.00 : 110.00;
+      const label = feijSize === 'ind' ? 'Individual (1 pessoa)' : 'Completa (2 pessoas)';
+      addToCartRaw('esp-01', 'Tradicional Feijoada do Largo do Machado', label, price);
+    }
+
+    function setCozSize(size) {
+      cozSize = size;
+      const isInd = (size === 'ind');
+      document.getElementById('coz-btn-ind').className = isInd 
+        ? 'p-3 rounded-xl border text-left bg-rose-950/70 border-rose-600 text-white font-bold'
+        : 'p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white';
+      document.getElementById('coz-btn-comp').className = !isInd 
+        ? 'p-3 rounded-xl border text-left bg-rose-950/70 border-rose-600 text-white font-bold'
+        : 'p-3 rounded-xl border text-left bg-stone-900 border-stone-800 text-stone-400 hover:text-white';
+      document.getElementById('coz-price').innerText = isInd ? 'R$ 60,00' : 'R$ 110,00';
+    }
+
+    function addCozido() {
+      const price = cozSize === 'ind' ? 60.00 : 110.00;
+      const label = cozSize === 'ind' ? 'Individual (1 pessoa)' : 'Completo (2 pessoas)';
+      addToCartRaw('esp-02', 'Cozido à Portuguesa Carioca', label, price);
+    }
+
+    function addCustomDrink(name, price) {
+      addToCartRaw('drink-' + name.toLowerCase().replace(/\s+/g, '-'), name, 'Drink Autoral', price);
+    }
+
+    function initPage() {
+      // Build categories tabs
+      const tabsEl = document.getElementById('cat-tabs');
+      tabsEl.innerHTML = menuData.categories.map(cat => `
+        <button 
+          onclick="filterCat('${cat.id}')" 
+          id="cbtn-${cat.id}" 
+          class="cat-tab px-3.5 py-1.5 rounded-xl border whitespace-nowrap transition-all ${cat.id === 'todos' ? 'bg-stone-900 text-amber-300 font-bold border-stone-900' : 'bg-stone-50 border-stone-200 text-stone-700 hover:bg-stone-100'}"
+        >
+          ${cat.name} (${cat.count})
+        </button>
+      `).join('');
+
+      renderMenu();
+      lucide.createIcons();
+    }
+
+    function filterCat(catId) {
+      activeCat = catId;
+      activeTag = 'all';
+      updateTabStyles();
+      renderMenu();
+    }
+
+    function setTag(tagId) {
+      activeTag = tagId;
+      if (tagId === 'executivos') activeCat = 'executivos';
+      else if (tagId === 'petiscos') activeCat = 'petiscos';
+      else if (tagId === 'chopes') activeCat = 'chopes';
+      else if (tagId === 'drinks') activeCat = 'drinks';
+      else if (tagId === 'sobremesas') activeCat = 'sobremesas';
+      else if (tagId === 'all') activeCat = 'todos';
+
+      document.querySelectorAll('.tag-btn').forEach(btn => {
+        btn.className = 'tag-btn px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200 whitespace-nowrap';
+      });
+      const activeBtn = document.getElementById('tag-' + tagId);
+      if (activeBtn) {
+        activeBtn.className = 'tag-btn px-3.5 py-1.5 rounded-full bg-amber-800 text-white shadow-sm whitespace-nowrap';
+      }
+      updateTabStyles();
+      renderMenu();
+    }
+
+    function updateTabStyles() {
+      document.querySelectorAll('.cat-tab').forEach(t => {
+        t.className = 'cat-tab px-3.5 py-1.5 rounded-xl border whitespace-nowrap transition-all bg-stone-50 border-stone-200 text-stone-700 hover:bg-stone-100';
+      });
+      const active = document.getElementById('cbtn-' + activeCat);
+      if (active) {
+        active.className = 'cat-tab px-3.5 py-1.5 rounded-xl border whitespace-nowrap transition-all bg-stone-900 text-amber-300 font-bold border-stone-900';
+      }
+    }
+
+    function renderMenu() {
+      const q = document.getElementById('search-input').value.toLowerCase().trim();
+      const grid = document.getElementById('menu-grid');
+
+      const items = menuData.items.filter(item => {
+        if (q) {
+          const match = item.name.toLowerCase().includes(q) || (item.description && item.description.toLowerCase().includes(q)) || item.category.toLowerCase().includes(q);
+          if (!match) return false;
+        }
+
+        if (activeCat !== 'todos' && item.category !== activeCat) return false;
+
+        if (activeTag === 'popular' && !item.popular) return false;
+        if (activeTag === 'veg' && item.dietary !== 'Vegetariano' && item.category !== 'vegetarianos') return false;
+        if (activeTag === 'share' && !(item.serves && (item.serves.includes('2') || item.serves.includes('3') || item.serves.includes('4')))) return false;
+
+        return true;
+      });
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-stone-500 bg-white rounded-3xl border border-stone-200 p-8 max-w-md mx-auto">
+            <p class="font-serif text-xl font-bold text-stone-900">Nenhum item encontrado</p>
+            <p class="text-xs text-stone-500 mt-1">Tente pesquisar por outro nome ou selecione outra categoria.</p>
+            <button onclick="document.getElementById('search-input').value=''; filterCat('todos');" class="mt-4 px-4 py-2 bg-stone-900 text-amber-400 rounded-xl text-xs font-bold">
+              Ver Todo o Cardápio
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = items.map(item => {
+        const hasOptions = item.priceOptions && item.priceOptions.length > 0;
+        return `
+          <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between text-[10px] mb-2 font-bold uppercase tracking-wider text-amber-800">
+                <span class="bg-amber-50 px-2 py-0.5 rounded border border-amber-200">${item.category}</span>
+                <div class="flex items-center gap-1">
+                  ${item.badge ? `<span class="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">${item.badge}</span>` : ''}
+                  ${item.serves ? `<span class="bg-stone-100 text-stone-500 px-2 py-0.5 rounded-full">${item.serves}</span>` : ''}
+                </div>
+              </div>
+
+              <h3 class="font-serif text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors leading-snug">
+                ${item.name}
+              </h3>
+
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                ${item.description || ''}
+              </p>
+
+              ${hasOptions ? `
+                <div class="mt-3 pt-2 border-t border-stone-100">
+                  <span class="text-[10px] text-stone-400 block mb-1 font-medium">Tamanho / Opções:</span>
+                  <div class="grid grid-cols-2 gap-1 text-xs">
+                    ${item.priceOptions.map((opt, oIdx) => `
+                      <button 
+                        type="button"
+                        onclick="addToCartWithOptions('${item.id}', '${item.name.replace(/'/g, "\\'")}', '${opt.label}', ${opt.price})" 
+                        class="p-2 rounded-lg border border-stone-200 bg-stone-50 hover:bg-amber-100/60 text-left transition-all"
+                      >
+                        <div class="truncate text-[11px] font-medium">${opt.label}</div>
+                        <div class="text-amber-800 font-extrabold mt-0.5">R$ ${opt.price.toFixed(2).replace('.', ',')}</div>
+                      </button>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between gap-3">
+              <div>
+                <span class="text-[10px] text-stone-400 uppercase tracking-wider block">Valor</span>
+                <span class="text-xl font-serif font-extrabold text-stone-900">
+                  R$ ${item.price.toFixed(2).replace('.', ',')}
+                </span>
+              </div>
+
+              <button 
+                onclick="addToCart('${item.id}')"
+                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-semibold text-xs shadow transition-all active:scale-95"
+              >
+                <span>+ Adicionar</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function addToCart(itemId) {
+      const item = menuData.items.find(i => i.id === itemId);
+      if (!item) return;
+      addToCartRaw(item.id, item.name, null, item.price);
+    }
+
+    function addToCartWithOptions(itemId, name, optionLabel, price) {
+      addToCartRaw(itemId, name, optionLabel, price);
+    }
+
+    function addToCartRaw(id, name, optionLabel, price) {
+      const key = optionLabel ? id + '-' + optionLabel : id;
+      const existing = cart.find(i => i.key === key);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ key, id, name, optionLabel, price, quantity: 1 });
+      }
+
+      updateCartUI();
+      toggleCart(true); // Open drawer on add
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((acc, i) => acc + i.quantity, 0);
+      const subtotal = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+      const badge = document.getElementById('cart-badge');
+      const mBadge = document.getElementById('mobile-cart-badge');
+      if (totalCount > 0) {
+        badge.innerText = totalCount;
+        badge.classList.remove('hidden');
+        mBadge.innerText = totalCount;
+        mBadge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+        mBadge.classList.add('hidden');
+      }
+
+      document.getElementById('cart-count-label').innerText = totalCount + ' ' + (totalCount === 1 ? 'item' : 'itens');
+      document.getElementById('cart-subtotal').innerText = 'R$ ' + subtotal.toFixed(2).replace('.', ',');
+
+      const container = document.getElementById('cart-items-container');
+      const footer = document.getElementById('cart-footer');
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-16 text-center text-stone-400">
+            <i data-lucide="shopping-bag" class="w-10 h-10 mx-auto text-stone-300 mb-2"></i>
+            <p class="text-sm font-semibold text-stone-700">Sua comanda está vazia.</p>
+            <p class="text-xs text-stone-400 mt-1">Escolha suas opções favoritas do cardápio!</p>
+          </div>
+        `;
+        footer.classList.add('hidden');
+      } else {
+        container.innerHTML = cart.map(item => `
+          <div class="p-3 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between gap-3 text-xs">
+            <div class="flex-1 min-w-0">
+              <h4 class="font-bold text-stone-900 truncate">${item.name}</h4>
+              ${item.optionLabel ? `<span class="text-amber-800 text-[11px] block">${item.optionLabel}</span>` : ''}
+              <span class="text-stone-700 font-bold block mt-0.5">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+            </div>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <button onclick="changeQty('${item.key}', -1)" class="w-6 h-6 rounded bg-white border border-stone-300 font-bold hover:bg-stone-100">-</button>
+              <span class="w-5 text-center font-bold">${item.quantity}</span>
+              <button onclick="changeQty('${item.key}', 1)" class="w-6 h-6 rounded bg-white border border-stone-300 font-bold hover:bg-stone-100">+</button>
+            </div>
+          </div>
+        `).join('');
+        footer.classList.remove('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function changeQty(key, delta) {
+      const item = cart.find(i => i.key === key);
+      if (!item) return;
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        cart = cart.filter(i => i.key !== key);
+      }
+      updateCartUI();
+    }
+
+    function toggleCart(forceOpen) {
+      const drawer = document.getElementById('cart-drawer');
+      if (forceOpen === true) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.toggle('hidden');
+      }
+    }
+
+    function sendOrderToWhatsApp() {
+      if (cart.length === 0) return;
+      const name = document.getElementById('cart-name').value.trim();
+      const address = document.getElementById('cart-address').value.trim();
+      const obs = document.getElementById('cart-obs').value.trim();
+      const subtotal = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+      let msg = "*NOVO PEDIDO — RESTAURANTE ESTAÇÃO LARGO DO MACHADO*\n";
+      msg += "_Tradicional Desde 1966 • Rua Bento Lisboa, 184_\n\n";
+      
+      if (name) msg += "👤 *Cliente:* " + name + "\n";
+      if (address) msg += "📍 *Endereço / Mesa:* " + address + "\n\n";
+
+      msg += "*ITENS DA COMANDA:*\n";
+      cart.forEach((item, idx) => {
+        const opt = item.optionLabel ? " (" + item.optionLabel + ")" : "";
+        msg += (idx + 1) + ". *" + item.quantity + "x* " + item.name + opt + " — R$ " + (item.price * item.quantity).toFixed(2).replace('.', ',') + "\n";
+      });
+
+      msg += "\n💰 *TOTAL DOS ITENS:* R$ " + subtotal.toFixed(2).replace('.', ',') + "\n";
+
+      if (obs) {
+        msg += "📝 *Observações:* " + obs + "\n";
+      }
+
+      msg += "\n_Por favor, confirme a disponibilidade e o prazo de entrega!_";
+
+      const url = "https://wa.me/552125565323?text=" + encodeURIComponent(msg);
+      window.open(url, '_blank');
+    }
+
+    document.addEventListener('DOMContentLoaded', initPage);
+  </script>
+</body>
+</html>

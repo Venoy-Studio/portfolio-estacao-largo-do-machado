@@ -1,0 +1,1272 @@
+{
+  "restaurant": {
+    "name": "Restaurante Estação Largo do Machado",
+    "shortName": "Estação Largo do Machado",
+    "badge": "Tradição Carioca Desde 1966",
+    "historyYear": 1966,
+    "tagline": "O ponto de encontro mais tradicional e charmoso do Largo do Machado",
+    "description": "Situado na Rua Bento Lisboa, a poucos passos do Metrô do Largo do Machado. A autêntica gastronomia carioca e o chopp mais gelado da Zona Sul em um ambiente acolhedor, familiar e repleto de história viva.",
+    "razaoSocial": "BOTECO 184 LTDA",
+    "cnpj": "46.859.491/0001-21",
+    "address": {
+      "street": "Rua Bento Lisboa, 184",
+      "neighborhood": "Largo do Machado / Catete",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "cep": "22221-011",
+      "metroDistance": "A apenas 50m da estação de Metrô Largo do Machado"
+    },
+    "hours": {
+      "days": "Todos os dias (Segunda a Domingo)",
+      "time": "11:00 à 00:00 (Meia-noite)",
+      "executiveHours": "Executivos servidos diariamente durante todo o horário"
+    },
+    "contacts": {
+      "phone": "(21) 2556-5323",
+      "whatsappNumber": "552125565323",
+      "whatsappDisplay": "(21) 2556-5323",
+      "whatsappLink": "https://wa.me/552125565323?text=Ol%C3%A1,%20estou%20no%20Site%20do%20Restaurante%20Esta%C3%A7%C3%A3o%20Largo%20do%20Machado%20e%20quero%20fazer%20um%20pedido",
+      "instagram": "https://www.instagram.com/estacao184oficial/",
+      "instagramHandle": "@estacao184oficial",
+      "facebook": "https://www.facebook.com/Estacao184Oficial/",
+      "ifood": "https://www.ifood.com.br/delivery/rio-de-janeiro-rj/restaurante-estacao-largo-do-machado-184-catete/f85cd422-e059-4b90-b2a3-fd1ee9511e87",
+      "app99": "https://oia.99app.com/dlp9/KpHevh"
+    },
+    "googleReviews": {
+      "score": 4.8,
+      "totalReviews": 992,
+      "platform": "Google Avaliações",
+      "reviews": [
+        {
+          "author": "Fillipe Braga",
+          "date": "Fevereiro de 2025",
+          "rating": 5,
+          "comment": "Ótimo atendimento e comida muito boa. A feijoada e o filé à Oswaldo Aranha são impecáveis. Um dos melhores pontos do Largo do Machado!",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Lucía G.",
+          "date": "Fevereiro de 2025",
+          "rating": 5,
+          "comment": "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio.",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Carlos Eduardo Mendes",
+          "date": "Janeiro de 2025",
+          "rating": 5,
+          "comment": "Chopp Brahma estupidamente gelado e o bolinho de bacalhau crocante por fora e macio por dentro. Lugar clássico de boteco carioca de alta qualidade.",
+          "source": "Google Reviews"
+        },
+        {
+          "author": "Mariana Alencar",
+          "date": "Dezembro de 2024",
+          "rating": 5,
+          "comment": "O almoço executivo salva a rotina! Preço justo, pratos muito bem servidos e sabor caseiro de verdade. Atendimento nota 10.",
+          "source": "Google Reviews"
+        }
+      ]
+    },
+    "highlights": [
+      {
+        "icon": "Beer",
+        "title": "Chopp Trincando",
+        "subtitle": "Brahma tirado no ponto certo na tulipa e caldereta"
+      },
+      {
+        "icon": "UtensilsCrossed",
+        "title": "Executivos o Dia Todo",
+        "subtitle": "24 opções diárias com o melhor custo-benefício do bairro"
+      },
+      {
+        "icon": "Flame",
+        "title": "Tradição Desde 1966",
+        "subtitle": "Receitas consagradas como a Feijoada e Oswaldo Aranha"
+      },
+      {
+        "icon": "Bike",
+        "title": "Entrega nas Redondezas",
+        "subtitle": "Peça direto pelo WhatsApp ou pelos aplicativos parceiros"
+      }
+    ]
+  },
+  "categories": [
+    { "id": "todos", "name": "Todo o Cardápio", "count": 136, "badge": "Cardápio Completo" },
+    { "id": "executivos", "name": "Pratos Executivos", "count": 24, "badge": "Almoço & Jantar Diário", "description": "Refeições completas com fartura e excelente custo-benefício servidas todos os dias durante todo o horário." },
+    { "id": "especiais", "name": "Destaques & Tradição", "count": 2, "badge": "Assinaturas da Casa", "description": "A famosa Feijoada Completa e o imperdível Cozido à Portuguesa aos domingos." },
+    { "id": "carnes", "name": "Carnes Nobres & Grelhados", "count": 13, "badge": "Para 2 a 4 Pessoas", "description": "Cortes selecionados, guarnições fartas e preparo artesanal no ponto desejado." },
+    { "id": "peixes", "name": "Peixes & Frutos do Mar", "count": 7, "badge": "Frescor & Tradição", "description": "Bacalhau à Portuguesa, Salmão com Alcaparras, Camarões à Monte Carlo e pescados nobres." },
+    { "id": "aves", "name": "Aves & Frangos", "count": 4, "badge": "Clássicos Cariocas", "description": "Pratos fartos e dourados para compartilhar." },
+    { "id": "petiscos", "name": "Petiscos de Boteco & Chapas", "count": 17, "badge": "Para Beliscar", "description": "Pastéis sequinhos, bolinho de bacalhau, chapas borbulhantes e dadinhos de tapioca." },
+    { "id": "pizzas", "name": "Pizzas Artesanais", "count": 6, "badge": "Massa Crocante", "description": "Receitas tradicionais assadas no ponto com muçarela farta." },
+    { "id": "sanduiches", "name": "Sanduíches & Pães", "count": 4, "badge": "Pão Francês Crocante", "description": "Filé mignon, pernil com geleia de abacaxi e carne assada recheada." },
+    { "id": "drinks", "name": "Drinks Autorais & Históricos", "count": 24, "badge": "Carta Autoral", "description": "Coquetéis inspirados nas lendas e esquinas do Largo do Machado e Catete." },
+    { "id": "chopes", "name": "Chopes & Cervejas", "count": 9, "badge": "Estupidamente Geladas", "description": "Chopp Brahma cremoso, cervejas 600ml e rótulos selecionados." },
+    { "id": "vinhos", "name": "Vinhos & Destilados", "count": 22, "badge": "Rótulos Nobres", "description": "Tintos, brancos, espumantes premiados e doses especiais." },
+    { "id": "massas", "name": "Massas & Omeletes", "count": 6, "badge": "Comfort Food", "description": "Molhos artesanais italianos e omeletes fofinhos na hora." },
+    { "id": "vegetarianos", "name": "Vegetarianos", "count": 2, "badge": "Sem Carne", "description": "Opções nutritivas e aromáticas com cogumelos e risotos." },
+    { "id": "kids", "name": "Pratos Infantis", "count": 2, "badge": "Brasileirinhos", "description": "Pratinhos balanceados com arroz, feijão e fritas crocantes." },
+    { "id": "saladas", "name": "Saladas Frescas", "count": 5, "badge": "Leves & Naturais", "description": "Folhas selecionadas, palmito premium e molhos caseiros." },
+    { "id": "sopas", "name": "Sopas & Caldos", "count": 4, "badge": "Tigelas Quentes", "description": "Caldo verde, canja de galinha e caldinho de feijão na medida certa." },
+    { "id": "guarnicoes", "name": "Guarnições & Extras", "count": 11, "badge": "Acompanhamentos", "description": "Arroz à piamontese, farofa de ovos, batata portuguesa e muito mais." },
+    { "id": "bebidas", "name": "Bebidas Sem Álcool", "count": 6, "badge": "Refrescantes", "description": "Mate artesanal da casa, sucos naturais e sodas italianas." },
+    { "id": "sobremesas", "name": "Sobremesas Artesanais", "count": 8, "badge": "Final Doce", "description": "Pudim de leite, petit gâteau, torta alemã e creme de papaya." }
+  ],
+  "items": [
+    {
+      "id": "exec-01",
+      "name": "Oswaldinho",
+      "category": "executivos",
+      "price": 66.90,
+      "description": "Homenagem ao clássico carioca: corte nobre grelhado, servido com arroz branco solto, batata portuguesa fatiada crocante e alho frito dourado.",
+      "badge": "Mais Pedido",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-02",
+      "name": "Contrafilé Executivo",
+      "category": "executivos",
+      "price": 51.90,
+      "description": "Suculento contrafilé grelhado no ponto com arroz soltinho, batata portuguesa da casa e farofa simples temperada.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-03",
+      "name": "Alcatra à Campanha",
+      "category": "executivos",
+      "price": 42.90,
+      "description": "Bife de alcatra macio na chapa com arroz branco, batatas fritas douradas, farofa simples e molho à campanha fresco.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-04",
+      "name": "Carne Assada ao Molho Rôti",
+      "category": "executivos",
+      "price": 38.90,
+      "description": "Carne assada de panela desmanchando ao autêntico molho rôti com arroz branco e batata portuguesa.",
+      "badge": "Tradicional",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-05",
+      "name": "Picadinho Estação",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Clássico da boemia carioca: carne bovina em cubos refogada lentamente, arroz, feijão com sabor de mãe, farofa de banana e ovo frito com gema mole.",
+      "badge": "Ícone Carioca",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-06",
+      "name": "Carne Seca à Mineira",
+      "category": "executivos",
+      "price": 43.90,
+      "description": "Carne seca desfiada e puxada na cebola com arroz branco, couve fininha refogada e tutu de feijão aveludado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-07",
+      "name": "Carne de Sol Nordestina",
+      "category": "executivos",
+      "price": 49.90,
+      "description": "Carne de sol macia na manteiga de garrafa acompanhada de cremoso baião de dois e aipim frito sequinho.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-08",
+      "name": "Estrogonofe de Carne",
+      "category": "executivos",
+      "price": 48.90,
+      "description": "Tiras de carne bovina no molho cremoso de champignons com arroz branco e batata sauté na manteiga com ervas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-09",
+      "name": "Estrogonofe de Frango",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Filé de frango em cubos em molho suave e aveludado de champignons, arroz branco e batata sauté.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-10",
+      "name": "Frango Grelhado Light",
+      "category": "executivos",
+      "price": 39.90,
+      "description": "Peito de frango grelhado com tempero suave da casa, arroz branco e panachê colorido de legumes frescos no vapor.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-11",
+      "name": "Frango Crocante",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Filé de frango empanado com casquinha extra crocante, arroz fresquinho com brócolis e batata sauté.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-12",
+      "name": "Frango à Milanesa",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Peito de frango à milanesa douradinho, servido com arroz branco e batatas fritas crocantes.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-13",
+      "name": "Linguiça Fatiada à Campanha",
+      "category": "executivos",
+      "price": 29.90,
+      "description": "Linguiça calabresa especial fatiada e acebolada na chapa com arroz branco, farofa simples e batatas fritas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-14",
+      "name": "Fígado à Lisboeta",
+      "category": "executivos",
+      "price": 34.90,
+      "description": "Tiras de fígado acebolado refogadas com tomate, pimentão doce e batatas sauté ao estilo português.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-15",
+      "name": "Carré à Mineira",
+      "category": "executivos",
+      "price": 29.90,
+      "description": "Costeleta suína suculenta grelhada na chapa, servida com arroz branco, couve refogada e tutu de feijão.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-16",
+      "name": "Picanha Suína à Mineira",
+      "category": "executivos",
+      "price": 49.90,
+      "description": "Picanha suína macia dourada na chapa, arroz branco, couve refogada e tutu tradicional.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-17",
+      "name": "Filé de Truta Grelhada",
+      "category": "executivos",
+      "price": 60.90,
+      "description": "Filé de truta delicado grelhado na manteiga com arroz branco e batatas sauté aromáticas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-18",
+      "name": "Tilápia Grelhada",
+      "category": "executivos",
+      "price": 66.90,
+      "description": "Filé de tilápia fresco e grelhado com arroz branco e batatas sauté douradas.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-19",
+      "name": "Filé de Peixe ao Molho de Camarão",
+      "category": "executivos",
+      "price": 46.90,
+      "description": "Pescado macio coberto por molho de tomates frescos e camarões selecionados com arroz branco e purê de batatas cremoso.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-20",
+      "name": "Risoto de Camarão Executivo",
+      "category": "executivos",
+      "price": 48.90,
+      "description": "Arroz cremoso envolto em caldo aromático de frutos do mar com camarões frescos, tomate e ervas finas.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-21",
+      "name": "Fetuccine com Camarões",
+      "category": "executivos",
+      "price": 41.90,
+      "description": "Massa longa al dente salteada com camarões frescos e envolta em molho bechamel cremoso e queijo gratinado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-22",
+      "name": "Nhoque ao Sugo com Carne Assada",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Nhoque de batata macio artesanal ao molho sugo de tomates com fatias generosas de carne assada suculenta.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-23",
+      "name": "Talharim à Parisiense",
+      "category": "executivos",
+      "price": 45.90,
+      "description": "Talharim caseiro com pedaços de frango desfiado, presunto, ervilhas frescas e molho bechamel gratinado com queijo parmesão.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "exec-24",
+      "name": "Talharim à Bolonhesa",
+      "category": "executivos",
+      "price": 40.90,
+      "description": "Talharim com molho bolonhesa clássico apurado lentamente com carne moída selecionada e ervas.",
+      "serves": "1 pessoa"
+    },
+
+    {
+      "id": "esp-01",
+      "name": "Tradicional Feijoada do Largo do Machado",
+      "category": "especiais",
+      "price": 60.00,
+      "priceOptions": [
+        { "label": "Individual (1 pessoa)", "price": 60.00 },
+        { "label": "Completa (2 pessoas)", "price": 110.00 }
+      ],
+      "description": "A estrela do Catete desde 1966: feijão preto apurado com carnes nobres selecionadas (carne seca, lombo, costelinha, paio e calabresa), acompanhada de arroz branco solto, couve mineira refogada fininha, farofa de mandioca tostada na manteiga, torresmo pururuca sequinho e fatias de laranja fresca.",
+      "badge": "Tradição Desde 1966",
+      "popular": true,
+      "serves": "1 a 2 pessoas"
+    },
+    {
+      "id": "esp-02",
+      "name": "Cozido à Portuguesa (Especial de Domingo)",
+      "category": "especiais",
+      "price": 60.00,
+      "priceOptions": [
+        { "label": "Individual (1 pessoa)", "price": 60.00 },
+        { "label": "Completo (2 pessoas)", "price": 110.00 }
+      ],
+      "description": "Servido exclusivamente aos domingos. O autêntico cozido de tradição luso-carioca com carnes nobres, legumes variados cozidos no ponto no próprio caldo aromático e pirão aveludado artesanal.",
+      "badge": "Exclusivo Domingo",
+      "popular": true,
+      "serves": "1 a 2 pessoas"
+    },
+
+    {
+      "id": "carne-01",
+      "name": "Contrafilé à Gaúcha",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "Generoso corte de contrafilé grelhado no ponto com linguiça calabresa na brasa, servido com arroz branco, batata frita portuguesa e farofa de ovos.",
+      "badge": "Para Compartilhar",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-02",
+      "name": "Contrafilé à Paulista",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "Contrafilé grelhado coroado com ovo estrelado, cebola dourada na manteiga, chimichurri artesanal, feijão com caldo rico, arroz e batatas portuguesas.",
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-03",
+      "name": "Contrafilé à Oswaldo Aranha",
+      "category": "carnes",
+      "price": 135.00,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 135.00 },
+        { "label": "Para 3 pessoas", "price": 185.90 }
+      ],
+      "description": "O mais icônico prato carioca: contrafilé alto grelhado e coberto por alho frito dourado crocante, acompanhado de arroz solto, batatas portuguesas e farofa de ovos úmida.",
+      "badge": "Clássico Carioca",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-04",
+      "name": "Picanha à Campanha",
+      "category": "carnes",
+      "price": 185.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 185.90 },
+        { "label": "Para 3 pessoas", "price": 240.00 }
+      ],
+      "description": "Fatias nobres de picanha maturada com capa de gordura nobre grelhada, servidas com arroz, batatas portuguesas, farofa de ovos e molho à campanha refrescante.",
+      "badge": "Corte Nobre",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-05",
+      "name": "Picanha à Estação (Especial da Casa)",
+      "category": "carnes",
+      "price": 185.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 185.90 },
+        { "label": "Para 3 pessoas", "price": 260.00 }
+      ],
+      "description": "Picanha nobre grelhada servida com batata gratinada especial coberta com queijo muçarela derretido, bacon crocante e cebolinha, acompanhada de feijão tropeiro legítimo, batatas fritas, arroz e molho à campanha.",
+      "badge": "Assinatura da Casa",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "carne-06",
+      "name": "Filé Mignon à Estação",
+      "category": "carnes",
+      "price": 190.00,
+      "description": "Medalhões de filé mignon grelhados, acompanhados de batatas gratinadas com queijo e bacon, feijão tropeiro, fritas crocantes, arroz branco e molho à campanha.",
+      "badge": "Especialidade",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-07",
+      "name": "Filé Mignon à Oswaldo Aranha",
+      "category": "carnes",
+      "price": 185.90,
+      "description": "Mignon alto e macio coberto por alho frito crocante na manteiga, acompanhado de arroz branco, batata portuguesa e farofa de ovos caprichada.",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-08",
+      "name": "Filé Mignon à Parmegiana",
+      "category": "carnes",
+      "price": 190.90,
+      "description": "Filé mignon empanado dourado, coberto com molho artesanal de tomates selecionados e camada farta de queijo muçarela gratinado no forno, servido com arroz branco e purê de batatas sedoso.",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-09",
+      "name": "Medalhão de Filé à Piamontese",
+      "category": "carnes",
+      "price": 190.90,
+      "description": "Medalhões altos de filé mignon grelhados ao aveludado molho madeira com champignons, acompanhados de autêntico arroz à piamontese cremoso e batatas portuguesas crocantes.",
+      "badge": "Mais Pedido",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-10",
+      "name": "Escalopinho de Filé Mignon",
+      "category": "carnes",
+      "price": 185.90,
+      "description": "Escalopes macios de filé ao molho madeira clássico com arroz à piamontese e batatas portuguesas.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-11",
+      "name": "Estrogonofe de Filé Mignon",
+      "category": "carnes",
+      "price": 180.90,
+      "description": "Filé mignon em tiras envolvido em creme especial de champignons flambados no conhaque, com arroz branco e batata sauté ou corada.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "carne-12",
+      "name": "Churrasco Misto à Campanha",
+      "category": "carnes",
+      "price": 209.90,
+      "priceOptions": [
+        { "label": "Para 2 pessoas", "price": 209.90 },
+        { "label": "Para 4 pessoas", "price": 292.00 }
+      ],
+      "description": "Fartura total: contrafilé, peito de frango, lombo suíno e linguiça artesanal grelhados na brasa, servidos com arroz, batatas fritas, farofa de ovos e molho à campanha.",
+      "badge": "Família & Amigos",
+      "popular": true,
+      "serves": "2 a 4 pessoas"
+    },
+    {
+      "id": "carne-13",
+      "name": "Picanha Suína à Mineira (Para Compartilhar)",
+      "category": "carnes",
+      "price": 125.90,
+      "description": "Corte suculento de picanha suína dourada, servida com arroz branco, tutu de feijão, farofa crocante de ovos e couve refogada no alho.",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "peixe-01",
+      "name": "Salmão Grelhado com Alcaparras & Camarões",
+      "category": "peixes",
+      "price": 159.90,
+      "description": "Posta de salmão grelhada regada ao molho de alcaparras, cogumelos frescos e camarões na manteiga, acompanhada de arroz com brócolis e panachê de legumes selecionados.",
+      "badge": "Sofisticado",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-02",
+      "name": "Filé de Pescada ao Molho de Camarão",
+      "category": "peixes",
+      "price": 134.90,
+      "description": "Pescada branca grelhada coberta por rico molho de camarões refogados com tomates e ervas, arroz branco e purê de batatas cremoso.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-03",
+      "name": "Filé de Peixe Colonial Gratinado",
+      "category": "peixes",
+      "price": 129.90,
+      "description": "Peixe nobre grelhado em leito de purê artesanal, camada generosa de molho bechamel, molho pomodoro e camarões frescos, gratinado ao forno.",
+      "badge": "Especialidade",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-04",
+      "name": "Filé de Tilápia Grelhada",
+      "category": "peixes",
+      "price": 132.90,
+      "description": "Filés frescos de tilápia com azeite e ervas na chapa, servidos com arroz branco e batatas sauté aromáticas.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-05",
+      "name": "Filé de Truta ao Belle Meunière",
+      "category": "peixes",
+      "price": 132.90,
+      "description": "Truta delicada grelhada com legumes ao molho Belle Meunière (manteiga, alcaparras, cogumelos e limão), com arroz de brócolis.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-06",
+      "name": "Bacalhau à Portuguesa Tradicional",
+      "category": "peixes",
+      "price": 170.90,
+      "description": "Lombo nobre de bacalhau cozido em azeite extravirgem com batatas cozidas, ovos cozidos, pimentões coloridos, cebola e azeitonas pretas portuguesas.",
+      "badge": "Tradição Lusa",
+      "popular": true,
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "peixe-07",
+      "name": "Camarões à Monte Carlo",
+      "category": "peixes",
+      "price": 136.90,
+      "description": "Camarões graúdos empanados em crosta dourada e gratinados com queijo, acompanhados de colorido arroz à grega.",
+      "badge": "Mais Pedido",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "ave-01",
+      "name": "Estrogonofe de Frango (Para Compartilhar)",
+      "category": "aves",
+      "price": 114.90,
+      "description": "Generosa porção de cubos de peito de frango em molho cremoso com cogumelos, arroz branco e batata sauté ou corada.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-02",
+      "name": "Frango à Parmegiana ou à Cubana",
+      "category": "aves",
+      "price": 114.90,
+      "description": "Filé de frango à parmegiana gratinado com queijo ou versão à cubana com batata palha, palmito, bacon crocante, cebola e toque de pimenta suave.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-03",
+      "name": "Frango à Campanha",
+      "category": "aves",
+      "price": 124.90,
+      "description": "Filés de frango grelhados acompanhados de arroz branco, batatas portuguesas da casa, farofa de ovos e molho à campanha refrescante.",
+      "serves": "Para 2 pessoas"
+    },
+    {
+      "id": "ave-04",
+      "name": "Filé de Frango Crocante",
+      "category": "aves",
+      "price": 124.90,
+      "description": "Frango empanado crocante dourado com arroz verde de brócolis e batatas portuguesas fatiadas.",
+      "serves": "Para 2 pessoas"
+    },
+
+    {
+      "id": "pet-01",
+      "name": "Batata Frita Especial (Palito ou Portuguesa)",
+      "category": "petiscos",
+      "price": 40.00,
+      "description": "Porção gigante de batatas cortadas na casa, crocantes por fora e macias por dentro com sal na medida.",
+      "badge": "Clássico",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-02",
+      "name": "Gurjão de Frango com Molho Tártaro",
+      "category": "petiscos",
+      "price": 55.00,
+      "description": "Tiras macias de peito de frango empanadas com casquinha crocante, acompanhadas de molho tártaro artesanal.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-03",
+      "name": "Gurjão de Peixe Branco",
+      "category": "petiscos",
+      "price": 69.90,
+      "description": "Iscas de peixe branco fresco empanadas no ponto perfeito com molho tártaro e limão galego.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-04",
+      "name": "Pernil Folhado na Chapa com Pão de Alho",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Fatias finas de pernil assado acebolado na chapa borbulhante no seu próprio molho de cozimento, acompanhado de fatias de pão de alho crocante.",
+      "badge": "Especial da Casa",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-05",
+      "name": "Frango à Passarinho Crocante",
+      "category": "petiscos",
+      "price": 52.90,
+      "priceOptions": [
+        { "label": "Meia Porção", "price": 49.00 },
+        { "label": "Porção Inteira", "price": 52.90 }
+      ],
+      "description": "Pedaços suculentos de frango fritos no ponto, salpicados com alho frito dourado crocante e salsinha fresca.",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-06",
+      "name": "Batatas Estação 184 Gratinadas",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Batatas fritas cobertas por farta linguiça calabresa acebolada e queijo muçarela derretido e gratinado na hora.",
+      "badge": "Campeão de Vendas",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-07",
+      "name": "Carne Assada com Torradas no Azeite",
+      "category": "petiscos",
+      "price": 49.00,
+      "description": "Fatias de carne assada desmanchando com seu molho aromático de cozimento, servidas com cesta de torradas douradas no azeite.",
+      "serves": "2 pessoas"
+    },
+    {
+      "id": "pet-08",
+      "name": "Estação Chapa Quente",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Chapa fumegante de ferro fundido com tiras de alcatra nobre acebolada, linguiça artesanal, batatas fritas crocantes e pão de alho tostado.",
+      "badge": "Para Compartilhar",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-09",
+      "name": "Estação Terrinha Nordestina",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Chapa fervente com autêntica carne de sol puxada na manteiga de garrafa, aipim frito derretendo de tão macio e queijo coalho tostado com orégano.",
+      "badge": "Favorito da Casa",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-10",
+      "name": "Estação Turbinada (Frutos do Mar & Sertão)",
+      "category": "petiscos",
+      "price": 97.90,
+      "description": "Combinação espetacular: camarão à paulista no alho e óleo, queijo coalho grelhado, aipim frito crocante e carne seca acebolada na manteiga.",
+      "badge": "Assinatura Boteco",
+      "popular": true,
+      "serves": "3 a 4 pessoas"
+    },
+    {
+      "id": "pet-11",
+      "name": "Chapa 'Pra Galera' Super Completa",
+      "category": "petiscos",
+      "price": 138.90,
+      "description": "A maior fartura do Largo do Machado: mix grelhado de alcatra nobre, lombinho suíno, peito de frango e linguiça calabresa, acompanhado de molho à campanha refrescante e farofa de ovos úmida.",
+      "badge": "Mesa Farta",
+      "popular": true,
+      "serves": "4 a 6 pessoas"
+    },
+    {
+      "id": "pet-12",
+      "name": "Dadinho de Tapioca com Geleia de Pimenta",
+      "category": "petiscos",
+      "price": 40.90,
+      "description": "Cubinhos dourados de tapioca e queijo coalho crocantes por fora e cremosos por dentro, servidos com geleia de pimenta agridoce.",
+      "badge": "Vegetariano",
+      "dietary": "Vegetariano",
+      "popular": true,
+      "serves": "2 a 3 pessoas"
+    },
+    {
+      "id": "pet-13",
+      "name": "Pastel Artesanal de Carne ou Queijo (Unidade)",
+      "category": "petiscos",
+      "price": 11.00,
+      "description": "Massa crocante com bolhas sequinhas, recheada generosamente com carne moída bem temperada ou queijo muçarela derretendo.",
+      "badge": "Frito na Hora"
+    },
+    {
+      "id": "pet-14",
+      "name": "Pastel de Camarão ou Camarão com Catupiry (Unidade)",
+      "category": "petiscos",
+      "price": 12.00,
+      "description": "Pastel crocante recheado com refogado farto de camarões frescos e toque opcional de Catupiry legítimo cremoso.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "pet-15",
+      "name": "Croquete do Alemão (Unidade)",
+      "category": "petiscos",
+      "price": 11.50,
+      "description": "Receita clássica de carne cozida desfiada com tempero especial alemão, empanado fininho e crocante.",
+      "badge": "Tradição"
+    },
+    {
+      "id": "pet-16",
+      "name": "Bolinho de Bacalhau Legítimo (Unidade)",
+      "category": "petiscos",
+      "price": 12.50,
+      "description": "Feito à mão com alto teor de bacalhau nobre desfiado e batata selecionada, dourado e sequinho por fora, macio por dentro.",
+      "badge": "Receita de 1966",
+      "popular": true
+    },
+    {
+      "id": "pet-17",
+      "name": "Bolinho de Feijoada Carioca (Unidade)",
+      "category": "petiscos",
+      "price": 12.50,
+      "description": "Massa de feijão preto temperada com carnes nobres recheada com couve refogada no alho e bacon.",
+      "badge": "Carioca Raiz",
+      "popular": true
+    },
+
+    { "id": "piz-01", "name": "Pizza Portuguesa Tradicional", "category": "pizzas", "price": 59.90, "description": "Molho de tomate artesanal, queijo muçarela farto, presunto magro, rodelas de ovos, cebola, ervilha e azeitonas pretas.", "popular": true },
+    { "id": "piz-02", "name": "Pizza Calabresa Acebolada", "category": "pizzas", "price": 54.90, "description": "Molho caseiro, muçarela, linguiça calabresa fatiada crocante, rodelas de cebola fresca e orégano chileno.", "popular": true },
+    { "id": "piz-03", "name": "Pizza Muçarela Clássica", "category": "pizzas", "price": 47.90, "description": "Molho de tomate temperado, dupla camada de queijo muçarela de primeira linha, azeitonas e orégano." },
+    { "id": "piz-04", "name": "Pizza Marguerita Especial", "category": "pizzas", "price": 54.90, "description": "Molho artesanal, muçarela derretida, rodelas de tomate fresco, queijo parmesão ralado e manjericão fresco." },
+    { "id": "piz-05", "name": "Pizza Frango com Catupiry", "category": "pizzas", "price": 59.90, "description": "Peito de frango desfiado temperado, muçarela, generosas tiras de Catupiry original cremoso e orégano.", "popular": true },
+    { "id": "piz-06", "name": "Pizza Doce de Banana com Canela", "category": "pizzas", "price": 49.90, "description": "Massa crocante com muçarela suave, fatias de banana prata caramelizadas, açúcar cristal e canela aromática em pó." },
+
+    { "id": "sand-01", "name": "Sanduíche de Filé Mignon com Queijo", "category": "sanduiches", "price": 42.00, "description": "Fatias nobres de filé mignon grelhado na manteiga, queijo derretido abundante e toque de molho de alho suave no pão crocante.", "popular": true },
+    { "id": "sand-02", "name": "Sanduíche de Frango Crocante Especial", "category": "sanduiches", "price": 35.00, "description": "Filé de frango empanado crocante, queijo muçarela, alface fresca e rodelas de tomate no pão fresquinho." },
+    { "id": "sand-03", "name": "Sanduíche de Pernil com Geleia de Abacaxi", "category": "sanduiches", "price": 31.00, "description": "Pernil desfiado suculento assado lentamente com tempero especial e geleia artesanal agridoce de abacaxi.", "badge": "Toque Autoral", "popular": true },
+    { "id": "sand-04", "name": "Sanduíche de Carne Assada com Queijo", "category": "sanduiches", "price": 31.00, "description": "Carne assada da panela no seu molho rôti com queijo muçarela derretido no pão francês crocante." },
+
+    {
+      "id": "drk-01",
+      "name": "Machado de Assis",
+      "category": "drinks",
+      "price": 31.00,
+      "description": "Homenagem ao bruxo do Cosme Velho: Amoras frescas maceradas, xarope de rosas nobre, toque sutil de tabasco, Gin Beefeater Rosê, água tônica e finalizado com espuma artesanal aveludada de morango.",
+      "badge": "Assinatura Autoral",
+      "popular": true
+    },
+    {
+      "id": "drk-02",
+      "name": "Aterro do Flamengo",
+      "category": "drinks",
+      "price": 32.00,
+      "description": "Inspirado na brisa da Baía de Guanabara: Gin Beefeater, licor de pêssego, xarope artesanal de maracujá, espumante brut geladíssimo e finalizado com espuma refrescante de gengibre.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "drk-03",
+      "name": "Clarisse Índio do Brasil",
+      "category": "drinks",
+      "price": 32.00,
+      "description": "Morangos frescos, xarope de hibisco rubi, Gin Beefeater Cítrico, água tônica gelada e espuma aromática de gengibre.",
+      "badge": "Autoral"
+    },
+    {
+      "id": "drk-04",
+      "name": "Rua das Laranjeiras 'Cássia Eller'",
+      "category": "drinks",
+      "price": 31.00,
+      "description": "Polpa fresca de maracujá, xarope aromático de manga, Gin Beefeater Tropical, água tônica e cremosa espuma brasileira de rapadura.",
+      "badge": "Homenagem Carioca",
+      "popular": true
+    },
+    {
+      "id": "drk-05",
+      "name": "Lia Corrêa Dutra",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Coquetel vibrante com morangos frescos macerados, abacaxi doce da estação e toque floral de xarope de hibisco.",
+      "badge": "Autoral"
+    },
+    {
+      "id": "drk-06",
+      "name": "São Salvador",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Em referência à famosa praça vizinha: amoras silvestres, morango, gota sutil de tabasco e xarope de açúcar.",
+      "badge": "Praça São Salvador"
+    },
+    {
+      "id": "drk-07",
+      "name": "Moscow Mule Clássico da Estação",
+      "category": "drinks",
+      "price": 30.00,
+      "description": "Vodka premium, suco de limão taiti fresco espremido na hora, xarope caseiro de gengibre picante e espuma densa de gengibre na canequinha de cobre.",
+      "popular": true
+    },
+    {
+      "id": "drk-08",
+      "name": "Negroni Perfeito",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Campari italiano, vermouth rosso selecionado e Gin Beefeater londrino na proporção áurea com casca de laranja bahia.",
+      "popular": true
+    },
+    {
+      "id": "drk-09",
+      "name": "Aperol Spritz",
+      "category": "drinks",
+      "price": 30.00,
+      "description": "Aperol italiano, espumante brut nacional, água com gás e fatia de laranja fresca servido na taça bojuda com bastante gelo.",
+      "popular": true
+    },
+    {
+      "id": "drk-10",
+      "name": "Mojito Cubano",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Folhas frescas de hortelã maceradas, suco de limão taiti, rum branco caribenho, xarope simples e toque de soda borbulhante."
+    },
+    {
+      "id": "drk-11",
+      "name": "Sex on the Beach",
+      "category": "drinks",
+      "price": 28.00,
+      "description": "Vodka, licor doce de pêssego, xarope de morango rubi e suco fresco de laranja da terra."
+    },
+    {
+      "id": "drk-12",
+      "name": "Brasil Smash",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Folhas de manjericão fresco da horta maceradas com Gin Beefeater, suco de limão e xarope de açúcar."
+    },
+    {
+      "id": "drk-13",
+      "name": "Gin Tônica Beefeater",
+      "category": "drinks",
+      "price": 28.00,
+      "description": "Gin Beefeater London Dry com água tônica clássica e fatias de limão siciliano ou zimbro."
+    },
+    {
+      "id": "drk-14",
+      "name": "Gin Tônica Importado Super Premium",
+      "category": "drinks",
+      "price": 37.00,
+      "description": "Rótulos internacionais de gin premium preparados com botânicos selecionados e água tônica especial."
+    },
+    {
+      "id": "drk-15",
+      "name": "Piña Colada Cremosa",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Rum branco, leite de coco espesso, leite condensado e suco natural de abacaxi batidos com gelo."
+    },
+    {
+      "id": "drk-16",
+      "name": "Whisky Sour",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Whisky escocês, suco de limão fresco e xarope de açúcar batidos vigorosamente na coqueteleira."
+    },
+    {
+      "id": "drk-17",
+      "name": "Kir Imperial",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Licor francês de cassis com vinho branco Mosteiro gelado."
+    },
+    {
+      "id": "drk-18",
+      "name": "Batida da Casa (Limão ou Maracujá)",
+      "category": "drinks",
+      "price": 8.00,
+      "description": "A clássica batidinha carioca de balcão de boteco: cachaça selecionada, fruta natural e leite condensado cremoso.",
+      "badge": "Clássico Boteco",
+      "popular": true
+    },
+    {
+      "id": "drk-19",
+      "name": "Caipirinha Tradicional de Cachaça",
+      "category": "drinks",
+      "price": 22.00,
+      "description": "Limão taiti fresco macerado com açúcar e cachaça da casa com bastante gelo."
+    },
+    {
+      "id": "drk-20",
+      "name": "Caipirinha com Cachaça Seleta",
+      "category": "drinks",
+      "price": 26.00,
+      "description": "Cachaça Seleta mineira envelhecida em tonéis de umburana com limão e açúcar."
+    },
+    {
+      "id": "drk-21",
+      "name": "Caipivodka Nacional / Absolut",
+      "category": "drinks",
+      "price": 27.00,
+      "priceOptions": [
+        { "label": "Nacional (Smirnoff)", "price": 27.00 },
+        { "label": "Importada (Vodka Absolut)", "price": 31.00 }
+      ],
+      "description": "Vodka com frutas frescas à sua escolha: limão, morango, abacaxi ou maracujá."
+    },
+    {
+      "id": "drk-22",
+      "name": "Clericot Jarra Especial (700ml)",
+      "category": "drinks",
+      "price": 50.00,
+      "priceOptions": [
+        { "label": "Com Vinho Branco", "price": 50.00 },
+        { "label": "Com Espumante Brut", "price": 60.00 }
+      ],
+      "description": "Jarra para compartilhar com frutas frescas picadas da época, Domecq, licor fino de pêssego, toque de soda e vinho branco ou espumante.",
+      "badge": "Jarra 700ml"
+    },
+    {
+      "id": "drk-23",
+      "name": "Marquesa de Santos (Mocktail / Sem Álcool)",
+      "category": "drinks",
+      "price": 27.00,
+      "description": "Drink doce sem álcool delicioso: café expresso encorpado, sorvete artesanal de baunilha e borda generosa de Nutella pura.",
+      "badge": "Sem Álcool",
+      "popular": true
+    },
+    {
+      "id": "drk-24",
+      "name": "Ice Tea Artesanal com Espuma de Rapadura",
+      "category": "drinks",
+      "price": 12.00,
+      "description": "Chá gelado da casa com opções de sabores (morango, maracujá, manga, maçã verde ou limão siciliano), coberto com espuma de rapadura.",
+      "badge": "Sem Álcool"
+    },
+
+    {
+      "id": "chopp-01",
+      "name": "Chopp Brahma Geladíssimo na Tulipa",
+      "category": "chopes",
+      "price": 10.90,
+      "description": "O mais tradicional chopp do Largo do Machado, tirado com colarinho cremoso de dois dedos na tulipa resfriada.",
+      "badge": "Tradição 1966",
+      "popular": true
+    },
+    {
+      "id": "chopp-02",
+      "name": "Chopp Brahma na Caldereta",
+      "category": "chopes",
+      "price": 10.90,
+      "description": "Chopp Brahma gelado servido no copo caldereta para beber com os amigos.",
+      "popular": true
+    },
+    {
+      "id": "chopp-03",
+      "name": "Cerveja Spaten (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 17.00,
+      "description": "A puro malte de Munique servida trincando de gelada com balde de gelo.",
+      "badge": "600ml Geladíssima",
+      "popular": true
+    },
+    {
+      "id": "chopp-04",
+      "name": "Cerveja Original (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 17.00,
+      "description": "A clássica pilsen brasileira de garrafa, amada em todos os botecos do Rio de Janeiro.",
+      "popular": true
+    },
+    {
+      "id": "chopp-05",
+      "name": "Cerveja Stella Artois (Garrafa 600ml)",
+      "category": "chopes",
+      "price": 19.00,
+      "description": "Lager premium belga leve e sofisticada na garrafa de 600ml."
+    },
+    {
+      "id": "chopp-06",
+      "name": "Stella Artois Long Neck",
+      "category": "chopes",
+      "price": 14.00,
+      "description": "Long neck clássica servida estupidamente gelada."
+    },
+    {
+      "id": "chopp-07",
+      "name": "Stella Artois Sem Glúten (Long Neck)",
+      "category": "chopes",
+      "price": 14.00,
+      "description": "Todo o sabor inconfundível de Stella Artois na versão especial sem glúten.",
+      "dietary": "Sem Glúten"
+    },
+    {
+      "id": "chopp-08",
+      "name": "Corona Extra",
+      "category": "chopes",
+      "price": 15.00,
+      "description": "Cerveja mexicana refrescante servida com a clássica fatia de limão no gargalo."
+    },
+    {
+      "id": "chopp-09",
+      "name": "Corona Cero (Zero Álcool)",
+      "category": "chopes",
+      "price": 15.00,
+      "description": "A mesma refrescância de Corona com zero teor alcoólico.",
+      "badge": "Zero Álcool"
+    },
+
+    {
+      "id": "vin-01",
+      "name": "Dona Vitória Premium (Tinto)",
+      "category": "vinhos",
+      "price": 145.00,
+      "description": "Origem: Portugal, Região do Alentejo. Uvas: Aragonês, Syrah e Trincadeira. Perfeito para harmonizar com carnes suculentas, picanha e cortes grelhados densos.",
+      "badge": "Vinho Tinto Premium"
+    },
+    {
+      "id": "vin-02",
+      "name": "Seival Tempranillo (Tinto)",
+      "category": "vinhos",
+      "price": 79.00,
+      "description": "Origem: Brasil, Campanha Gaúcha. Uva: Tempranillo. Notas frutadas que harmonizam com carnes e massas.",
+      "badge": "Nacional Selecionado"
+    },
+    {
+      "id": "vin-03",
+      "name": "Viejo Feo Reserva Carmenere (Tinto)",
+      "category": "vinhos",
+      "price": 139.00,
+      "description": "Origem: Chile, Vale do Maule. Uva: Carmenere. Estruturado e aveludado, ideal para carnes assadas e feijoada."
+    },
+    {
+      "id": "vin-04",
+      "name": "El Supremo Malbec (Tinto)",
+      "category": "vinhos",
+      "price": 110.00,
+      "description": "Origem: Argentina, Mendoza. Uva: Malbec. Taninos redondos com notas de ameixa e especiarias doces."
+    },
+    {
+      "id": "vin-05",
+      "name": "Júlia Florista (Tinto)",
+      "category": "vinhos",
+      "price": 99.00,
+      "description": "Origem: Portugal, Lisboa. Uvas: Castelão e Aragonês. Vinho versátil e gastronômico que harmoniza desde bolinho de bacalhau até carnes magras e frangos."
+    },
+    {
+      "id": "vin-06",
+      "name": "El Supremo Blend (Branco)",
+      "category": "vinhos",
+      "price": 79.00,
+      "description": "Origem: Argentina, Mendoza. Uvas: Chenin Blanc e Pedro Ximenez. Fresco e aromático, excelente para saladas, entradas e peixes fritos.",
+      "badge": "Vinho Branco"
+    },
+    {
+      "id": "vin-07",
+      "name": "Viejo Feo Reserva Chardonnay (Branco)",
+      "category": "vinhos",
+      "price": 129.00,
+      "description": "Origem: Chile, Vale do Maule. Uva: Chardonnay. Mineralidade e elegância para acompanhar frutos do mar e salmão."
+    },
+    {
+      "id": "vin-08",
+      "name": "Altís Vinho Verde DOC (Branco)",
+      "category": "vinhos",
+      "price": 139.00,
+      "description": "Origem: Portugal, Região do Minho. Uvas: Loureiro, Arinto e Trajadura. Leve agulha refrescante, par perfeito para bacalhau e petiscos de praia.",
+      "badge": "Vinho Verde DOC"
+    },
+    {
+      "id": "vin-09",
+      "name": "Espumante Chandon Brut",
+      "category": "vinhos",
+      "price": 189.00,
+      "description": "Origem: Garibaldi, Serra Gaúcha. Uvas: Chardonnay, Riesling Itálico e Pinot Noir. Elegante, borbulhas finas para brindar ocasiões especiais.",
+      "badge": "Espumante Brut"
+    },
+    {
+      "id": "vin-10",
+      "name": "Espumante Terra Nova Brut Rosé",
+      "category": "vinhos",
+      "price": 119.00,
+      "description": "Origem: Vale do São Francisco. Uva: Grenache. Aromas florais e de frutas vermelhas frescas."
+    },
+    {
+      "id": "vin-11",
+      "name": "Taça de Vinho Mosteiro da Casa",
+      "category": "vinhos",
+      "price": 15.00,
+      "description": "Taça de vinho tinto da casa servido na temperatura ideal."
+    },
+    { "id": "dest-01", "name": "Whisky Johnnie Walker Red Label (Dose)", "category": "vinhos", "price": 26.00, "description": "Clássico whisky escocês blended." },
+    { "id": "dest-02", "name": "Whisky Johnnie Walker Black Label 12 Anos (Dose)", "category": "vinhos", "price": 30.00, "description": "Whisky 12 anos complexo e defumado." },
+    { "id": "dest-03", "name": "Whisky Black & White (Dose)", "category": "vinhos", "price": 20.00, "description": "Whisky suave e equilibrado." },
+    { "id": "dest-04", "name": "Vodka Absolut Importada (Dose)", "category": "vinhos", "price": 27.00, "description": "Vodka sueca pura e aveludada." },
+    { "id": "dest-05", "name": "Tequila José Cuervo (Dose)", "category": "vinhos", "price": 24.00, "description": "Dose de tequila mexicana com limão e sal." },
+    { "id": "dest-06", "name": "Cachaças Premium Artesanais (Dose)", "category": "vinhos", "price": 14.00, "description": "Doses selecionadas de cachaças envelhecidas em madeiras nobres brasileiras." },
+    { "id": "dest-07", "name": "Licores Finos (Dose)", "category": "vinhos", "price": 23.00, "description": "Digestivos e licores selecionados para finalizar a refeição." },
+
+    { "id": "veg-01", "name": "Risoto de Tomate Seco & Manjericão", "category": "vegetarianos", "price": 38.90, "description": "Arroz cremoso aromatizado com tomates secos nobres, manjericão fresco colhido e queijo parmesão ralado na hora.", "badge": "Vegetariano", "dietary": "Vegetariano", "serves": "1 pessoa" },
+    { "id": "veg-02", "name": "Estrogonofe de Cogumelos", "category": "vegetarianos", "price": 38.90, "description": "Mix de cogumelos frescos e abobrinha em molho de estrogonofe cremoso, acompanhado de arroz com castanhas e batatas portuguesas.", "badge": "Vegetariano", "dietary": "Vegetariano", "serves": "1 pessoa" },
+
+    { "id": "kids-01", "name": "Brasileirinho de Frango (Kids)", "category": "kids", "price": 29.00, "description": "Filézinho de frango grelhado ou empanado em tirinhas, arroz branquinho, feijão com sabor caseiro e batatinhas fritas.", "badge": "Menu Kids", "serves": "1 criança" },
+    { "id": "kids-02", "name": "Brasileirinho de Filé (Kids)", "category": "kids", "price": 39.00, "description": "Tirinhas macias de filé mignon grelhado na manteiga, arroz branco, feijãozinho e batatas fritas crocantes.", "badge": "Menu Kids", "serves": "1 criança" },
+
+    { "id": "massa-01", "name": "Massa ao Molho Pomodoro Clássico", "category": "massas", "price": 40.90, "description": "Massa al dente com molho caseiro de tomates frescos, azeite extravirgem, alho e folhas de manjericão fresco.", "serves": "1 pessoa" },
+    { "id": "massa-02", "name": "Massa à Bolonhesa Tradicional", "category": "massas", "price": 40.90, "description": "Massa italiana com molho de carne moída selecionada cozida lentamente com vinho tinto, tomate e ervas finas.", "serves": "1 pessoa" },
+    { "id": "massa-03", "name": "Massa aos Quatro Queijos", "category": "massas", "price": 40.90, "description": "Molho aveludado e cremoso elaborado com gorgonzola, muçarela, provolone e parmesão gratinado.", "serves": "1 pessoa" },
+    { "id": "omelete-01", "name": "Omelete de Queijo", "category": "massas", "price": 32.90, "description": "Omelete fofinho e dourado com queijo derretido abundante, acompanhado de salada ou guarnição.", "serves": "1 pessoa" },
+    { "id": "omelete-02", "name": "Omelete Misto", "category": "massas", "price": 32.90, "description": "Ovos caipiras batidos e recheados com presunto cozido magro e queijo muçarela derretendo.", "serves": "1 pessoa" },
+    { "id": "omelete-03", "name": "Omelete de Legumes", "category": "massas", "price": 32.90, "description": "Omelete leve preparado com seleção de legumes salteados na manteiga e cheiro verde.", "serves": "1 pessoa" },
+
+    { "id": "salada-01", "name": "Salada Mista Completa", "category": "saladas", "price": 48.90, "description": "Alface crespa, tomate fresco, palmito nobre em rodelas, cebola, azeitonas e ovos cozidos.", "serves": "Para compartilhar" },
+    { "id": "salada-02", "name": "Salada de Palmito Nobre", "category": "saladas", "price": 50.90, "description": "Porção farta de palmito pupunha macio e saboroso com azeite extravirgem e orégano.", "serves": "Para compartilhar" },
+    { "id": "salada-03", "name": "Salada Verde", "category": "saladas", "price": 35.90, "description": "Mix crocante de folhas verdes da estação com azeite e vinagre balsâmico.", "serves": "1 a 2 pessoas" },
+    { "id": "salada-04", "name": "Salada Tradicional", "category": "saladas", "price": 35.90, "description": "Alface americana crocante, rodelas de tomate caqui e cebola roxa fininha.", "serves": "1 a 2 pessoas" },
+    { "id": "salada-05", "name": "Salada Estação 184", "category": "saladas", "price": 34.90, "description": "Receita exclusiva da casa combinando folhas selecionadas, queijo em cubos e molho suave especial.", "serves": "1 a 2 pessoas" },
+
+    {
+      "id": "sopa-01",
+      "name": "Canja de Galinha Tradicional",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Canja reconfortante com frango desfiado, legumes picadinhos e arroz cozido no caldo aromatizado.",
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-02",
+      "name": "Caldo Verde com Calabresa",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Autêntico caldo português espesso de batatas com couve fininha e rodelas de linguiça calabresa frita.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-03",
+      "name": "Caldo de Feijão Amigo",
+      "category": "sopas",
+      "price": 20.00,
+      "priceOptions": [
+        { "label": "Pequeno (300ml)", "price": 20.00 },
+        { "label": "Grande (500ml)", "price": 30.00 }
+      ],
+      "description": "O lendário caldinho de feijão de boteco carioca batido com alho, servido com cheiro verde e torresminho.",
+      "popular": true,
+      "serves": "1 pessoa"
+    },
+    {
+      "id": "sopa-04",
+      "name": "Sopa de Legumes da Vovó",
+      "category": "sopas",
+      "price": 22.00,
+      "priceOptions": [
+        { "label": "Pequena (300ml)", "price": 22.00 },
+        { "label": "Grande (500ml)", "price": 32.00 }
+      ],
+      "description": "Sopa quentinha e aveludada com batatas, cenouras, chuchu e ervas aromáticas frescas.",
+      "serves": "1 pessoa"
+    },
+
+    { "id": "guar-01", "name": "Arroz Branco ou Feijão", "category": "guarnicoes", "price": 22.00, "description": "Porção caprichada de arroz agulhinha solto ou feijão carioca temperado no alho." },
+    { "id": "guar-02", "name": "Arroz com Brócolis", "category": "guarnicoes", "price": 28.00, "description": "Arroz refogado no azeite com brócolis frescos picados e alho dourado." },
+    { "id": "guar-03", "name": "Arroz à Grega", "category": "guarnicoes", "price": 28.00, "description": "Arroz soltinho com passas, cenoura em cubinhos, pimentões e ervilhas." },
+    { "id": "guar-04", "name": "Arroz com Passas", "category": "guarnicoes", "price": 28.00, "description": "Arroz branco salteado na manteiga com uvas passas doces." },
+    { "id": "guar-05", "name": "Arroz Maluco Carioca", "category": "guarnicoes", "price": 34.00, "description": "Arroz com bacon crocante, ovos mexidos, presunto, cebolinha e batata palha." },
+    { "id": "guar-06", "name": "Arroz à Piamontese Cremoso", "category": "guarnicoes", "price": 35.00, "description": "Arroz envolto em creme de leite fresco, champignons e queijo muçarela derretido." },
+    { "id": "guar-07", "name": "Farofa à Brasileira", "category": "guarnicoes", "price": 28.00, "description": "Farinha de mandioca torrada com manteiga, cebola douradinha e bacon." },
+    { "id": "guar-08", "name": "Farofa de Ovos Caipiras", "category": "guarnicoes", "price": 28.00, "description": "Farofa úmida com pedaços graúdos de ovos mexidos e cheiro verde." },
+    { "id": "guar-09", "name": "Farofa de Banana", "category": "guarnicoes", "price": 28.00, "description": "Farofa agridoce com rodelas de banana fritas na manteiga de primeira." },
+    { "id": "guar-10", "name": "Guarnição à Francesa", "category": "guarnicoes", "price": 35.00, "description": "Batata palha crocante salteada com presunto em tiras, cebola fininha e ervilhas na manteiga." },
+    { "id": "guar-11", "name": "Guarnição à Mineira", "category": "guarnicoes", "price": 29.00, "description": "Couve fininha refogada no alho, farofa temperada e tutu de feijão." },
+
+    { "id": "beb-01", "name": "Água Mineral (Com ou Sem Gás)", "category": "bebidas", "price": 7.00, "description": "Garrafa 300ml geladinha." },
+    { "id": "beb-02", "name": "Refrigerante Lata", "category": "bebidas", "price": 9.00, "description": "Coca-Cola, Coca Zero, Guaraná Antarctica, Sprite ou Schweppes Tônica." },
+    { "id": "beb-03", "name": "H2OH! Limão", "category": "bebidas", "price": 11.00, "description": "Garrafa 500ml gelada." },
+    { "id": "beb-04", "name": "Suco Natural da Fruta (Copo 300ml)", "category": "bebidas", "price": 15.00, "description": "Fruta fresca espremida na hora: Laranja, Limão, Abacaxi, Maracujá ou Melancia." },
+    { "id": "beb-05", "name": "Suco Natural da Fruta (Jarra 700ml)", "category": "bebidas", "price": 30.00, "description": "Jarra servindo até 3 pessoas com suco natural refrescante." },
+    { "id": "beb-06", "name": "Mate Artesanal da Casa (Limão ou Natural)", "category": "bebidas", "price": 9.90, "description": "O legítimo mate tostado carioca com toque de limão fresco da casa.", "badge": "Carioca Raiz", "popular": true },
+
+    {
+      "id": "sob-01",
+      "name": "Brownie Quente com Sorvete de Baunilha",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Brownie macio de puro chocolate meio amargo servido quente, acompanhado de bola de sorvete de baunilha e calda de chocolate.",
+      "badge": "Mais Pedido",
+      "popular": true
+    },
+    {
+      "id": "sob-02",
+      "name": "Pudim de Leite Condensado Lisinho",
+      "category": "sobremesas",
+      "price": 13.00,
+      "description": "Fatia caprichada de pudim tradicional sem furinhos, textura sedosa e calda de caramelo dourado da casa.",
+      "badge": "Receita Tradicional",
+      "popular": true
+    },
+    {
+      "id": "sob-03",
+      "name": "Mousse de Chocolate Artesanal",
+      "category": "sobremesas",
+      "price": 14.00,
+      "description": "Mousse aerada e densa com raspas finas de chocolate nobre."
+    },
+    {
+      "id": "sob-04",
+      "name": "Torta Alemã Clássica",
+      "category": "sobremesas",
+      "price": 18.00,
+      "description": "Camadas crocantes de biscoito embebido com creme aveludado e cobertura farta de ganache de chocolate."
+    },
+    {
+      "id": "sob-05",
+      "name": "Petit Gâteau com Sorvete",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Bolinho de chocolate com recheio cremoso que escorre ao cortar, servido com sorvete de creme e hortelã."
+    },
+    {
+      "id": "sob-06",
+      "name": "Creme de Papaya com Licor de Cassis",
+      "category": "sobremesas",
+      "price": 32.00,
+      "description": "Mamão papaya batido na hora com sorvete de baunilha e coroado com fio do autêntico licor francês de cassis.",
+      "badge": "Clássico Anos 90",
+      "popular": true
+    },
+    {
+      "id": "sob-07",
+      "name": "Sorvete Artesanal (1 Bola)",
+      "category": "sobremesas",
+      "price": 13.00,
+      "description": "Sabores disponíveis: Creme, Chocolate ou Morango."
+    },
+    {
+      "id": "sob-08",
+      "name": "Sorvete Artesanal (2 Bolas)",
+      "category": "sobremesas",
+      "price": 17.00,
+      "description": "Duas bolas generosas com calda à sua escolha."
+    }
+  ]
+}
