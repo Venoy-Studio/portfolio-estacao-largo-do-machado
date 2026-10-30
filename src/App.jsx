@@ -12,8 +12,10 @@ import LocationSection from './components/LocationSection.jsx';
 import Footer from './components/Footer.jsx';
 import CartDrawer from './components/CartDrawer.jsx';
 import MobileBottomBar from './components/MobileBottomBar.jsx';
+import { useLanguage } from './i18n/LanguageContext.jsx';
 
 export default function App() {
+  const { t } = useLanguage();
   const [cartItems, setCartItems] = useState(() => {
     try {
       const saved = localStorage.getItem('estacao_cart');
@@ -63,7 +65,7 @@ export default function App() {
       }
     });
 
-    showToast(`"${item.name}" adicionado à comanda!`);
+    showToast(`"${item.name}" ${t('toast.itemAdded')}`);
   };
 
   // Update Item Quantity

@@ -1,32 +1,51 @@
 import React from 'react';
 import { Star, MessageCircle, ExternalLink, ThumbsUp, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function ReviewsSection({ restaurantData }) {
+  const { t, language } = useLanguage();
   const googleReviews = restaurantData?.restaurant?.googleReviews || restaurantData?.googleReviews || {};
-  const reviews = googleReviews.reviews || [
+  
+  const reviews = [
     {
       author: "Fillipe Braga",
-      date: "Fevereiro de 2025",
+      date: language === 'en' ? "February 2025" : language === 'es' ? "Febrero de 2025" : "Fevereiro de 2025",
       rating: 5,
-      comment: "Ótimo atendimento e comida muito boa. A feijoada e o filé à Oswaldo Aranha são impecáveis. Um dos melhores pontos do Largo do Machado!"
+      comment: language === 'en' 
+        ? "Excellent service and delicious food. The feijoada and Oswaldo Aranha steak are flawless. One of the top dining spots in Largo do Machado!"
+        : language === 'es'
+        ? "Excelente atención y comida riquísima. La feijoada y el bife a la Oswaldo Aranha son impecables. ¡Uno de los mejores puntos de Largo do Machado!"
+        : "Ótimo atendimento e comida muito boa. A feijoada e o filé à Oswaldo Aranha são impecáveis. Um dos melhores pontos do Largo do Machado!"
     },
     {
       author: "Lucía G.",
-      date: "Fevereiro de 2025",
+      date: language === 'en' ? "February 2025" : language === 'es' ? "Febrero de 2025" : "Fevereiro de 2025",
       rating: 5,
-      comment: "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio."
+      comment: language === 'en'
+        ? "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio."
+        : language === 'es'
+        ? "¡Tuvimos un almuerzo encantador! El bife estaba delicioso y el personal fue súper amable y atento. Gran ambiente tradicional en Río."
+        : "We had a lovely lunch! The steak was delicious and the staff were very friendly and attentive. Great traditional atmosphere in Rio."
     },
     {
       author: "Carlos Eduardo Mendes",
-      date: "Janeiro de 2025",
+      date: language === 'en' ? "January 2025" : language === 'es' ? "Enero de 2025" : "Janeiro de 2025",
       rating: 5,
-      comment: "Chopp Brahma estupidamente gelado e o bolinho de bacalhau crocante por fora e macio por dentro. Lugar clássico de boteco carioca de alta qualidade."
+      comment: language === 'en'
+        ? "Brahma draft beer served sub-zero cold and codfish croquette crispy on the outside, soft inside. High quality classic Rio boteco."
+        : language === 'es'
+        ? "Chopp Brahma estupendamente helado y el buñuelo de bacalao crocante por fuera y suave por dentro. Boteco clásico de alta calidad."
+        : "Chopp Brahma estupidamente gelado e o bolinho de bacalhau crocante por fora e macio por dentro. Lugar clássico de boteco carioca de alta qualidade."
     },
     {
       author: "Mariana Alencar",
-      date: "Dezembro de 2024",
+      date: language === 'en' ? "December 2024" : language === 'es' ? "Diciembre de 2024" : "Dezembro de 2024",
       rating: 5,
-      comment: "O almoço executivo salva a rotina! Preço justo, pratos muito bem servidos e sabor caseiro de verdade. Atendimento nota 10."
+      comment: language === 'en'
+        ? "The executive lunch saves the work routine! Fair prices, generous portions, and genuine homestyle flavors. Top notch service."
+        : language === 'es'
+        ? "¡El almuerzo ejecutivo salva la rutina! Precio justo, platos muy abundantes y sabor casero de verdad. Atención de diez."
+        : "O almoço executivo salva a rotina! Preço justo, pratos muito bem servidos e sabor caseiro de verdade. Atendimento nota 10."
     }
   ];
 
@@ -43,13 +62,13 @@ export default function ReviewsSection({ restaurantData }) {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold tracking-wider uppercase mb-3">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
-              Opinião de Quem Frequenta
+              {t('reviews.badge')}
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-              Avaliações Reais dos Nossos Clientes
+              {t('reviews.title')}
             </h2>
             <p className="text-stone-600 text-sm sm:text-base mt-2">
-              Sua satisfação diária é o que move nossa tradição de quase 60 anos.
+              {t('reviews.subtitle')}
             </p>
           </div>
 
@@ -65,10 +84,14 @@ export default function ReviewsSection({ restaurantData }) {
                 ))}
               </div>
               <p className="text-xs font-semibold text-stone-900 mt-0.5">
-                {totalReviews} Avaliações no Google
+                {language === 'en' 
+                  ? `${totalReviews} Google Reviews` 
+                  : language === 'es' 
+                  ? `${totalReviews} Opiniones en Google` 
+                  : `${totalReviews} Avaliações no Google`}
               </p>
               <span className="text-[10px] text-stone-500">
-                Verificadas no perfil oficial
+                {language === 'en' ? 'Verified on official profile' : language === 'es' ? 'Verificadas en perfil oficial' : 'Verificadas no perfil oficial'}
               </span>
             </div>
           </div>
@@ -122,13 +145,21 @@ export default function ReviewsSection({ restaurantData }) {
             
             <div className="space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/60 inline-block">
-                Nosso Compromisso com Você
+                {language === 'en' ? 'Our Commitment to You' : language === 'es' ? 'Nuestro Compromiso Contigo' : 'Nosso Compromisso com Você'}
               </span>
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-stone-900">
-                Já nos visitou? Conte como foi sua experiência!
+                {language === 'en' 
+                  ? 'Visited us recently? Tell us about your experience!' 
+                  : language === 'es' 
+                  ? '¿Ya nos visitaste? ¡Cuéntanos tu experiencia!' 
+                  : 'Já nos visitou? Conte como foi sua experiência!'}
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Periodicamente realizamos reuniões de equipe para aperfeiçoar nosso atendimento e cardápio. Caso algo não tenha saído de seu agrado, envie uma mensagem direta de WhatsApp; nós fazemos questão de ouvir você e solucionar.
+                {language === 'en'
+                  ? 'We continuously strive to elevate our service, menu, and warmth. If anything was not to your absolute satisfaction, reach out to us directly on WhatsApp; we make it a point to listen and make it right.'
+                  : language === 'es'
+                  ? 'Periódicamente nos reunimos para perfeccionar nuestro servicio y menú. Si algo no fue de tu total agrado, envíanos un mensaje directo de WhatsApp; nos aseguraremos de escucharte y solucionarlo.'
+                  : 'Periodicamente realizamos reuniões de equipe para aperfeiçoar nosso atendimento e cardápio. Caso algo não tenha saído de seu agrado, envie uma mensagem direta de WhatsApp; nós fazemos questão de ouvir você e solucionar.'}
               </p>
             </div>
 
@@ -140,7 +171,7 @@ export default function ReviewsSection({ restaurantData }) {
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-400 font-semibold text-xs sm:text-sm shadow transition-all"
               >
                 <ThumbsUp className="w-4 h-4 text-amber-400" />
-                <span>Avaliar no Google</span>
+                <span>{t('reviews.writeReview')}</span>
                 <ExternalLink className="w-3.5 h-3.5 text-stone-400" />
               </a>
 
@@ -151,7 +182,9 @@ export default function ReviewsSection({ restaurantData }) {
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs sm:text-sm shadow transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Falar com o Gerente</span>
+                <span>
+                  {language === 'en' ? 'Talk to the Manager' : language === 'es' ? 'Hablar con el Gerente' : 'Falar com o Gerente'}
+                </span>
               </a>
             </div>
 

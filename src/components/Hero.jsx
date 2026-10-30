@@ -7,44 +7,46 @@ import {
   Clock, 
   MessageCircle, 
   ChevronRight, 
-  ShieldCheck,
-  Utensils,
-  Award
+  ShieldCheck, 
+  Utensils, 
+  Award 
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Hero({ restaurantData, onExploreMenu }) {
+  const { t, language } = useLanguage();
   const [activeSlide, setActiveSlide] = useState(0);
 
   const gallery = [
     {
       url: '/images/fachada.jpg',
       fallback: 'https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/estac.jpg',
-      title: 'A Tradicional Esquina da Bento Lisboa',
-      subtitle: 'Ambiente acolhedor, mesas na calçada e clima clássico de boteco carioca.'
+      title: t('hero.slide1Title'),
+      subtitle: t('hero.slide1Sub')
     },
     {
       url: '/images/banner-1.jpg',
       fallback: 'https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/IMG-TOP-HEADER-01.jpg',
-      title: 'Gastronomia Afetiva Carioca',
-      subtitle: 'Carnes na brasa, feijoada completa, pescados frescos e guarnições caprichadas.'
+      title: t('hero.slide2Title'),
+      subtitle: t('hero.slide2Sub')
     },
     {
       url: '/images/banner-2.jpg',
       fallback: 'https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/IMG-TOP-HEADER-02.jpg',
-      title: 'Chopp Estupidamente Gelado',
-      subtitle: 'Chopp Brahma tirado no grau certo com colarinho aveludado e cervejas 600ml.'
+      title: t('hero.slide3Title'),
+      subtitle: t('hero.slide3Sub')
     },
     {
       url: '/images/banner-3.jpg',
       fallback: 'https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/IMG-TOP-HEADER-03.jpg',
-      title: 'Almoço & Jantar Executivo Diário',
-      subtitle: '24 opções completas e fartas servidas todos os dias para a rotina da Zona Sul.'
+      title: t('hero.slide4Title'),
+      subtitle: t('hero.slide4Sub')
     },
     {
       url: '/images/banner-4.jpg',
       fallback: 'https://estacaolargodomachado.com.br/wp-content/uploads/2025/06/IMG-TOP-HEADER-04.jpg',
-      title: 'Carta de Drinks Autorais',
-      subtitle: 'Homenagens líquidas a Machado de Assis, Aterro do Flamengo e Cássia Eller.'
+      title: t('hero.slide5Title'),
+      subtitle: t('hero.slide5Sub')
     }
   ];
 
@@ -66,19 +68,17 @@ export default function Hero({ restaurantData, onExploreMenu }) {
             {/* Heritage Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-900/10 border border-amber-900/20 text-amber-950 text-xs font-semibold tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-700 animate-pulse" />
-              <span>TRADIÇÃO DESDE 1966 • CATETE / LARGO DO MACHADO</span>
+              <span>{t('hero.badge')}</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-3xl sm:text-5xl xl:text-[54px] font-extrabold text-stone-900 leading-[1.12] tracking-tight">
-              O sabor autêntico e a alma carioca no coração do <span className="italic font-normal text-amber-900">Largo do Machado.</span>
+              {t('hero.title1')}<span className="italic font-normal text-amber-900">{t('hero.titleHighlight')}</span>
             </h1>
 
             {/* Subtitle / Description */}
             <p className="text-stone-700 text-base sm:text-lg leading-relaxed max-w-xl">
-              Localizado na histórica Rua Bento Lisboa, a 50 metros do metrô. 
-              Chopp Brahma trincando de gelado, cortes nobres na brasa, a tradicionalíssima 
-              feijoada carioca, 24 opções de almoço executivo servidos todos os dias e drinks autorais inesquecíveis.
+              {t('hero.description')}
             </p>
 
             {/* CTAs */}
@@ -87,7 +87,7 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                 onClick={onExploreMenu}
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-semibold text-base shadow-md hover:shadow-lg active:scale-[0.98] transition-all group"
               >
-                <span>Explorar Cardápio Completo</span>
+                <span>{t('hero.ctaMenu')}</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
@@ -98,7 +98,7 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                 className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base shadow-sm active:scale-[0.98] transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Pedir no WhatsApp</span>
+                <span>{t('hero.ctaWhatsApp')}</span>
               </a>
             </div>
 
@@ -111,7 +111,7 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                   <span className="font-bold text-stone-900 text-base">4.8</span>
                 </div>
                 <p className="text-[11px] text-stone-600 mt-0.5">
-                  992 avaliações no Google
+                  {language === 'en' ? '992 Google reviews' : language === 'es' ? '992 opiniones en Google' : '992 avaliações no Google'}
                 </p>
               </div>
 
@@ -120,16 +120,16 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                   1966
                 </div>
                 <p className="text-[11px] text-stone-600 mt-0.5">
-                  60 anos de tradição viva
+                  {language === 'en' ? '60 years of live tradition' : language === 'es' ? '60 años de tradición viva' : '60 anos de tradição viva'}
                 </p>
               </div>
 
               <div>
                 <div className="font-bold text-stone-900 text-base text-emerald-800">
-                  11h às 00h
+                  11:00 - 00:00
                 </div>
                 <p className="text-[11px] text-stone-600 mt-0.5">
-                  Aberto todos os dias
+                  {language === 'en' ? 'Open every day' : language === 'es' ? 'Abierto todos los días' : 'Aberto todos os dias'}
                 </p>
               </div>
 
@@ -158,7 +158,9 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                 {/* Badge on top */}
                 <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900/80 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
                   <Award className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Ambiente & Gastronomia Original</span>
+                  <span>
+                    {language === 'en' ? 'Atmosphere & Authentic Cuisine' : language === 'es' ? 'Ambiente y Cocina Original' : 'Ambiente & Gastronomia Original'}
+                  </span>
                 </div>
 
                 {/* Caption at bottom */}
@@ -185,7 +187,9 @@ export default function Hero({ restaurantData, onExploreMenu }) {
                     }`}
                   >
                     <div className="truncate font-semibold">{item.title.split(' ')[0]}</div>
-                    <div className="text-[10px] text-stone-500">Foto 0{idx + 1}</div>
+                    <div className="text-[10px] text-stone-500">
+                      {language === 'en' ? `Photo 0${idx + 1}` : language === 'es' ? `Foto 0${idx + 1}` : `Foto 0${idx + 1}`}
+                    </div>
                   </button>
                 ))}
               </div>

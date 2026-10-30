@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Sparkles, Wine, GlassWater, Plus, Check, Beer } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function DrinksShowcase({ onAddToCart, restaurantData }) {
+  const { t, language, translateItem } = useLanguage();
   const [addedMap, setAddedMap] = useState({});
 
-  // Filter signature drinks
-  const signatureDrinks = [
+  // Base signature drinks definition
+  const baseDrinks = [
     {
       id: "drk-01",
       name: "Machado de Assis",
       price: 31.00,
       description: "Homenagem ao bruxo do Cosme Velho: amoras frescas maceradas, xarope de rosas nobre, toque sutil de tabasco, Gin Beefeater Rosê, água tônica e finalizado com aveludada espuma artesanal de morango.",
-      tag: "Assinatura Autoral",
+      tag: language === 'en' ? 'Authorial Signature' : language === 'es' ? 'Firma de Autor' : 'Assinatura Autoral',
       accent: "from-rose-950 to-stone-900 border-rose-800/40 text-rose-300"
     },
     {
@@ -19,7 +21,7 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
       name: "Aterro do Flamengo",
       price: 32.00,
       description: "Inspirado na brisa da Guanabara: Gin Beefeater, licor de pêssego, xarope artesanal de maracujá, espumante brut geladíssimo e finalizado com cremosa espuma de gengibre.",
-      tag: "Mais Pedido",
+      tag: language === 'en' ? 'Most Popular' : language === 'es' ? 'Más Pedido' : 'Mais Pedido',
       accent: "from-amber-950 to-stone-900 border-amber-800/40 text-amber-300"
     },
     {
@@ -27,7 +29,7 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
       name: "Clarisse Índio do Brasil",
       price: 32.00,
       description: "Morangos frescos, xarope de hibisco rubi, Gin Beefeater Cítrico, água tônica gelada e espuma aromática de gengibre.",
-      tag: "Autoral Refrescante",
+      tag: language === 'en' ? 'Refreshing Signature' : language === 'es' ? 'Refrescante de Autor' : 'Autoral Refrescante',
       accent: "from-red-950 to-stone-900 border-red-800/40 text-red-300"
     },
     {
@@ -35,7 +37,7 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
       name: "Rua das Laranjeiras 'Cássia Eller'",
       price: 31.00,
       description: "Polpa fresca de maracujá, xarope artesanal de manga, Gin Beefeater Tropical, água tônica e inesquecível espuma brasileira de rapadura.",
-      tag: "Homenagem Carioca",
+      tag: language === 'en' ? 'Carioca Tribute' : language === 'es' ? 'Homenaje Carioca' : 'Homenagem Carioca',
       accent: "from-yellow-950 to-stone-900 border-yellow-800/40 text-yellow-300"
     },
     {
@@ -43,7 +45,7 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
       name: "São Salvador",
       price: 26.00,
       description: "Em referência à boemia da famosa praça vizinha: amoras silvestres, morango, gota sutil de tabasco e xarope de açúcar.",
-      tag: "Praça São Salvador",
+      tag: language === 'en' ? 'São Salvador Square' : language === 'es' ? 'Plaza São Salvador' : 'Praça São Salvador',
       accent: "from-purple-950 to-stone-900 border-purple-800/40 text-purple-300"
     },
     {
@@ -51,10 +53,19 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
       name: "Marquesa de Santos (Mocktail)",
       price: 27.00,
       description: "Sobremesa em forma de coquetel sem álcool: dose de café expresso encorpado, sorvete artesanal de baunilha e borda generosa de Nutella pura.",
-      tag: "Sem Álcool • Doce",
+      tag: language === 'en' ? 'Non-Alcoholic • Sweet' : language === 'es' ? 'Sin Alcohol • Dulce' : 'Sem Álcool • Doce',
       accent: "from-stone-900 to-amber-950 border-stone-700/60 text-amber-200"
     }
   ];
+
+  const signatureDrinks = baseDrinks.map(drink => {
+    const tr = translateItem(drink);
+    return {
+      ...drink,
+      name: tr.name || drink.name,
+      description: tr.description || drink.description
+    };
+  });
 
   const handleAdd = (drink) => {
     onAddToCart({
@@ -68,7 +79,7 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
   };
 
   return (
-    <section id="drinks-section" className="py-20 bg-dark-pattern text-stone-100 relative overflow-hidden border-b border-stone-800">
+    <section id="drinks-section" className="py-20 bg-[#141211] text-stone-100 relative overflow-hidden border-b border-stone-800">
       
       {/* Visual lighting effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
@@ -79,13 +90,13 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            Carta Autoral de Drinks
+            {t('drinksShowcase.badge')}
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Coquetéis Inspirados no Rio & no Catete
+            {t('drinksShowcase.title')}
           </h2>
           <p className="text-stone-400 text-sm sm:text-base mt-3 leading-relaxed">
-            Nossos bartenders homenageiam os poetas, ruas e memórias do Largo do Machado com insumos artesanais, espumas aveludadas e destilados nobres.
+            {t('drinksShowcase.subtitle')}
           </p>
         </div>
 
@@ -119,7 +130,9 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
 
                 <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between gap-3">
                   <div>
-                    <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Preço</span>
+                    <span className="text-[10px] text-stone-400 uppercase tracking-wider block">
+                      {language === 'en' ? 'Price' : language === 'es' ? 'Precio' : 'Preço'}
+                    </span>
                     <span className="text-xl font-serif font-extrabold text-amber-400">
                       R$ {drink.price.toFixed(2).replace('.', ',')}
                     </span>
@@ -136,12 +149,12 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
                     {isAdded ? (
                       <>
                         <Check className="w-3.5 h-3.5" />
-                        <span>Adicionado!</span>
+                        <span>{t('drinksShowcase.added')}</span>
                       </>
                     ) : (
                       <>
                         <Plus className="w-3.5 h-3.5" />
-                        <span>Pedir Drink</span>
+                        <span>{t('drinksShowcase.addToCart')}</span>
                       </>
                     )}
                   </button>
@@ -159,10 +172,18 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
             </div>
             <div>
               <h4 className="font-serif text-lg font-bold text-white">
-                Prefere o Clássico Chopp Brahma Gelado?
+                {language === 'en' 
+                  ? 'Prefer Classic Ice-Cold Brahma Draft Beer?' 
+                  : language === 'es' 
+                  ? '¿Prefieres el Clásico Chopp Brahma Bien Helado?' 
+                  : 'Prefere o Clássico Chopp Brahma Gelado?'}
               </h4>
               <p className="text-xs sm:text-sm text-stone-400 mt-0.5">
-                Tulipa (R$ 10,90) ou Caldereta (R$ 10,90), além de garrafas de 600ml de Spaten, Original e Stella Artois.
+                {language === 'en' 
+                  ? 'Tulip glass (R$ 10.90) or Caldereta (R$ 10.90), plus 600ml bottles of Spaten, Original, and Stella Artois.' 
+                  : language === 'es' 
+                  ? 'Tulipa (R$ 10,90) o Caldereta (R$ 10,90), además de botellas de 600ml de Spaten, Original y Stella Artois.' 
+                  : 'Tulipa (R$ 10,90) ou Caldereta (R$ 10,90), além de garrafas de 600ml de Spaten, Original e Stella Artois.'}
               </p>
             </div>
           </div>
@@ -171,7 +192,11 @@ export default function DrinksShowcase({ onAddToCart, restaurantData }) {
             href="#cardapio"
             className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold text-xs uppercase tracking-wide shrink-0 transition-colors"
           >
-            Ver Carta Completa de Cervejas
+            {language === 'en' 
+              ? 'View Full Beer Menu' 
+              : language === 'es' 
+              ? 'Ver Carta Completa de Cervezas' 
+              : 'Ver Carta Completa de Cervejas'}
           </a>
         </div>
 

@@ -47,6 +47,12 @@ O projeto une a rica essência da boemia tradicional carioca com tecnologia mode
 - **🍸 Carta Autoral de Drinks do Catete**:
   - Coquetéis que homenageiam personalidades e esquinas históricas da região: *"Machado de Assis"*, *"Aterro do Flamengo"*, *"Clarisse Índio do Brasil"*, *"Rua das Laranjeiras 'Cássia Eller'"*, *"São Salvador"* e o mocktail *"Marquesa de Santos"*.
 
+- **🌐 Suporte Multilíngue Completo (Português, Inglês e Espanhol)**:
+  - Seletor de idioma intuitivo e elegante integrado na barra superior, navbar e menu mobile (🇧🇷 Português, 🇺🇸 English, 🇪🇸 Español).
+  - Tradução completa da interface, categorias, pratos executivos, drinks autorais e itens do cardápio.
+  - Comanda digital e mensagens de WhatsApp adaptadas dinamicamente ao idioma escolhido.
+  - Persistência automática da preferência do visitante via `localStorage`.
+
 - **🛍️ Comanda Digital & Pedido Direto no WhatsApp**:
   - Adição instantânea de itens à comanda com controle de quantidades.
   - Escolha entre **Entrega em Domicílio**, **Retirada no Balcão** ou **Consumo na Mesa**.

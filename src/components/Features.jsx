@@ -1,38 +1,41 @@
 import React from 'react';
 import { Beer, UtensilsCrossed, Flame, Bike, Clock, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Features({ onSelectCategory }) {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: Beer,
-      title: 'Chopp Estupidamente Gelado',
-      tag: 'Tradição Carioca',
-      description: 'Chopp Brahma cremoso tirado no ponto exato na tulipa e na caldereta, além de garrafas 600ml de Spaten, Original e Stella.',
-      actionLabel: 'Ver Chopes & Bebidas',
+      title: t('features.chopp.title'),
+      tag: t('features.chopp.tag'),
+      description: t('features.chopp.description'),
+      actionLabel: t('features.chopp.actionLabel'),
       categoryId: 'chopes'
     },
     {
       icon: UtensilsCrossed,
-      title: '24 Executivos Diários',
-      tag: 'Todo o Horário',
-      description: 'Refeições completas com fartura e tempero de verdade para a correria do dia a dia. Pratos a partir de R$ 29,90 servidos até meia-noite.',
-      actionLabel: 'Ver Cardápio Executivo',
+      title: t('features.executivos.title'),
+      tag: t('features.executivos.tag'),
+      description: t('features.executivos.description'),
+      actionLabel: t('features.executivos.actionLabel'),
       categoryId: 'executivos'
     },
     {
       icon: Flame,
-      title: 'Receitas Clássicas Desde 1966',
-      tag: 'Assinaturas da Casa',
-      description: 'A lendária Feijoada do Largo do Machado, o autêntico Filé à Oswaldo Aranha coberto de alho dourado e o Cozido dos domingos.',
-      actionLabel: 'Ver Pratos Tradicionais',
+      title: t('features.tradicao.title'),
+      tag: t('features.tradicao.tag'),
+      description: t('features.tradicao.description'),
+      actionLabel: t('features.tradicao.actionLabel'),
       categoryId: 'especiais'
     },
     {
       icon: Bike,
-      title: 'Entregas Rápidas no Bairro',
-      tag: 'Peça no WhatsApp',
-      description: 'Atendimento ágil para Catete, Largo do Machado, Flamengo, Glória e Laranjeiras. Peça sem burocracia direto pelo WhatsApp.',
-      actionLabel: 'Fazer Pedido Agora',
+      title: t('features.delivery.title'),
+      tag: t('features.delivery.tag'),
+      description: t('features.delivery.description'),
+      actionLabel: t('features.delivery.actionLabel'),
       categoryId: 'todos'
     }
   ];

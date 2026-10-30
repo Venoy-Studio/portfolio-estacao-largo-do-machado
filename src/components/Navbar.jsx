@@ -12,6 +12,8 @@ import {
   MessageCircle,
   ExternalLink
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
+import LanguageSelector from './LanguageSelector.jsx';
 
 export default function Navbar({ 
   cartCount, 
@@ -20,6 +22,7 @@ export default function Navbar({
   setSearchQuery, 
   restaurantData 
 }) {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -30,7 +33,6 @@ export default function Navbar({
     const checkOpen = () => {
       const now = new Date();
       const hour = now.getHours();
-      // Open from 11:00 to 23:59 (and up to midnight)
       setIsOpenNow(hour >= 11 && hour < 24);
     };
     checkOpen();
@@ -48,12 +50,12 @@ export default function Navbar({
   }, []);
 
   const navLinks = [
-    { label: 'Cardápio', href: '#cardapio' },
-    { label: 'Executivos', href: '#executivos-section' },
-    { label: 'Drinks & Chopes', href: '#drinks-section' },
-    { label: 'Tradição 1966', href: '#historia' },
-    { label: 'Avaliações', href: '#avaliacoes' },
-    { label: 'Onde Estamos', href: '#localizacao' },
+    { label: t('nav.cardapio'), href: '#cardapio' },
+    { label: t('nav.executivos'), href: '#executivos-section' },
+    { label: t('nav.drinks'), href: '#drinks-section' },
+    { label: t('nav.tradicao'), href: '#historia' },
+    { label: t('nav.avaliacoes'), href: '#avaliacoes' },
+    { label: t('nav.ondeEstamos'), href: '#localizacao' },
   ];
 
   const handleNavClick = (href) => {
@@ -72,28 +74,34 @@ export default function Navbar({
           <div className="flex items-center gap-4 flex-wrap">
             <span className="inline-flex items-center gap-1.5 font-medium text-amber-400">
               <Sparkles className="w-3.5 h-3.5" />
-              Tradição Carioca Desde 1966
+              {t('topBar.tradition')}
             </span>
             <span className="hidden md:inline text-stone-600">•</span>
             <span className="hidden sm:inline-flex items-center gap-1 text-stone-300">
               <MapPin className="w-3.5 h-3.5 text-amber-500" />
-              Rua Bento Lisboa, 184 — Largo do Machado / Catete
+              {t('topBar.addressShort')}
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-1.5">
               <span className={`w-2 h-2 rounded-full ${isOpenNow ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
               <span className="text-stone-300 font-medium">
-                {isOpenNow ? 'Aberto Hoje até 00:00' : 'Abre às 11:00'}
+                {isOpenNow ? t('topBar.openNow') : t('topBar.opensAt')}
               </span>
             </div>
+
+            <span className="hidden sm:inline text-stone-700">|</span>
+
+            {/* Topbar Quick Language Switcher */}
+            <LanguageSelector variant="topbar" />
+
             <a 
               href="tel:2125565323" 
               className="hidden lg:inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              (21) 2556-5323
+              {t('topBar.phone')}
             </a>
           </div>
         </div>
@@ -124,13 +132,13 @@ export default function Navbar({
                 Estação Largo do Machado
               </span>
               <span className="text-[11px] font-medium tracking-wider uppercase text-amber-800">
-                Boteco 184 • Desde 1966
+                {t('nav.brandSub')}
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden xl:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -146,17 +154,17 @@ export default function Navbar({
             ))}
           </div>
 
-          {/* Actions: Search, WhatsApp CTA, Cart */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Actions: Search, Language, WhatsApp CTA, Cart */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
             
             {/* Search Toggle */}
             <div className="relative">
               {searchOpen ? (
-                <div className="flex items-center bg-stone-100 rounded-full border border-stone-300 px-3 py-1.5 shadow-inner transition-all w-48 sm:w-64">
+                <div className="flex items-center bg-stone-100 rounded-full border border-stone-300 px-3 py-1.5 shadow-inner transition-all w-44 sm:w-60">
                   <Search className="w-4 h-4 text-stone-500 mr-2 shrink-0" />
                   <input
                     type="text"
-                    placeholder="Buscar no cardápio..."
+                    placeholder={t('nav.buscarPlaceholder')}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     autoFocus
@@ -165,7 +173,7 @@ export default function Navbar({
                   <button 
                     onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
                     className="text-stone-400 hover:text-stone-600 p-1"
-                    title="Fechar busca"
+                    title={t('nav.fecharBusca')}
                   >
                     <X className="w-3.5 h-3.5" />
                   </button>
@@ -174,34 +182,37 @@ export default function Navbar({
                 <button
                   onClick={() => setSearchOpen(true)}
                   className="p-2 sm:px-3 sm:py-2 text-stone-700 hover:text-amber-900 hover:bg-stone-100 rounded-full transition-colors flex items-center gap-1.5 text-xs font-medium border border-transparent hover:border-stone-200"
-                  title="Buscar prato ou bebida"
-                  aria-label="Buscar prato ou bebida"
+                  title={t('nav.buscar')}
+                  aria-label={t('nav.buscar')}
                 >
                   <Search className="w-4 h-4 text-stone-600" />
-                  <span className="hidden sm:inline">Buscar</span>
+                  <span className="hidden sm:inline">{t('nav.buscar')}</span>
                 </button>
               )}
             </div>
+
+            {/* Language Dropdown Selector in Main Nav */}
+            <LanguageSelector variant="navbar" className="hidden sm:block" />
 
             {/* WhatsApp Quick Order CTA */}
             <a
               href={restaurantData?.restaurant?.contacts?.whatsappLink || "https://wa.me/552125565323"}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow active:scale-[0.98] transition-all"
+              className="hidden lg:inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow active:scale-[0.98] transition-all"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Pedir no WhatsApp</span>
+              <span>{t('nav.pedirWhatsApp')}</span>
             </a>
 
             {/* Cart / Comanda Trigger Button */}
             <button
               onClick={onOpenCart}
               className="relative inline-flex items-center justify-center p-2.5 sm:px-4 sm:py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-400 font-medium text-xs sm:text-sm shadow-sm hover:shadow active:scale-[0.98] transition-all"
-              aria-label="Abrir Comanda e Pedido"
+              aria-label={t('nav.comanda')}
             >
               <ShoppingBag className="w-4 h-4 sm:mr-2 text-amber-400" />
-              <span className="hidden sm:inline text-stone-100 font-semibold">Comanda</span>
+              <span className="hidden sm:inline text-stone-100 font-semibold">{t('nav.comanda')}</span>
               
               {cartCount > 0 && (
                 <span className="absolute -top-1.5 -right-1.5 sm:relative sm:top-auto sm:right-auto sm:ml-2 w-5 h-5 flex items-center justify-center bg-amber-600 text-white text-[11px] font-bold rounded-full shadow animate-bounce">
@@ -214,7 +225,7 @@ export default function Navbar({
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="xl:hidden p-2 text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors focus:outline-none"
-              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-label={mobileMenuOpen ? t('nav.fecharMenu') : t('nav.abrirMenu')}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
@@ -225,6 +236,12 @@ export default function Navbar({
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
           <div className="xl:hidden bg-stone-50 border-t border-stone-200 px-4 pt-3 pb-6 shadow-xl animate-in slide-in-from-top-2 duration-200">
+            
+            {/* Prominent Mobile Language Switcher */}
+            <div className="mb-4 pb-3 border-b border-stone-200">
+              <LanguageSelector variant="mobile" />
+            </div>
+
             <div className="space-y-1">
               {navLinks.map((link) => (
                 <a
@@ -249,7 +266,7 @@ export default function Navbar({
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-700 text-white font-semibold text-sm shadow active:scale-[0.98] transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Pedir pelo WhatsApp</span>
+                <span>{t('nav.pedirWhatsApp')}</span>
               </a>
 
               <div className="grid grid-cols-2 gap-2">
@@ -259,7 +276,7 @@ export default function Navbar({
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-red-600 text-white font-medium text-xs hover:bg-red-700 transition-colors"
                 >
-                  <span>Pedir no iFood</span>
+                  <span>{t('nav.pediriFood')}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <a
@@ -268,7 +285,7 @@ export default function Navbar({
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-amber-500 text-stone-900 font-medium text-xs hover:bg-amber-600 transition-colors"
                 >
-                  <span>Pedir no 99Food</span>
+                  <span>{t('nav.pedir99')}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

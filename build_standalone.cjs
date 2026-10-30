@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const projDir = path.join('C:', 'Users', 'paulovenoy', '.gemini', 'antigravity', 'scratch', 'estacao-largo-do-machado');
+const projDir = __dirname;
 const dataStr = fs.readFileSync(path.join(projDir, 'src', 'data', 'restaurantData.json'), 'utf8');
 
 const htmlContent = `<!DOCTYPE html>

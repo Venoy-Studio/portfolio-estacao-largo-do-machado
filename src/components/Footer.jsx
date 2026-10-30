@@ -4,12 +4,16 @@ import {
   MapPin, 
   Clock, 
   MessageCircle, 
-  ExternalLink,
-  ShieldCheck,
-  Heart
+  ExternalLink, 
+  ShieldCheck, 
+  Heart,
+  Globe
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
+import LanguageSelector from './LanguageSelector.jsx';
 
 export default function Footer({ restaurantData }) {
+  const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -25,10 +29,10 @@ export default function Footer({ restaurantData }) {
             </div>
             <div>
               <h4 className="font-serif text-base font-bold text-white">
-                Peça no conforto da sua casa ou trabalho
+                {t('footer.heading')}
               </h4>
               <p className="text-stone-400 text-xs mt-0.5">
-                Entregas rápidas nas redondezas pelo WhatsApp oficial ou pelos nossos aplicativos parceiros.
+                {t('footer.subheading')}
               </p>
             </div>
           </div>
@@ -41,7 +45,7 @@ export default function Footer({ restaurantData }) {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-semibold transition-all shadow"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Direto</span>
+              <span>{t('footer.directWhatsApp')}</span>
             </a>
 
             <a
@@ -90,55 +94,64 @@ export default function Footer({ restaurantData }) {
                   Restaurante Estação Largo do Machado
                 </h3>
                 <span className="text-amber-400 font-medium text-[11px] block tracking-wider uppercase">
-                  Tradicional Desde 1966 • Boteco 184 Ltda
+                  {t('topBar.tradition')} • Boteco 184 Ltda
                 </span>
               </div>
             </div>
 
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              O mais autêntico ponto de encontro do Catete e do Largo do Machado. Chopp na temperatura certa, carnes nobres na chapa, feijoada aos fins de semana e 24 opções de almoço executivo servidas todos os dias.
+              {language === 'en'
+                ? 'The quintessential gathering place in Catete and Largo do Machado. Cold draft beer poured to perfection, sizzling grilled meats on iron skillets, traditional weekend feijoada, and 24 daily executive lunch options.'
+                : language === 'es'
+                ? 'El punto de encuentro más auténtico de Catete y Largo do Machado. Cerveza fría en su punto exacto, carnes a la plancha, feijoada los fines de semana y 24 opciones de menú ejecutivo todos los días.'
+                : 'O mais autêntico ponto de encontro do Catete e do Largo do Machado. Chopp na temperatura certa, carnes nobres na chapa, feijoada aos fins de semana e 24 opções de almoço executivo servidas todos os dias.'}
             </p>
 
             <div className="pt-2 text-[11px] text-stone-500 space-y-1">
               <p>Razão Social: <strong>BOTECO 184 LTDA</strong></p>
               <p>CNPJ: <strong>46.859.491/0001-21</strong></p>
             </div>
+
+            {/* Language Selector in Footer */}
+            <div className="pt-2">
+              <LanguageSelector variant="footer" />
+            </div>
           </div>
 
           {/* Quick Menu Links (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider text-amber-200">
-              Cardápio & Seções
+              {language === 'en' ? 'Menu & Sections' : language === 'es' ? 'Menú y Secciones' : 'Cardápio & Seções'}
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#cardapio" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Todos os 136 Pratos & Bebidas
+                  {language === 'en' ? 'All 136 Dishes & Drinks' : language === 'es' ? 'Los 136 Platos y Bebidas' : 'Todos os 136 Pratos & Bebidas'}
                 </a>
               </li>
               <li>
                 <a href="#cardapio" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Almoço Executivo (24 Opções Diárias)
+                  {language === 'en' ? 'Daily Executive Specials (24 Options)' : language === 'es' ? 'Almuerzo Ejecutivo (24 Opciones)' : 'Almoço Executivo (24 Opções Diárias)'}
                 </a>
               </li>
               <li>
                 <a href="#cardapio" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Feijoada Completa do Largo do Machado
+                  {language === 'en' ? 'Traditional Complete Feijoada' : language === 'es' ? 'Feijoada Completa Tradicional' : 'Feijoada Completa do Largo do Machado'}
                 </a>
               </li>
               <li>
                 <a href="#cardapio" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Carnes Nobres & Filé à Oswaldo Aranha
+                  {language === 'en' ? 'Steaks & Filé à Oswaldo Aranha' : language === 'es' ? 'Carnes Nobles y Bife Oswaldo Aranha' : 'Carnes Nobres & Filé à Oswaldo Aranha'}
                 </a>
               </li>
               <li>
                 <a href="#drinks-section" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Drinks Autorais & Chopes Gelados
+                  {language === 'en' ? 'Signature Cocktails & Draft Beers' : language === 'es' ? 'Cócteles de Autor y Cervezas' : 'Drinks Autorais & Chopes Gelados'}
                 </a>
               </li>
               <li>
                 <a href="#historia" className="text-stone-400 hover:text-amber-300 transition-colors">
-                  Nossa História Desde 1966
+                  {language === 'en' ? 'Our Heritage Since 1966' : language === 'es' ? 'Nuestra Historia Desde 1966' : 'Nossa História Desde 1966'}
                 </a>
               </li>
             </ul>
@@ -147,7 +160,7 @@ export default function Footer({ restaurantData }) {
           {/* Contacts & Hours (4 cols) */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider text-amber-200">
-              Atendimento & Localização
+              {language === 'en' ? 'Service & Location' : language === 'es' ? 'Atención y Ubicación' : 'Atendimento & Localização'}
             </h4>
             
             <div className="space-y-2.5 text-xs text-stone-400">
@@ -158,7 +171,7 @@ export default function Footer({ restaurantData }) {
 
               <div className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Todos os dias das 11:00 às 00:00 (Meia-noite)</span>
+                <span>{language === 'en' ? 'Every day from 11:00 AM to Midnight' : language === 'es' ? 'Todos los días de 11:00 a 00:00 (Medianoche)' : 'Todos os dias das 11:00 às 00:00 (Meia-noite)'}</span>
               </div>
 
               <div className="flex items-center gap-2.5">
@@ -176,7 +189,7 @@ export default function Footer({ restaurantData }) {
               </div>
             </div>
 
-            {/* Social Icons (SVGs) */}
+            {/* Social Icons */}
             <div className="pt-3 flex items-center gap-3">
               <a
                 href={restaurantData?.restaurant?.contacts?.instagram}
@@ -210,14 +223,20 @@ export default function Footer({ restaurantData }) {
         {/* Bottom copyright bar */}
         <div className="mt-12 pt-8 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
           <div>
-            © {currentYear} Restaurante Estação Largo do Machado (BOTECO 184 LTDA). Todos os direitos reservados.
+            © {currentYear} Restaurante Estação Largo do Machado (BOTECO 184 LTDA). {t('footer.rights')}
           </div>
           <div className="flex items-center gap-4">
-            <a href="#historia" className="hover:text-stone-300 transition-colors">Tradição Desde 1966</a>
+            <a href="#historia" className="hover:text-stone-300 transition-colors">
+              {t('nav.tradicao')}
+            </a>
             <span>•</span>
-            <a href="#localizacao" className="hover:text-stone-300 transition-colors">Como Chegar</a>
+            <a href="#localizacao" className="hover:text-stone-300 transition-colors">
+              {t('nav.ondeEstamos')}
+            </a>
             <span>•</span>
-            <a href="#cardapio" className="hover:text-stone-300 transition-colors">Cardápio Digital</a>
+            <a href="#cardapio" className="hover:text-stone-300 transition-colors">
+              {t('nav.cardapio')}
+            </a>
           </div>
         </div>
 

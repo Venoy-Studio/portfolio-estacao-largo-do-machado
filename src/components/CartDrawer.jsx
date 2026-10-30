@@ -13,6 +13,7 @@ import {
   Sparkles,
   MapPin
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function CartDrawer({ 
   isOpen, 
@@ -23,6 +24,7 @@ export default function CartDrawer({
   onClearCart,
   restaurantData 
 }) {
+  const { t, language } = useLanguage();
   const [orderType, setOrderType] = useState('delivery'); // 'delivery' | 'pickup' | 'table'
   const [customerName, setCustomerName] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
@@ -41,46 +43,123 @@ export default function CartDrawer({
   const handleSendWhatsApp = () => {
     if (cartItems.length === 0) return;
 
-    let message = `*NOVO PEDIDO — RESTAURANTE ESTAÇÃO LARGO DO MACHADO*\n`;
-    message += `_Tradicional Desde 1966 • Rua Bento Lisboa, 184_\n\n`;
+    let message = '';
 
-    // Order Type Info
-    if (orderType === 'delivery') {
-      message += `🛵 *TIPO:* Entrega em Domicílio\n`;
-      if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
-      if (deliveryAddress) message += `📍 *Endereço:* ${deliveryAddress} — ${neighborhood}\n`;
-    } else if (orderType === 'pickup') {
-      message += `🛍️ *TIPO:* Retirada no Balcão (Bento Lisboa, 184)\n`;
-      if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
+    if (language === 'en') {
+      message += `*NEW ORDER — RESTAURANTE ESTAÇÃO LARGO DO MACHADO*\n`;
+      message += `_Tradition Since 1966 • Bento Lisboa, 184 (Order in English)_\n\n`;
+
+      if (orderType === 'delivery') {
+        message += `🛵 *TYPE:* Home Delivery\n`;
+        if (customerName) message += `👤 *Customer:* ${customerName}\n`;
+        if (deliveryAddress) message += `📍 *Delivery Address:* ${deliveryAddress} — ${neighborhood}\n`;
+      } else if (orderType === 'pickup') {
+        message += `🛍️ *TYPE:* Takeout / Counter Pickup (Bento Lisboa, 184)\n`;
+        if (customerName) message += `👤 *Customer:* ${customerName}\n`;
+      } else {
+        message += `🍽️ *TYPE:* Dine-in at Restaurant\n`;
+        if (tableNumber) message += `🪑 *Table:* ${tableNumber}\n`;
+        if (customerName) message += `👤 *Name:* ${customerName}\n`;
+      }
+
+      const paymentLabelsEn = {
+        'pix': 'Pix / Instant Transfer',
+        'cartao_entrega': 'Credit / Debit Card (Bring Card Machine)',
+        'vr': 'Meal Voucher (VR / Sodexo / Alelo / Ticket)',
+        'dinheiro': 'Cash'
+      };
+      message += `💳 *Payment Method:* ${paymentLabelsEn[paymentMethod] || paymentMethod}\n\n`;
+
+      message += `*ORDER ITEMS:*\n`;
+      cartItems.forEach((item, index) => {
+        const optionText = item.selectedOption ? ` (${item.selectedOption})` : '';
+        message += `${index + 1}. *${item.quantity}x* ${item.name}${optionText} — R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
+      });
+
+      message += `\n💰 *ITEMS SUBTOTAL:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+
+      if (generalNotes.trim()) {
+        message += `📝 *Notes:* ${generalNotes}\n`;
+      }
+
+      message += `\n_Please confirm the estimated time and order details! Thank you!_`;
+    } else if (language === 'es') {
+      message += `*NUEVO PEDIDO — RESTAURANTE ESTAÇÃO LARGO DO MACHADO*\n`;
+      message += `_Tradición Desde 1966 • Bento Lisboa, 184 (Pedido en Español)_\n\n`;
+
+      if (orderType === 'delivery') {
+        message += `🛵 *TIPO:* Entrega a Domicilio\n`;
+        if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
+        if (deliveryAddress) message += `📍 *Dirección:* ${deliveryAddress} — ${neighborhood}\n`;
+      } else if (orderType === 'pickup') {
+        message += `🛍️ *TIPO:* Retiro en Barra (Bento Lisboa, 184)\n`;
+        if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
+      } else {
+        message += `🍽️ *TIPO:* Consumo en Mesa\n`;
+        if (tableNumber) message += `🪑 *Mesa:* ${tableNumber}\n`;
+        if (customerName) message += `👤 *Nombre:* ${customerName}\n`;
+      }
+
+      const paymentLabelsEs = {
+        'pix': 'Pix / Transferencia',
+        'cartao_entrega': 'Tarjeta de Débito / Crédito (Llevar Terminal)',
+        'vr': 'Vale de Comida (VR / Sodexo / Alelo / Ticket)',
+        'dinheiro': 'Efectivo'
+      };
+      message += `💳 *Pago:* ${paymentLabelsEs[paymentMethod] || paymentMethod}\n\n`;
+
+      message += `*PRODUCTOS DEL PEDIDO:*\n`;
+      cartItems.forEach((item, index) => {
+        const optionText = item.selectedOption ? ` (${item.selectedOption})` : '';
+        message += `${index + 1}. *${item.quantity}x* ${item.name}${optionText} — R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
+      });
+
+      message += `\n💰 *VALOR TOTAL DE PRODUCTOS:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+
+      if (generalNotes.trim()) {
+        message += `📝 *Observaciones:* ${generalNotes}\n`;
+      }
+
+      message += `\n_¡Por favor confirme el tiempo estimado y los datos del pedido! Muchas gracias._`;
     } else {
-      message += `🍽️ *TIPO:* Consumo no Local\n`;
-      if (tableNumber) message += `🪑 *Mesa:* ${tableNumber}\n`;
-      if (customerName) message += `👤 *Nome:* ${customerName}\n`;
+      message += `*NOVO PEDIDO — RESTAURANTE ESTAÇÃO LARGO DO MACHADO*\n`;
+      message += `_Tradicional Desde 1966 • Rua Bento Lisboa, 184_\n\n`;
+
+      if (orderType === 'delivery') {
+        message += `🛵 *TIPO:* Entrega em Domicílio\n`;
+        if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
+        if (deliveryAddress) message += `📍 *Endereço:* ${deliveryAddress} — ${neighborhood}\n`;
+      } else if (orderType === 'pickup') {
+        message += `🛍️ *TIPO:* Retirada no Balcão (Bento Lisboa, 184)\n`;
+        if (customerName) message += `👤 *Cliente:* ${customerName}\n`;
+      } else {
+        message += `🍽️ *TIPO:* Consumo no Local\n`;
+        if (tableNumber) message += `🪑 *Mesa:* ${tableNumber}\n`;
+        if (customerName) message += `👤 *Nome:* ${customerName}\n`;
+      }
+
+      const paymentLabels = {
+        'pix': 'Pix na Entrega / Chave Pix',
+        'cartao_entrega': 'Cartão de Débito / Crédito (Levar Máquina)',
+        'vr': 'Vale Refeição (Sodexo / VR / Alelo / Ticket)',
+        'dinheiro': 'Dinheiro'
+      };
+      message += `💳 *Pagamento:* ${paymentLabels[paymentMethod] || paymentMethod}\n\n`;
+
+      message += `*ITENS DO PEDIDO:*\n`;
+      cartItems.forEach((item, index) => {
+        const optionText = item.selectedOption ? ` (${item.selectedOption})` : '';
+        message += `${index + 1}. *${item.quantity}x* ${item.name}${optionText} — R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
+      });
+
+      message += `\n💰 *VALOR TOTAL DOS ITENS:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+
+      if (generalNotes.trim()) {
+        message += `📝 *Observações:* ${generalNotes}\n`;
+      }
+
+      message += `\n_Por favor, confirme o tempo estimado e os dados para finalização!_`;
     }
-
-    // Payment Info
-    const paymentLabels = {
-      'pix': 'Pix na Entrega / Chave Pix',
-      'cartao_entrega': 'Cartão de Débito / Crédito (Levar Máquina)',
-      'vr': 'Vale Refeição (Sodexo / VR / Alelo / Ticket)',
-      'dinheiro': 'Dinheiro'
-    };
-    message += `💳 *Pagamento:* ${paymentLabels[paymentMethod] || paymentMethod}\n\n`;
-
-    // Items List
-    message += `*ITENS DO PEDIDO:*\n`;
-    cartItems.forEach((item, index) => {
-      const optionText = item.selectedOption ? ` (${item.selectedOption})` : '';
-      message += `${index + 1}. *${item.quantity}x* ${item.name}${optionText} — R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
-    });
-
-    message += `\n💰 *VALOR TOTAL DOS ITENS:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
-
-    if (generalNotes.trim()) {
-      message += `📝 *Observações:* ${generalNotes}\n`;
-    }
-
-    message += `\n_Por favor, confirme o tempo estimado e os dados para finalização!_`;
 
     const encoded = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/552125565323?text=${encoded}`;
@@ -107,9 +186,11 @@ export default function CartDrawer({
                 <ShoppingBag className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-serif text-lg font-bold text-white">Sua Comanda</h3>
+                <h3 className="font-serif text-lg font-bold text-white">{t('cart.title')}</h3>
                 <span className="text-xs text-amber-300 font-medium">
-                  {totalItemsCount} {totalItemsCount === 1 ? 'item selecionado' : 'itens selecionados'}
+                  {totalItemsCount} {totalItemsCount === 1 
+                    ? (language === 'en' ? 'item selected' : language === 'es' ? 'producto seleccionado' : 'item selecionado')
+                    : (language === 'en' ? 'items selected' : language === 'es' ? 'productos seleccionados' : 'itens selecionados')}
                 </span>
               </div>
             </div>
@@ -131,7 +212,7 @@ export default function CartDrawer({
                 {/* Order Type Toggle */}
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-stone-500">
-                    Como deseja receber seu pedido?
+                    {t('cart.orderType')}
                   </label>
                   <div className="grid grid-cols-3 gap-2">
                     <button
@@ -144,7 +225,7 @@ export default function CartDrawer({
                       }`}
                     >
                       <Bike className="w-4 h-4" />
-                      <span>Entrega</span>
+                      <span>{t('cart.delivery')}</span>
                     </button>
 
                     <button
@@ -157,7 +238,7 @@ export default function CartDrawer({
                       }`}
                     >
                       <Store className="w-4 h-4" />
-                      <span>Retirada</span>
+                      <span>{t('cart.pickup')}</span>
                     </button>
 
                     <button
@@ -170,7 +251,7 @@ export default function CartDrawer({
                       }`}
                     >
                       <Utensils className="w-4 h-4" />
-                      <span>Na Mesa</span>
+                      <span>{t('cart.table')}</span>
                     </button>
                   </div>
                 </div>
@@ -178,12 +259,12 @@ export default function CartDrawer({
                 {/* Items List */}
                 <div className="space-y-3 pt-2">
                   <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-stone-500">
-                    <span>Itens Escolhidos</span>
+                    <span>{language === 'en' ? 'Selected Items' : language === 'es' ? 'Productos Seleccionados' : 'Itens Escolhidos'}</span>
                     <button
                       onClick={onClearCart}
                       className="text-stone-400 hover:text-red-600 text-[11px] underline lowercase"
                     >
-                      limpar comanda
+                      {t('cart.btnClear')}
                     </button>
                   </div>
 
@@ -247,11 +328,11 @@ export default function CartDrawer({
                   
                   <div>
                     <label className="font-semibold text-stone-700 block mb-1">
-                      Seu Nome:
+                      {t('cart.nameLabel')}
                     </label>
                     <input
                       type="text"
-                      placeholder="Ex: Carlos Silva"
+                      placeholder={t('cart.namePlaceholder')}
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       className="w-full px-3 py-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:bg-white focus:outline-none focus:border-amber-700"
@@ -262,11 +343,11 @@ export default function CartDrawer({
                     <>
                       <div>
                         <label className="font-semibold text-stone-700 block mb-1">
-                          Endereço Completo de Entrega:
+                          {t('cart.addressLabel')}
                         </label>
                         <input
                           type="text"
-                          placeholder="Rua, número e apto / bloco"
+                          placeholder={t('cart.addressPlaceholder')}
                           value={deliveryAddress}
                           onChange={(e) => setDeliveryAddress(e.target.value)}
                           className="w-full px-3 py-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:bg-white focus:outline-none focus:border-amber-700"
@@ -275,7 +356,7 @@ export default function CartDrawer({
 
                       <div>
                         <label className="font-semibold text-stone-700 block mb-1">
-                          Bairro (Redondezas):
+                          {t('cart.neighborhoodLabel')}
                         </label>
                         <select
                           value={neighborhood}
@@ -287,7 +368,9 @@ export default function CartDrawer({
                           <option value="Flamengo">Flamengo</option>
                           <option value="Glória">Glória</option>
                           <option value="Laranjeiras">Laranjeiras</option>
-                          <option value="Outro Bairro">Outro Bairro (Consultar taxa)</option>
+                          <option value="Outro Bairro">
+                            {language === 'en' ? 'Other Neighborhood (Confirm fee)' : language === 'es' ? 'Otro Barrio (Consultar costo)' : 'Outro Bairro (Consultar taxa)'}
+                          </option>
                         </select>
                       </div>
                     </>
@@ -296,11 +379,11 @@ export default function CartDrawer({
                   {orderType === 'table' && (
                     <div>
                       <label className="font-semibold text-stone-700 block mb-1">
-                        Número da Mesa (se estiver no salão):
+                        {t('cart.tableLabel')}
                       </label>
                       <input
                         type="text"
-                        placeholder="Ex: Mesa 12"
+                        placeholder={t('cart.tablePlaceholder')}
                         value={tableNumber}
                         onChange={(e) => setTableNumber(e.target.value)}
                         className="w-full px-3 py-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:bg-white focus:outline-none focus:border-amber-700"
@@ -311,28 +394,28 @@ export default function CartDrawer({
                   {/* Payment Method Selector */}
                   <div>
                     <label className="font-semibold text-stone-700 block mb-1">
-                      Forma de Pagamento:
+                      {t('cart.paymentLabel')}
                     </label>
                     <select
                       value={paymentMethod}
                       onChange={(e) => setPaymentMethod(e.target.value)}
                       className="w-full px-3 py-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:bg-white focus:outline-none focus:border-amber-700 font-medium"
                     >
-                      <option value="cartao_entrega">Cartão de Crédito / Débito (Levar Máquina)</option>
-                      <option value="pix">Pix (Solicitar chave na confirmação)</option>
-                      <option value="vr">Vale Refeição (VR, Sodexo, Alelo, Ticket)</option>
-                      <option value="dinheiro">Dinheiro</option>
+                      <option value="cartao_entrega">{t('cart.paymentCard')}</option>
+                      <option value="pix">{t('cart.paymentPix')}</option>
+                      <option value="vr">{t('cart.paymentVr')}</option>
+                      <option value="dinheiro">{t('cart.paymentCash')}</option>
                     </select>
                   </div>
 
                   {/* Special Notes */}
                   <div>
                     <label className="font-semibold text-stone-700 block mb-1">
-                      Observações Especiais:
+                      {t('cart.notesLabel')}
                     </label>
                     <textarea
                       rows={2}
-                      placeholder="Ex: Ponto da carne bem passado, sem cebola, enviar sachês de azeite..."
+                      placeholder={t('cart.notesPlaceholder')}
                       value={generalNotes}
                       onChange={(e) => setGeneralNotes(e.target.value)}
                       className="w-full px-3 py-2 bg-stone-50 border border-stone-200 rounded-lg text-xs focus:bg-white focus:outline-none focus:border-amber-700 resize-none"
@@ -348,16 +431,16 @@ export default function CartDrawer({
                   <ShoppingBag className="w-8 h-8" />
                 </div>
                 <h4 className="font-serif text-lg font-bold text-stone-800">
-                  Sua comanda está vazia
+                  {t('cart.emptyTitle')}
                 </h4>
                 <p className="text-xs text-stone-500 mt-1 max-w-xs mx-auto">
-                  Adicione opções saborosas do nosso cardápio executivo, petiscos, pratos para compartilhar ou bebidas geladas!
+                  {t('cart.emptySub')}
                 </p>
                 <button
                   onClick={onClose}
                   className="mt-5 inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-800 text-white font-semibold text-xs shadow hover:bg-amber-900 transition-colors"
                 >
-                  <span>Explorar Cardápio</span>
+                  <span>{t('cart.btnExplore')}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -370,7 +453,7 @@ export default function CartDrawer({
             <div className="p-4 sm:p-5 bg-stone-50 border-t border-stone-200 space-y-3">
               
               <div className="flex items-center justify-between text-sm">
-                <span className="text-stone-600 font-medium">Subtotal dos itens:</span>
+                <span className="text-stone-600 font-medium">{t('cart.subtotal')}</span>
                 <span className="font-serif font-extrabold text-stone-900 text-lg">
                   R$ {subtotal.toFixed(2).replace('.', ',')}
                 </span>
@@ -378,8 +461,12 @@ export default function CartDrawer({
 
               {orderType === 'delivery' && (
                 <div className="text-[11px] text-stone-500 flex items-center justify-between border-t border-stone-200/60 pt-2">
-                  <span>Taxa de entrega nas redondezas:</span>
-                  <span className="font-medium text-emerald-800">Confirmada no WhatsApp</span>
+                  <span>
+                    {language === 'en' ? 'Local delivery fee:' : language === 'es' ? 'Costo de envío en la zona:' : 'Taxa de entrega nas redondezas:'}
+                  </span>
+                  <span className="font-medium text-emerald-800">
+                    {language === 'en' ? 'Confirmed on WhatsApp' : language === 'es' ? 'Confirmado en WhatsApp' : 'Confirmada no WhatsApp'}
+                  </span>
                 </div>
               )}
 
@@ -389,11 +476,11 @@ export default function CartDrawer({
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md active:scale-[0.98] transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Enviar Pedido Pronto para o WhatsApp</span>
+                <span>{t('cart.btnSendWhatsApp')}</span>
               </button>
 
               <p className="text-[10px] text-center text-stone-500">
-                Seu pedido é enviado formatado direto para o WhatsApp oficial <strong>(21) 2556-5323</strong>.
+                {t('cart.whatsappNotice')}
               </p>
 
             </div>

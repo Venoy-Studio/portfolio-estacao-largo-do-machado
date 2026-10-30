@@ -1,7 +1,10 @@
 import React from 'react';
 import { Award, Clock, Heart, Users, MapPin, Coffee } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function HeritageSection({ restaurantData }) {
+  const { t, language } = useLanguage();
+
   return (
     <section id="historia" className="py-20 bg-[#F4EFEA] border-b border-stone-300/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -23,10 +26,10 @@ export default function HeritageSection({ restaurantData }) {
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <span className="text-xs uppercase font-bold text-amber-400 tracking-wider">
-                  Rua Bento Lisboa, 184
+                  {t('heritage.locationLabel')}
                 </span>
                 <p className="font-serif text-lg font-bold text-white">
-                  O ponto de encontro do Largo do Machado & Catete
+                  {t('heritage.locationSub')}
                 </p>
               </div>
             </div>
@@ -38,10 +41,10 @@ export default function HeritageSection({ restaurantData }) {
               </div>
               <div>
                 <div className="text-xs uppercase font-bold tracking-wider text-stone-200">
-                  Anos de História
+                  {t('heritage.yearsTitle')}
                 </div>
                 <div className="text-[11px] text-stone-400">
-                  Desde 1966 no Rio
+                  {t('heritage.yearsSub')}
                 </div>
               </div>
             </div>
@@ -53,19 +56,23 @@ export default function HeritageSection({ restaurantData }) {
             
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-900/10 border border-amber-900/20 text-amber-950 text-xs font-semibold tracking-wide">
               <Award className="w-3.5 h-3.5 text-amber-800" />
-              <span>TRADIÇÃO & HOSPITALIDADE CARIOCA</span>
+              <span>{t('heritage.badge')}</span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 leading-tight">
-              Mais de meio século de amizades, boemia e comida boa de verdade.
+              {t('heritage.title')}
             </h2>
 
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
-              O restaurante mais tradicional e charmoso do bairro, situado na <strong>Rua Bento Lisboa, 184</strong>, de facílimo acesso e a poucos passos do <strong>Metrô do Largo do Machado</strong>. A deliciosa gastronomia carioca é a nossa essência: seja para compartilhar momentos inesquecíveis com a família e os amigos nos fins de semana, ou para desfrutar de um almoço executivo dinâmico, farto e saboroso no intervalo da rotina de trabalho.
+              {t('heritage.p1')}
             </p>
 
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
-              Aqui, a cerveja chega sempre na temperatura certa, o chopp é servido com colarinho aveludado e o cardápio abraça desde a clássica feijoada até carnes nobres grelhadas, peixes frescos, massas italianas, petiscos e pizzas crocantes.
+              {t('heritage.p2')}
+            </p>
+
+            <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+              {t('heritage.p3')}
             </p>
 
             {/* 3 Pillars */}
@@ -77,10 +84,10 @@ export default function HeritageSection({ restaurantData }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-stone-900">
-                    Todos os Dias
+                    {language === 'en' ? 'Every Single Day' : language === 'es' ? 'Todos los Días' : 'Todos os Dias'}
                   </h4>
                   <p className="text-xs text-stone-600 mt-0.5">
-                    Das 11h à meia-noite sem interrupção.
+                    {language === 'en' ? 'From 11 AM to Midnight nonstop.' : language === 'es' ? 'De 11h a medianoche sin interrupción.' : 'Das 11h à meia-noite sem interrupção.'}
                   </p>
                 </div>
               </div>
@@ -91,10 +98,10 @@ export default function HeritageSection({ restaurantData }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-stone-900">
-                    A 50m do Metrô
+                    {language === 'en' ? '50m from Metro' : language === 'es' ? 'A 50m del Metro' : 'A 50m do Metrô'}
                   </h4>
                   <p className="text-xs text-stone-600 mt-0.5">
-                    Saída Largo do Machado / Catete.
+                    {language === 'en' ? 'Largo do Machado Station exit.' : language === 'es' ? 'Salida estación Largo do Machado.' : 'Saída Largo do Machado / Catete.'}
                   </p>
                 </div>
               </div>
@@ -105,10 +112,10 @@ export default function HeritageSection({ restaurantData }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-stone-900">
-                    Ambiente Familiar
+                    {language === 'en' ? 'Family Ambiance' : language === 'es' ? 'Ambiente Familiar' : 'Ambiente Familiar'}
                   </h4>
                   <p className="text-xs text-stone-600 mt-0.5">
-                    Mesas acolhedoras e atendimento cordial.
+                    {language === 'en' ? 'Warm welcoming staff & tables.' : language === 'es' ? 'Mesas acogedoras y atención cordial.' : 'Mesas acolhedoras e atendimento cordial.'}
                   </p>
                 </div>
               </div>
