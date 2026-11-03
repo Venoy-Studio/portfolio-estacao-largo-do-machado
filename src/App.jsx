@@ -12,6 +12,7 @@ import LocationSection from './components/LocationSection.jsx';
 import Footer from './components/Footer.jsx';
 import CartDrawer from './components/CartDrawer.jsx';
 import MobileBottomBar from './components/MobileBottomBar.jsx';
+import ProposalNotice from './components/ProposalNotice.jsx';
 import { useLanguage } from './i18n/LanguageContext.jsx';
 
 export default function App() {
@@ -204,6 +205,17 @@ export default function App() {
         onOpenCart={() => setIsCartOpen(true)}
         onOpenMenu={handleExploreMenu}
         restaurantData={restaurantData}
+      />
+
+      {/* Modal Demonstrativo de Proposta & Badge no Rodapé */}
+      <ProposalNotice
+        clientName="Estação Largo do Machado"
+        companyType="restaurante"
+        logoSrc="/assets/agency-logo.png"
+        instagramHandle="venoystudio"
+        instagramUrl="https://www.instagram.com/venoystudio/"
+        position="bottom-left"
+        defaultOpen={true}
       />
 
     </div>
